@@ -9,12 +9,11 @@ public class movementScript : MonoBehaviour
     float control = 0f;
     Rigidbody2D mybody;
 
+    public WizardState.State state = WizardState.State.IDLE;
+
     void Awake()
     {
         mybody = gameObject.GetComponent<Rigidbody2D>();
-        // if (mybody == null){
-        //     print("Error");
-        // }
     }
     // Start is called before the first frame update
     void Start()
@@ -40,5 +39,14 @@ public class movementScript : MonoBehaviour
         speed = Mathf.Clamp(speed, -2.5f, 2.5f);
         Vector2 playerVector = new Vector2(control*speed, mybody.velocity.y);
         mybody.velocity = playerVector;
+
+
+        if (control*speed == 0){
+            state = WizardState.State.IDLE;
+        } else {
+            state = WizardState.State.RUNNING;
+        }
+
+
     }
 }
