@@ -29,7 +29,12 @@ public class AnimateWizard : MonoBehaviour
             animator.SetBool("isGrounded", true);
             animator.SetBool("isRunning", false);
 
-        } else if (state == WizardState.State.RUNNING){
+        } 
+        else if (state == WizardState.State.JUMP){
+            
+        } 
+        
+        else if (state == WizardState.State.RUNNING){
             animator.SetBool("isRunning", true);
         }
         
