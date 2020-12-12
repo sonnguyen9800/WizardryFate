@@ -58,7 +58,7 @@ public class movementScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             mybody.AddForce(new Vector2(0, bounce), ForceMode2D.Impulse);
-            
+            this.state = WizardState.State.JUMP;
             this.onGround = false;
         }
     }
