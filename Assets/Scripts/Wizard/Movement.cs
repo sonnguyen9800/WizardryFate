@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class movementScript : MonoBehaviour
+public class Movement : MonoBehaviour
 {
     [SerializeField]
     float speed = 10f;
@@ -55,7 +55,7 @@ public class movementScript : MonoBehaviour
     private void Jumping()
     {
         if (this.onGround == false ){return;}
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButton("Jump"))
         {
             mybody.AddForce(new Vector2(0, bounce), ForceMode2D.Impulse);
             this.state = WizardState.State.JUMP;
