@@ -43,11 +43,11 @@ public class movementScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+
             mybody.AddForce(new Vector2(0, 5f), ForceMode2D.Impulse);
 
         }
     }
-
     private void Running()
     {
         float control = Input.GetAxis("Horizontal");
