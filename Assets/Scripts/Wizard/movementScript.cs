@@ -8,6 +8,12 @@ public class movementScript : MonoBehaviour
     float speed = 10f;
     float control = 0f;
     float jumpCount = 0f;
+
+
+    bool onGround = true;
+
+    [SerializeField]
+    float bounce = 5.0f;
     Rigidbody2D mybody;
 
     public WizardState.State state = WizardState.State.IDLE;
@@ -32,20 +38,29 @@ public class movementScript : MonoBehaviour
         FlipOnMouse();
     }
 
+    private void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.tag != "Ground")
+         {
+             //Debug.Log("On THE SKY");
+             this.onGround = true;
+         }
+    }
+
     private void FlipOnMouse()
     {
         Vector3 mousePosition = main.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 10));
         transform.localScale = mousePosition.x > transform.position.x ? new Vector3(1,1,1) : new Vector3(-1,1,1);
-        print(mousePosition);   
+        //print(mousePosition);   
     }
 
     private void Jumping()
     {
+        if (this.onGround == false ){return;}
         if (Input.GetKeyDown(KeyCode.Space))
         {
-
-            mybody.AddForce(new Vector2(0, 5f), ForceMode2D.Impulse);
-
+            mybody.AddForce(new Vector2(0, bounce), ForceMode2D.Impulse);
+            
+            this.onGround = false;
         }
     }
     private void Running()
