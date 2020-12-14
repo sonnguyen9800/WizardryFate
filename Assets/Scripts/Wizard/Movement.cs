@@ -4,24 +4,25 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    [SerializeField] float speed = 10f;
     [SerializeField]
-    float speed = 10f;
-    float control = 0f;
-    float jumpCount = 0f;
+    float accel = 0.1f;
 
-
-    bool onGround = true;
 
     [SerializeField]
-    float bounce = 5.0f;
+    float bounce = 1.0f;
+
+
+
     Rigidbody2D mybody;
-
+    CircleCollider2D myCircleCollider2d;
     public WizardState.State state = WizardState.State.IDLE;
 
     private Camera main;
     void Awake()
     {
         mybody = GetComponent<Rigidbody2D>();
+        myCircleCollider2d = GetComponent<CircleCollider2D>();
         main = Camera.main;
     }
     // Start is called before the first frame update
@@ -38,29 +39,29 @@ public class Movement : MonoBehaviour
         FlipOnMouse();
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.tag != "Ground")
-         {
-             //Debug.Log("On THE SKY");
-             this.onGround = true;
-         }
-    }
-
     private void FlipOnMouse()
     {
         Vector3 mousePosition = main.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 10));
         transform.localScale = mousePosition.x > transform.position.x ? new Vector3(1,1,1) : new Vector3(-1,1,1);
-        //print(mousePosition);   
     }
 
     private void Jumping()
     {
-        if (this.onGround == false ){return;}
+        if (!myCircleCollider2d.IsTouchingLayers(LayerMask.GetMask("Ground"))) {
+           // mybody.velocity = new Vector2(mybody.velocity.x, 0);
+            return;
+        }
         if (Input.GetButton("Jump"))
         {
-            mybody.AddForce(new Vector2(0, bounce), ForceMode2D.Impulse);
+            Vector2 jumpVector = new Vector2(0f, bounce);
+
+            Vector2 newVectorJump = mybody.velocity + jumpVector;
+
+            if (newVectorJump.y > bounce){
+                newVectorJump.y = bounce;
+            }
+            mybody.velocity = newVectorJump;
             this.state = WizardState.State.JUMP;
-            this.onGround = false;
         }
     }
 
@@ -70,12 +71,12 @@ public class Movement : MonoBehaviour
         if (control != 0)
         {
             //acceleration
-            speed += 0.1f;
+            speed += accel;
         }
         else
         {
             // deceleration
-            speed -= 0.1f;
+            speed -= accel;
             if (speed < 0)
             {
                 speed = 0;
@@ -89,11 +90,11 @@ public class Movement : MonoBehaviour
         if (control * speed == 0)
         {
             state = WizardState.State.IDLE;
+            return;
         }
-        else
-        {
+
             state = WizardState.State.RUNNING;
-        }
+        
     }
 
 }
