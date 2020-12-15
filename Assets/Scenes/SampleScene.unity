@@ -2058,6 +2058,10 @@ PrefabInstance:
       propertyPath: bounce
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7684448783334609874, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
+      propertyPath: jumpForce
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7684448783334609875, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
       propertyPath: m_RootOrder
       value: 3
