@@ -7,6 +7,8 @@ public class Wizard : MonoBehaviour
 {
 
     [SerializeField][Range(0,-40)] float gravity = -20;
+    [SerializeField][Range(0,4)] float moveSpeed = 1;
+
     Controller2D controller2D;
 
     Vector2 movementVelocity ; // Important variable, determine the velocity of game object
@@ -25,7 +27,10 @@ public class Wizard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movementVelocity.y += gravity*Time.deltaTime;
+        Vector2 input = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
+
+		movementVelocity.x = input.x * moveSpeed;
+		movementVelocity.y += gravity * Time.deltaTime;
         controller2D.Move(movementVelocity*Time.deltaTime);
     }
 }
