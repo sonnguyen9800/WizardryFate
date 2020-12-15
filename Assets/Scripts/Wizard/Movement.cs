@@ -4,24 +4,26 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] float speed = 10f;
+    [Header("Attributes")]
     [SerializeField]
-    float accel = 0.1f;
+    private float speed = 10f;
+    [SerializeField]
+    private float acceleration = 0.1f;
 
 
     [SerializeField]
-    float bounce = 1.0f;
+    private float jumpForce = 1.0f;
 
 
 
-    Rigidbody2D mybody;
-    CircleCollider2D myCircleCollider2d;
-    public WizardState.State state = WizardState.State.IDLE;
+    private Rigidbody2D rb;
+    private CircleCollider2D myCircleCollider2d;
+    public WizardState state = WizardState.IDLE;
 
     private Camera main;
     void Awake()
     {
-        mybody = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         myCircleCollider2d = GetComponent<CircleCollider2D>();
         main = Camera.main;
     }
@@ -42,26 +44,20 @@ public class Movement : MonoBehaviour
     private void FlipOnMouse()
     {
         Vector3 mousePosition = main.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 10));
-        transform.localScale = mousePosition.x > transform.position.x ? new Vector3(1,1,1) : new Vector3(-1,1,1);
+        transform.rotation = mousePosition.x > transform.position.x ? Quaternion.Euler(0, 0, 0) : Quaternion.Euler(0, 180, 0);
     }
 
     private void Jumping()
     {
-        if (!myCircleCollider2d.IsTouchingLayers(LayerMask.GetMask("Ground"))) {
-           // mybody.velocity = new Vector2(mybody.velocity.x, 0);
+        if (!myCircleCollider2d.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        {
+            // rb.velocity = new Vector2(rb.velocity.x, 0);
             return;
         }
-        if (Input.GetButton("Jump"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            Vector2 jumpVector = new Vector2(0f, bounce);
-
-            Vector2 newVectorJump = mybody.velocity + jumpVector;
-
-            if (newVectorJump.y > bounce){
-                newVectorJump.y = bounce;
-            }
-            mybody.velocity = newVectorJump;
-            this.state = WizardState.State.JUMP;
+            rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            this.state = WizardState.JUMP;
         }
     }
 
@@ -71,30 +67,30 @@ public class Movement : MonoBehaviour
         if (control != 0)
         {
             //acceleration
-            speed += accel;
+            speed += acceleration;
         }
         else
         {
             // deceleration
-            speed -= accel;
+            speed -= acceleration;
             if (speed < 0)
             {
                 speed = 0;
             }
         }
         speed = Mathf.Clamp(speed, -2.5f, 2.5f);
-        Vector2 playerVector = new Vector2(control * speed, mybody.velocity.y);
-        mybody.velocity = playerVector;
+        Vector2 playerVector = new Vector2(control * speed, rb.velocity.y);
+        rb.velocity = playerVector;
 
 
         if (control * speed == 0)
         {
-            state = WizardState.State.IDLE;
+            state = WizardState.IDLE;
             return;
         }
 
-            state = WizardState.State.RUNNING;
-        
+        state = WizardState.RUNNING;
+
     }
 
 }
