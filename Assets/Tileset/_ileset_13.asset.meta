@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/Tileset/_ileset_13.asset.meta
 guid: f464a5374257f864bb44f3d527788f2b
+=======
+guid: 04ea3a19712a96049af96210d623ddb4
+>>>>>>> parent of 45167bb... lighting done:Assets/Tileset/_ileset_10.asset.meta
+=======
+guid: f464a5374257f864bb44f3d527788f2b
+>>>>>>> parent of 45167bb... lighting done
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0

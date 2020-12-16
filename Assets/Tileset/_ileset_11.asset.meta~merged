@@ -1,20 +1,12 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
-<<<<<<< HEAD
-guid: aae56e193f6064f40b2c8d9a6c6f31c3
-=======
-<<<<<<< HEAD:Assets/Tileset/_ileset_1.asset.meta
-guid: 3077b5a9ae1754a41be2e15fe64e48a2
-=======
-guid: aae56e193f6064f40b2c8d9a6c6f31c3
->>>>>>> parent of 45167bb... lighting done:Assets/Tileset/_ileset_0.asset.meta
->>>>>>> parent of 45167bb... lighting done
-=======
 <<<<<<< HEAD:Assets/Tileset/_ileset_11.asset.meta
 guid: 518bef6a8380a054599d4abda8943ad8
 =======
 guid: aae56e193f6064f40b2c8d9a6c6f31c3
 >>>>>>> parent of 45167bb... lighting done:Assets/Tileset/_ileset_0.asset.meta
+=======
+guid: 518bef6a8380a054599d4abda8943ad8
 >>>>>>> parent of 45167bb... lighting done
 NativeFormatImporter:
   externalObjects: {}
