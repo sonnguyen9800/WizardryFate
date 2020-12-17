@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class parallax : MonoBehaviour
+public class Parallax : MonoBehaviour
 {
     float length, startPos;
     [SerializeField]
