@@ -8,7 +8,7 @@ public class AnimateWizard : MonoBehaviour
     Animator animator;
     Movement movement;
 
-    private WizardState state;
+    private WizardState.State state;
 
     void Awake()
     {   
@@ -25,19 +25,11 @@ public class AnimateWizard : MonoBehaviour
     void Update()
     {
         state = movement.state;
-        if (state == WizardState.IDLE){
+        if (state == WizardState.State.IDLE){
             animator.SetBool("isGrounded", true);
             animator.SetBool("isRunning", false);
 
-        } 
-        else if (state == WizardState.JUMP){
-           // animator.SetBool("isGrounded", false);
-           // animator.SetBool("isRunning", false);
-
-
-        } 
-        
-        else if (state == WizardState.RUNNING){
+        } else if (state == WizardState.State.RUNNING){
             animator.SetBool("isRunning", true);
         }
         

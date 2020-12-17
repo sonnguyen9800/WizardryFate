@@ -55,10 +55,10 @@ public class Movement : MonoBehaviour
     private void Jumping()
     {
         if (this.onGround == false ){return;}
-        if (Input.GetButton("Jump"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             mybody.AddForce(new Vector2(0, bounce), ForceMode2D.Impulse);
-            this.state = WizardState.State.JUMP;
+            
             this.onGround = false;
         }
     }

@@ -3,9 +3,10 @@ using UnityEngine;
 using System.Collections;
 
 
-public enum WizardState
-{
-    IDLE,
-    RUNNING,
-    JUMP
+public class WizardState : MonoBehaviour {
+    public enum State {
+        IDLE ,
+        RUNNING ,
+        JUMP 
+    }
 }
