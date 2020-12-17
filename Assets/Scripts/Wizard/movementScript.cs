@@ -57,20 +57,11 @@ public class movementScript : MonoBehaviour
         if (this.onGround == false ){return;}
         if (Input.GetKeyDown(KeyCode.Space))
         {
-<<<<<<< HEAD:Assets/Scripts/Wizard/movementScript.cs
-<<<<<<< HEAD:Assets/Scripts/Wizard/movementScript.cs
             mybody.AddForce(new Vector2(0, bounce), ForceMode2D.Impulse);
             
             this.onGround = false;
-=======
-=======
->>>>>>> parent of 45167bb... lighting done:Assets/Scripts/movementScript.cs
-            mybody.AddForce(new Vector2(0, 5f), ForceMode2D.Impulse);
-
->>>>>>> parent of 45167bb... lighting done:Assets/Scripts/movementScript.cs
         }
     }
-
     private void Running()
     {
         float control = Input.GetAxis("Horizontal");
