@@ -6,7 +6,6 @@ public class movementScript : MonoBehaviour
 {
     [SerializeField]
     float speed = 10f;
-    float control = 0f;
     float jumpCount = 0f;
 
 
@@ -27,7 +26,7 @@ public class movementScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Debug.Log(jumpCount);
     }
 
     // Update is called once per frame
