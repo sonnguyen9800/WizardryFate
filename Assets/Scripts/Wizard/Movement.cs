@@ -15,7 +15,7 @@ public class Movement : MonoBehaviour
     float bounce = 5.0f;
     Rigidbody2D mybody;
 
-    public WizardState.State state = WizardState.State.IDLE;
+    public WizardState state = WizardState.IDLE;
 
     private Camera main;
     void Awake()
@@ -86,11 +86,11 @@ public class Movement : MonoBehaviour
 
         if (control * speed == 0)
         {
-            state = WizardState.State.IDLE;
+            state = WizardState.IDLE;
         }
         else
         {
-            state = WizardState.State.RUNNING;
+            state = WizardState.RUNNING;
         }
     }
 
