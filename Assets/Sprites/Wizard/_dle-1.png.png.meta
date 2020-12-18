@@ -1,79 +1,46 @@
 fileFormatVersion: 2
-guid: 0a7a2ab5161370240bf4b0e042456b49
+guid: 035feb52ac15a1a4099b4b4b526c7700
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3403539836886751422
-    second: light melee_0
+      213: -3389042318606533719
+    second: _dle-1.png_0
   - first:
-      213: -7858182583949035902
-    second: light melee_1
+      213: -2456933163114473015
+    second: _dle-1.png_1
   - first:
-      213: -4813544491898657554
-    second: light melee_2
+      213: 8550041680990619053
+    second: _dle-1.png_2
   - first:
-      213: 1137014974872265889
-    second: light melee_3
+      213: -4086029721555673313
+    second: _dle-1.png_3
   - first:
-      213: -88370929443200280
-    second: light melee_4
+      213: -875891699665385995
+    second: _dle-1.png_4
   - first:
-      213: 7351466470156395802
-    second: light melee_5
+      213: 4681691098243730246
+    second: _dle-1.png_5
   - first:
-      213: -6573448793763266964
-    second: light melee_6
+      213: -3214621695044458894
+    second: _dle-1.png_6
   - first:
-      213: 5716123355767776393
-    second: light melee_7
+      213: -2738563545047150943
+    second: _dle-1.png_0
   - first:
-      213: -5503726636150690813
-    second: light melee_8
+      213: 8454280443673493301
+    second: _dle-1.png_1
   - first:
-      213: 1427193660069433711
-    second: light melee_9
+      213: 7930354763068183282
+    second: _dle-1.png_2
   - first:
-      213: -6806201994672375937
-    second: light melee_10
+      213: -8606687658064701720
+    second: _dle-1.png_3
   - first:
-      213: -9009216238391018490
-    second: light melee_11
+      213: -5174627286046378046
+    second: _dle-1.png_4
   - first:
-      213: 8860168515663134644
-    second: light melee_12
-  - first:
-      213: 5226393332095164557
-    second: light melee_13
-  - first:
-      213: 6734741665756223335
-    second: light melee_14
-  - first:
-      213: -143819366827565539
-    second: light melee_15
-  - first:
-      213: 7702906528368075216
-    second: light melee_16
-  - first:
-      213: -2698241450753859830
-    second: light melee_17
-  - first:
-      213: -1108531026452536600
-    second: light melee_18
-  - first:
-      213: -795943900911683879
-    second: light melee_19
-  - first:
-      213: -5473766095721000359
-    second: light melee_20
-  - first:
-      213: -8667987292418315413
-    second: light melee_21
-  - first:
-      213: 6879915159212585113
-    second: light melee_22
-  - first:
-      213: -3424187546386382144
-    second: light melee_23
+      213: 388446499220499414
+    second: _dle-1.png_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,7 +85,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -161,169 +128,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: light melee_3
+      name: _dle-1.png_0
       rect:
         serializedVersion: 2
-        x: 86
+        x: 82
         y: 49
-        width: 82
-        height: 79
-      alignment: 9
-      pivot: {x: 0.00690851, y: 0.028682467}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a4af81781d77cf00800000000000000
-      internalID: 1137014974872265889
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: light melee_4
-      rect:
-        serializedVersion: 2
-        x: 317
-        y: 49
-        width: 79
-        height: 84
-      alignment: 9
-      pivot: {x: 0.01434133, y: 0.023603257}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e2211e9b1b06cef0800000000000000
-      internalID: -88370929443200280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: light melee_5
-      rect:
-        serializedVersion: 2
-        x: 540
-        y: 49
-        width: 76
-        height: 87
-      alignment: 9
-      pivot: {x: 0.11395906, y: 0.023526466}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a15eddb0ec7a50660800000000000000
-      internalID: 7351466470156395802
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: light melee_6
-      rect:
-        serializedVersion: 2
-        x: 783
-        y: 49
-        width: 81
-        height: 84
-      alignment: 9
-      pivot: {x: 0.0034571518, y: 0.031306494}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c6e3582562b66c4a0800000000000000
-      internalID: -6573448793763266964
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: light melee_7
-      rect:
-        serializedVersion: 2
-        x: 1014
-        y: 49
-        width: 96
-        height: 88
-      alignment: 9
-      pivot: {x: 0.010232289, y: 0.02364306}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9842ad028efb35f40800000000000000
-      internalID: 5716123355767776393
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: light melee_8
-      rect:
-        serializedVersion: 2
-        x: 1245
-        y: 49
-        width: 130
+        width: 57
         height: 86
-      alignment: 9
-      pivot: {x: 0.005420861, y: 0.02573896}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30ce16fc8c5de93b0800000000000000
-      internalID: -5503726636150690813
+      spriteID: 1ae41ae17faaef9d0800000000000000
+      internalID: -2738563545047150943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: light melee_9
+      name: _dle-1.png_1
       rect:
         serializedVersion: 2
-        x: 1476
+        x: 313
         y: 49
-        width: 134
-        height: 96
-      alignment: 9
-      pivot: {x: 0.0032740352, y: 0.03088502}
+        width: 57
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f61d02e72196ec310800000000000000
-      internalID: 1427193660069433711
+      spriteID: 53fb0b45543a35570800000000000000
+      internalID: 8454280443673493301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: light melee_11
+      name: _dle-1.png_2
       rect:
         serializedVersion: 2
-        x: 1707
+        x: 544
         y: 49
-        width: 140
-        height: 105
-      alignment: 9
-      pivot: {x: 0.008377511, y: 0.025237093}
+        width: 57
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60cb5066095d8f280800000000000000
-      internalID: -9009216238391018490
+      spriteID: 2f29183e3a74e0e60800000000000000
+      internalID: 7930354763068183282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _dle-1.png_3
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 49
+        width: 57
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e69058dc27ee8880800000000000000
+      internalID: -8606687658064701720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _dle-1.png_4
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 49
+        width: 57
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c7792256e70038b0800000000000000
+      internalID: -5174627286046378046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _dle-1.png_5
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 49
+        width: 57
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db2840780a046500800000000000000
+      internalID: 388446499220499414
       vertices: []
       indices: 
       edges: []
