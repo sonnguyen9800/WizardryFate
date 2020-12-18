@@ -4,33 +4,29 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [Header("Attributes")]
     [SerializeField]
-    private float speed = 10f;
+    float speed = 10f;
+    float jumpCount = 0f;
+
+
+    bool onGround = true;
+
     [SerializeField]
-    private float acceleration = 0.1f;
+    float bounce = 5.0f;
+    Rigidbody2D mybody;
 
-
-    [SerializeField]
-    private float jumpForce = 1.0f;
-
-
-
-    private Rigidbody2D rb;
-    private CircleCollider2D myCircleCollider2d;
-    public WizardState state = WizardState.IDLE;
+    public WizardState.State state = WizardState.State.IDLE;
 
     private Camera main;
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        myCircleCollider2d = GetComponent<CircleCollider2D>();
+        mybody = GetComponent<Rigidbody2D>();
         main = Camera.main;
     }
     // Start is called before the first frame update
     void Start()
     {
-
+        Debug.Log(jumpCount);
     }
 
     // Update is called once per frame
@@ -41,56 +37,61 @@ public class Movement : MonoBehaviour
         FlipOnMouse();
     }
 
+    private void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.tag != "Ground")
+         {
+             //Debug.Log("On THE SKY");
+             this.onGround = true;
+         }
+    }
+
     private void FlipOnMouse()
     {
         Vector3 mousePosition = main.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 10));
-        transform.rotation = mousePosition.x > transform.position.x ? Quaternion.Euler(0, 0, 0) : Quaternion.Euler(0, 180, 0);
+        transform.localScale = mousePosition.x > transform.position.x ? new Vector3(1,1,1) : new Vector3(-1,1,1);
+        //print(mousePosition);   
     }
 
     private void Jumping()
     {
-        if (!myCircleCollider2d.IsTouchingLayers(LayerMask.GetMask("Ground")))
-        {
-            // rb.velocity = new Vector2(rb.velocity.x, 0);
-            return;
-        }
+        if (this.onGround == false ){return;}
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-            this.state = WizardState.JUMP;
+            mybody.AddForce(new Vector2(0, bounce), ForceMode2D.Impulse);
+            
+            this.onGround = false;
         }
     }
-
     private void Running()
     {
         float control = Input.GetAxis("Horizontal");
         if (control != 0)
         {
             //acceleration
-            speed += acceleration;
+            speed += 0.1f;
         }
         else
         {
             // deceleration
-            speed -= acceleration;
+            speed -= 0.1f;
             if (speed < 0)
             {
                 speed = 0;
             }
         }
         speed = Mathf.Clamp(speed, -2.5f, 2.5f);
-        Vector2 playerVector = new Vector2(control * speed, rb.velocity.y);
-        rb.velocity = playerVector;
+        Vector2 playerVector = new Vector2(control * speed, mybody.velocity.y);
+        mybody.velocity = playerVector;
 
 
         if (control * speed == 0)
         {
-            state = WizardState.IDLE;
-            return;
+            state = WizardState.State.IDLE;
         }
-
-        state = WizardState.RUNNING;
-
+        else
+        {
+            state = WizardState.State.RUNNING;
+        }
     }
 
 }
