@@ -1,43 +1,46 @@
 fileFormatVersion: 2
-guid: 086637e53cb538e45a4b57227b01ef7f
+guid: 035feb52ac15a1a4099b4b4b526c7700
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3786416459866339964
-    second: _dle_0
+      213: -3389042318606533719
+    second: _dle-1.png_0
   - first:
-      213: -4122024756644233509
-    second: _dle_1
+      213: -2456933163114473015
+    second: _dle-1.png_1
   - first:
-      213: 1897853714275452699
-    second: _dle_2
+      213: 8550041680990619053
+    second: _dle-1.png_2
   - first:
-      213: -8239924871208350231
-    second: _dle_3
+      213: -4086029721555673313
+    second: _dle-1.png_3
   - first:
-      213: -416009173039599042
-    second: _dle_4
+      213: -875891699665385995
+    second: _dle-1.png_4
   - first:
-      213: -7545834640309996283
-    second: _dle_5
+      213: 4681691098243730246
+    second: _dle-1.png_5
   - first:
-      213: 2788915379875674739
-    second: _dle_0
+      213: -3214621695044458894
+    second: _dle-1.png_6
   - first:
-      213: -9154532356040676962
-    second: _dle_1
+      213: -2738563545047150943
+    second: _dle-1.png_0
   - first:
-      213: 605287706038042870
-    second: _dle_2
+      213: 8454280443673493301
+    second: _dle-1.png_1
   - first:
-      213: 7879209698103496214
-    second: _dle_3
+      213: 7930354763068183282
+    second: _dle-1.png_2
   - first:
-      213: 1688336801975996762
-    second: _dle_4
+      213: -8606687658064701720
+    second: _dle-1.png_3
   - first:
-      213: 4707574475295528679
-    second: _dle_5
+      213: -5174627286046378046
+    second: _dle-1.png_4
+  - first:
+      213: 388446499220499414
+    second: _dle-1.png_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,23 +124,11 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: _dle_0
+      name: _dle-1.png_0
       rect:
         serializedVersion: 2
         x: 82
@@ -151,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37afc1ef2c734b620800000000000000
-      internalID: 2788915379875674739
+      spriteID: 1ae41ae17faaef9d0800000000000000
+      internalID: -2738563545047150943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _dle_1
+      name: _dle-1.png_1
       rect:
         serializedVersion: 2
         x: 313
@@ -172,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e992061335194f080800000000000000
-      internalID: -9154532356040676962
+      spriteID: 53fb0b45543a35570800000000000000
+      internalID: 8454280443673493301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _dle_2
+      name: _dle-1.png_2
       rect:
         serializedVersion: 2
         x: 544
@@ -193,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f00f4136f9666800800000000000000
-      internalID: 605287706038042870
+      spriteID: 2f29183e3a74e0e60800000000000000
+      internalID: 7930354763068183282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _dle_3
+      name: _dle-1.png_3
       rect:
         serializedVersion: 2
         x: 775
@@ -214,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61e854e7973985d60800000000000000
-      internalID: 7879209698103496214
+      spriteID: 8e69058dc27ee8880800000000000000
+      internalID: -8606687658064701720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _dle_4
+      name: _dle-1.png_4
       rect:
         serializedVersion: 2
         x: 1006
@@ -235,14 +226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a519ffe406d2e6710800000000000000
-      internalID: 1688336801975996762
+      spriteID: 2c7792256e70038b0800000000000000
+      internalID: -5174627286046378046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _dle_5
+      name: _dle-1.png_5
       rect:
         serializedVersion: 2
         x: 1237
@@ -256,8 +247,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e69fa12b0aa45140800000000000000
-      internalID: 4707574475295528679
+      spriteID: 6db2840780a046500800000000000000
+      internalID: 388446499220499414
       vertices: []
       indices: 
       edges: []
@@ -271,9 +262,7 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures:
-    - texture: {fileID: 2800000, guid: 035feb52ac15a1a4099b4b4b526c7700, type: 3}
-      name: Emission
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
