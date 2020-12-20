@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,12 +12,13 @@ public class Controller2D : MonoBehaviour
     private const float skinWidth = 0.015f;
     private RaycastOrigin raycastOrigin;
 
+    public CollisionInfo collisionInfo;
+
 
     [SerializeField][Range(4,16)] private int horizontalRayCount = 4;
     [SerializeField][Range(4,16)] private int verticalRayCount = 4;
 
-    float horitonalSpaceRay;
-    float verticalSpaceRay;
+    float horitonalSpaceRay; float verticalSpaceRay;
     [SerializeField] private LayerMask collisionMask;
 
     private void Awake() {
@@ -32,12 +33,6 @@ public class Controller2D : MonoBehaviour
     }
 
     private void Update() {
-    //  UpdateRaycastOrigin();
-    //  CalculateRaySpaceing();
-        
-        // for (int i = 0; i < verticalRayCount; i ++) {
-        //         Debug.DrawRay(raycastOrigin.bottomLeft + Vector2.right * verticalSpaceRay * i, Vector2.up * -2,Color.red);
-        // }
 
     }
 
@@ -46,8 +41,8 @@ public class Controller2D : MonoBehaviour
     public void Move(Vector2 velocity){
         UpdateRaycastOrigin ();
 
+        collisionInfo.Reset();
 
-        // Check 
 		if (velocity.x != 0) {
 			HorizontalCollision (ref velocity);
 		}
@@ -73,6 +68,10 @@ public class Controller2D : MonoBehaviour
                 //Debug.Log("COLLIDE");
 				velocity.y = (hit.distance - skinWidth) * directionY;
 				rayLength = hit.distance;
+
+
+                collisionInfo.above = directionY == 1;
+                collisionInfo.below = directionY == -1;
 			}
         }
 
@@ -93,6 +92,11 @@ public class Controller2D : MonoBehaviour
                 if (hit) {
                     velocity.x = (hit.distance - skinWidth) * directionX;
                     rayLength = hit.distance;
+
+
+                    collisionInfo.left = directionX == -1;
+                    collisionInfo.right = directionX == 1;
+
                 }
             }
         }
@@ -129,6 +133,15 @@ public class Controller2D : MonoBehaviour
 
 
 
-    // Update is called once per frame
+    public struct CollisionInfo {
+        public bool above, below;
+        public bool left, right;
+
+
+        public void Reset() {
+            above = below = left = right = false;
+        }
+    }
 
 }
+   
