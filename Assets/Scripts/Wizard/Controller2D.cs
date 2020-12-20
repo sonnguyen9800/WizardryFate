@@ -49,7 +49,7 @@ public class Controller2D : MonoBehaviour
 		if (velocity.y != 0) {
 			VerticalCollision(ref velocity);
 		}
-
+        //Debug.Log(velocity);
 		transform.Translate (velocity);
     }
 

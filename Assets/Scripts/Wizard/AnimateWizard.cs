@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class AnimateWizard : MonoBehaviour
 {
+
+    public enum AnimateState {
+        IDLE,
+        RUNNING,
+        JUMP
+    }
+
+
+
     // Start is called before the first frame update
     Animator animator;
-    Movement movement;
 
-    private WizardState state;
+    public AnimateState state = AnimateState.IDLE;
 
     void Awake()
     {   
         animator = gameObject.GetComponent<Animator>();
-        movement = gameObject.GetComponent<Movement>();
     }
     
     void Start()
@@ -24,20 +31,19 @@ public class AnimateWizard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        state = movement.state;
-        if (state == WizardState.IDLE){
+        
+        if (state ==  AnimateState.IDLE){
             animator.SetBool("isGrounded", true);
             animator.SetBool("isRunning", false);
 
         } 
-        else if (state == WizardState.JUMP){
-           // animator.SetBool("isGrounded", false);
-           // animator.SetBool("isRunning", false);
-
-
+        else if (state == AnimateState.JUMP){
+            // animator.SetBool("isGrounded", false);
+            // animator.SetBool("isRunning", false);
         } 
         
-        else if (state == WizardState.RUNNING){
+        else if (state == AnimateState.RUNNING){
+            animator.SetBool("isGrounded", true);
             animator.SetBool("isRunning", true);
         }
         
