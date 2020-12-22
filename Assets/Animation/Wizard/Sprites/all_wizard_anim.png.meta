@@ -1,0 +1,1266 @@
+fileFormatVersion: 2
+guid: cf0001c4646b0e64fa40e27eea11055d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5069053013194307764
+    second: all_wizard_anim_0
+  - first:
+      213: -8888691794419174678
+    second: all_wizard_anim_1
+  - first:
+      213: -570952053690293912
+    second: all_wizard_anim_2
+  - first:
+      213: 1656314621035264661
+    second: all_wizard_anim_3
+  - first:
+      213: -5671961188922912430
+    second: all_wizard_anim_4
+  - first:
+      213: -2844525979937394781
+    second: all_wizard_anim_5
+  - first:
+      213: -2809621568779990833
+    second: all_wizard_anim_6
+  - first:
+      213: 337099870185761249
+    second: all_wizard_anim_7
+  - first:
+      213: 4039912086205317656
+    second: all_wizard_anim_8
+  - first:
+      213: 8981139879637182869
+    second: all_wizard_anim_9
+  - first:
+      213: -6290934744463786457
+    second: all_wizard_anim_10
+  - first:
+      213: -3121596208343303160
+    second: all_wizard_anim_11
+  - first:
+      213: 3019199186186477219
+    second: all_wizard_anim_12
+  - first:
+      213: -2832363723194181267
+    second: all_wizard_anim_13
+  - first:
+      213: 2533224496823208542
+    second: all_wizard_anim_14
+  - first:
+      213: 2770030914380229537
+    second: all_wizard_anim_15
+  - first:
+      213: -8291057280532134668
+    second: all_wizard_anim_16
+  - first:
+      213: -6889760620737052643
+    second: all_wizard_anim_17
+  - first:
+      213: -8323567558200960259
+    second: all_wizard_anim_18
+  - first:
+      213: -7805105020747125581
+    second: all_wizard_anim_19
+  - first:
+      213: -2909558499746376967
+    second: all_wizard_anim_20
+  - first:
+      213: 511494744950034661
+    second: all_wizard_anim_21
+  - first:
+      213: -7424322495337135539
+    second: all_wizard_anim_22
+  - first:
+      213: -13105784835869246
+    second: all_wizard_anim_23
+  - first:
+      213: -8590883059511673642
+    second: all_wizard_anim_24
+  - first:
+      213: -337988499813310635
+    second: all_wizard_anim_25
+  - first:
+      213: -1734618965198427157
+    second: all_wizard_anim_26
+  - first:
+      213: -3007714306974929279
+    second: all_wizard_anim_27
+  - first:
+      213: 8400438685173570378
+    second: all_wizard_anim_28
+  - first:
+      213: 3308898736788895135
+    second: all_wizard_anim_29
+  - first:
+      213: -3522355522454577172
+    second: all_wizard_anim_30
+  - first:
+      213: 6305481706470751142
+    second: all_wizard_anim_31
+  - first:
+      213: -28729957152933033
+    second: all_wizard_anim_32
+  - first:
+      213: 8707444120122687327
+    second: all_wizard_anim_33
+  - first:
+      213: 3822727960813325670
+    second: all_wizard_anim_34
+  - first:
+      213: 6944345526734414419
+    second: all_wizard_anim_35
+  - first:
+      213: 5055465353786348004
+    second: all_wizard_anim_36
+  - first:
+      213: -4753787547061259484
+    second: all_wizard_anim_37
+  - first:
+      213: -7366213947795317588
+    second: all_wizard_anim_38
+  - first:
+      213: -4623423034344911771
+    second: all_wizard_anim_39
+  - first:
+      213: -4089873879916332719
+    second: all_wizard_anim_40
+  - first:
+      213: -3832189778176276089
+    second: all_wizard_anim_41
+  - first:
+      213: 5854343837449385296
+    second: all_wizard_anim_42
+  - first:
+      213: 7206143552713062146
+    second: all_wizard_anim_43
+  - first:
+      213: 2130051812509676615
+    second: all_wizard_anim_44
+  - first:
+      213: -1917686120609921319
+    second: all_wizard_anim_45
+  - first:
+      213: -7906000569618400313
+    second: all_wizard_anim_46
+  - first:
+      213: -8250992287195690896
+    second: all_wizard_anim_47
+  - first:
+      213: 7393565472455745202
+    second: all_wizard_anim_48
+  - first:
+      213: 2296921258487331969
+    second: all_wizard_anim_49
+  - first:
+      213: -6498567804377623796
+    second: all_wizard_anim_50
+  - first:
+      213: -7956699018719106864
+    second: all_wizard_anim_51
+  - first:
+      213: 7432383825587715493
+    second: all_wizard_anim_52
+  - first:
+      213: 2338815229202970820
+    second: all_wizard_anim_53
+  - first:
+      213: -8644275219188401039
+    second: all_wizard_anim_54
+  - first:
+      213: 5739182740898766695
+    second: all_wizard_anim_55
+  - first:
+      213: -8517583466193097018
+    second: all_wizard_anim_56
+  - first:
+      213: 4322028758180713587
+    second: all_wizard_anim_57
+  - first:
+      213: -8875653978643343558
+    second: all_wizard_anim_58
+  - first:
+      213: -2104478389052615771
+    second: all_wizard_anim_59
+  - first:
+      213: 5675648591417673685
+    second: all_wizard_anim_60
+  - first:
+      213: 3344957152244474105
+    second: all_wizard_anim_61
+  - first:
+      213: -5633643782044168190
+    second: all_wizard_anim_62
+  - first:
+      213: 5534602186129192338
+    second: all_wizard_anim_63
+  - first:
+      213: -7698472589635112537
+    second: all_wizard_anim_64
+  - first:
+      213: -4605101581889775985
+    second: all_wizard_anim_65
+  - first:
+      213: 8706608237025834711
+    second: all_wizard_anim_66
+  - first:
+      213: -4667705323049388005
+    second: all_wizard_anim_67
+  - first:
+      213: -4300773822419752609
+    second: all_wizard_anim_68
+  - first:
+      213: 3794173206824801458
+    second: all_wizard_anim_69
+  - first:
+      213: 8339171697901437858
+    second: all_wizard_anim_70
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: all_wizard_anim_0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 1217
+        width: 75
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b8f117cbd4e85640800000000000000
+      internalID: 5069053013194307764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_1
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 1217
+        width: 75
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae237b348e505a480800000000000000
+      internalID: -8888691794419174678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_2
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 1217
+        width: 75
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 861a208d1229318f0800000000000000
+      internalID: -570952053690293912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_3
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 1217
+        width: 93
+        height: 136
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ab71f4f596cf610800000000000000
+      internalID: 1656314621035264661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_4
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 1217
+        width: 103
+        height: 103
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251927a99552941b0800000000000000
+      internalID: -5671961188922912430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_5
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 1217
+        width: 108
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af267331b63688d0800000000000000
+      internalID: -2844525979937394781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_6
+      rect:
+        serializedVersion: 2
+        x: 1476
+        y: 1217
+        width: 115
+        height: 115
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8c797b1183209d0800000000000000
+      internalID: -2809621568779990833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_12
+      rect:
+        serializedVersion: 2
+        x: 1707
+        y: 1217
+        width: 126
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ae1bc6d9a956e920800000000000000
+      internalID: 3019199186186477219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_18
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 1023
+        width: 82
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa577de76fbc7c80800000000000000
+      internalID: -8323567558200960259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_19
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1023
+        width: 79
+        height: 84
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bcefbb3652bea390800000000000000
+      internalID: -7805105020747125581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_20
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 1023
+        width: 76
+        height: 87
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f21661c5fb2f97d0800000000000000
+      internalID: -2909558499746376967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_21
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 1023
+        width: 81
+        height: 84
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e0d931b2c1391700800000000000000
+      internalID: 511494744950034661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_22
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 1023
+        width: 96
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d420d77b60287f890800000000000000
+      internalID: -7424322495337135539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_23
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 1023
+        width: 130
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c5fa5eab5071dff0800000000000000
+      internalID: -13105784835869246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_24
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 1023
+        width: 133
+        height: 96
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dcb2e2bf5d07c880800000000000000
+      internalID: -8590883059511673642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_26
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 1023
+        width: 141
+        height: 104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb21b6dd356de7e0800000000000000
+      internalID: -1734618965198427157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_39
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 830
+        width: 75
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c43870f3d46dfb0800000000000000
+      internalID: -4623423034344911771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_40
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 829
+        width: 70
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15930731069dd37c0800000000000000
+      internalID: -4089873879916332719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_41
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 827
+        width: 59
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7898be753b351dac0800000000000000
+      internalID: -3832189778176276089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_42
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 831
+        width: 71
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 055fa28d3bece3150800000000000000
+      internalID: 5854343837449385296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_43
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 834
+        width: 75
+        height: 72
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 207fee3a16d510460800000000000000
+      internalID: 7206143552713062146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_44
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 829
+        width: 63
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 744f0d586d67f8d10800000000000000
+      internalID: 2130051812509676615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_45
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 829
+        width: 55
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6495632a20365e0800000000000000
+      internalID: -1917686120609921319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_46
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 831
+        width: 71
+        height: 77
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cbfbd5ae5e384290800000000000000
+      internalID: -7906000569618400313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_47
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 635
+        width: 65
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 078863dfa369e7d80800000000000000
+      internalID: -8250992287195690896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_49
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 635
+        width: 65
+        height: 96
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c3e2907bd40ef10800000000000000
+      internalID: 2296921258487331969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_51
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 635
+        width: 84
+        height: 99
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d86c8c1660249190800000000000000
+      internalID: -7956699018719106864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_52
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 635
+        width: 102
+        height: 101
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5adb38ef5b1252760800000000000000
+      internalID: 7432383825587715493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_54
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 635
+        width: 88
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c309bcc7d590880800000000000000
+      internalID: -8644275219188401039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_55
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 635
+        width: 84
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76fd25c9b4ca5af40800000000000000
+      internalID: 5739182740898766695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_56
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 635
+        width: 88
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cee1d037f67bc980800000000000000
+      internalID: -8517583466193097018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_57
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 441
+        width: 57
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3745268a14eeafb30800000000000000
+      internalID: 4322028758180713587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_58
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 441
+        width: 57
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a375ead4bb753d480800000000000000
+      internalID: -8875653978643343558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_59
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 441
+        width: 57
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3580f1e046bc2e0800000000000000
+      internalID: -2104478389052615771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_60
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 441
+        width: 57
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d78561b254f3ce40800000000000000
+      internalID: 5675648591417673685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_61
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 441
+        width: 57
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f02f60ceccab6e20800000000000000
+      internalID: 3344957152244474105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_62
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 441
+        width: 57
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2005b2c14d641d1b0800000000000000
+      internalID: -5633643782044168190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_63
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 247
+        width: 54
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 295b45d5d5bdecc40800000000000000
+      internalID: 5534602186129192338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_64
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 247
+        width: 75
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a1b7bdc7f7892590800000000000000
+      internalID: -7698472589635112537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_65
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 247
+        width: 75
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f86ded892846710c0800000000000000
+      internalID: -4605101581889775985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_66
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 247
+        width: 75
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d63a6edf0614d870800000000000000
+      internalID: 8706608237025834711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_67
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 259
+        width: 59
+        height: 100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18f07f3dbaf83fb0800000000000000
+      internalID: -4667705323049388005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_68
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 259
+        width: 59
+        height: 100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f592f57bef49054c0800000000000000
+      internalID: -4300773822419752609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_69
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 55
+        width: 66
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4d811ed6c97a430800000000000000
+      internalID: 3794173206824801458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all_wizard_anim_70
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 55
+        width: 66
+        height: 87
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a30866f970bab370800000000000000
+      internalID: 8339171697901437858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 8d5450a7f421b9a449b9864a8290d859, type: 3}
+      name: Emission
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
