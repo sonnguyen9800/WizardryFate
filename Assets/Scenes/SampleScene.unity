@@ -1066,7 +1066,7 @@ GameObject:
   - component: {fileID: 1126354387}
   - component: {fileID: 1126354386}
   - component: {fileID: 1126354388}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7387,7 +7387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1145604743}
   - component: {fileID: 1145604742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8229,7 +8229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
+  m_RenderShadows: 0
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
@@ -8573,11 +8573,12 @@ GameObject:
   - component: {fileID: 1676668275}
   - component: {fileID: 1676668274}
   - component: {fileID: 1676668273}
+  - component: {fileID: 1676668269}
   - component: {fileID: 1676668272}
   - component: {fileID: 1676668271}
   - component: {fileID: 1676668270}
-  - component: {fileID: 1676668269}
   - component: {fileID: 1676668268}
+  - component: {fileID: 1676668276}
   m_Layer: 0
   m_Name: Wizard
   m_TagString: Untagged
@@ -8629,9 +8630,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.14, y: 0.2}
+  m_Offset: {x: -0.05, y: 0.36}
   serializedVersion: 2
-  m_Radius: 0.20174868
+  m_Radius: 0.35
 --- !u!61 &1676668271
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8645,18 +8646,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.17, y: 0.56}
+  m_Offset: {x: -0.04, y: 0.78}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.57, y: 0.86}
+    oldSize: {x: 0.890625, y: 1.34375}
     newSize: {x: 0.57, y: 0.86}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.47, y: 0.65592766}
+  m_Size: {x: 0.7, y: 1}
   m_EdgeRadius: 0
 --- !u!50 &1676668272
 Rigidbody2D:
@@ -8713,7 +8714,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: a03aa921bf0040c459f4ecf7916bd0d8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8760,6 +8761,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1676668276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676668267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f0762b55501185499026c394cf67202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalRayCount: 4
+  verticalRayCount: 4
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1718354325
 GameObject:
   m_ObjectHideFlags: 0
@@ -9410,8 +9428,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 1.41
-  m_PointLightOuterRadius: 10.41
+  m_PointLightInnerRadius: 0.47
+  m_PointLightOuterRadius: 11.82
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -9432,7 +9450,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1903123008}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 0.7, z: 0}
+  m_LocalPosition: {x: -0.4, y: 1.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1676668275}
