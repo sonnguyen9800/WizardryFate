@@ -17,7 +17,7 @@ TagManager:
   - Ground
   - Background
   - Player
-  - 
+  - Projectile
   - 
   - 
   - 
@@ -51,6 +51,9 @@ TagManager:
   - name: Characters
     uniqueID: 240894965
     locked: 0
-  - name: Effect
+  - name: Projectile
     uniqueID: 214306575
+    locked: 0
+  - name: Effect
+    uniqueID: 232217899
     locked: 0

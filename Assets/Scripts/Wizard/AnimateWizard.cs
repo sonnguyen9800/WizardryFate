@@ -8,7 +8,8 @@ public class AnimateWizard : MonoBehaviour
     public enum AnimateState {
         IDLE,
         RUNNING,
-        JUMP
+        JUMP,
+        LIGHT_ATTACK
     }
 
 
@@ -35,6 +36,7 @@ public class AnimateWizard : MonoBehaviour
         if (state ==  AnimateState.IDLE){
             animator.SetBool("isGrounded", true);
             animator.SetBool("isRunning", false);
+            animator.SetBool("lightAttack", false);
 
         } 
         else if (state == AnimateState.JUMP){
@@ -45,7 +47,12 @@ public class AnimateWizard : MonoBehaviour
         else if (state == AnimateState.RUNNING){
             animator.SetBool("isGrounded", true);
             animator.SetBool("isRunning", true);
+            animator.SetBool("lightAttack", false);
+
         }
         
+        else if (state == AnimateState.LIGHT_ATTACK){
+            animator.SetBool("lightAttack", true);
+        }
     }
 }
