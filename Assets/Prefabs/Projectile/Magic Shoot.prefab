@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2314224479369766755}
   - component: {fileID: 2314224479369766752}
   - component: {fileID: 7378542049700784903}
+  - component: {fileID: 5051716557431170648}
   m_Layer: 0
   m_Name: Magic Shoot
   m_TagString: Untagged
@@ -115,4 +116,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bdd6871a290fec4bb3788f9ba7c7853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  step: 0.204
+  step: 0.3
+--- !u!114 &5051716557431170648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2314224479369766753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94da85c51abf13342a5a3620ee1901b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyedVFX: {fileID: 1043978614733368, guid: 64b6b675aa49b16459f7ce363e98b4f8, type: 3}
