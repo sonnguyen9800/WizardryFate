@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IDamageable : MonoBehaviour
+public class Damageable : MonoBehaviour
 {
     // Health of the instance
     [Header("Set max HP")]
     public float maxHP;
     
-    private float currentHP;
+    public float currentHP;
 
 
     [SerializeField]
