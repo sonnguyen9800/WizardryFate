@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent (typeof (Controller2D))]
+
+
 [RequireComponent (typeof (AnimateWizard))]
 public class Wizard : MonoBehaviour
 {
+    [Header("Character Type")]
+    public CharacterType type = CharacterType.Player;
+
     [Header("Movement Speed")]
     [SerializeField][Range(0,10)] int moveSpeed;
     [SerializeField][Range(0,1)] float accelerationTimeGround = 0.1f;

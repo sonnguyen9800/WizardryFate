@@ -1,0 +1,307 @@
+fileFormatVersion: 2
+guid: 65fbc931ea832924192ff8e4acdb5bb4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2013565662355475531
+    second: _ttack3_0
+  - first:
+      213: -3967148238706529188
+    second: _ttack3_1
+  - first:
+      213: 4431137996006357514
+    second: _ttack3_2
+  - first:
+      213: -4545254929378273101
+    second: _ttack3_3
+  - first:
+      213: -2863833376142326203
+    second: _ttack3_4
+  - first:
+      213: 1337669865470022695
+    second: _ttack3_5
+  - first:
+      213: -2865324480034459950
+    second: _ttack3_0
+  - first:
+      213: 2535382081921670548
+    second: _ttack3_1
+  - first:
+      213: -9033874650989896253
+    second: _ttack3_2
+  - first:
+      213: -2902291253173992064
+    second: _ttack3_3
+  - first:
+      213: -3315483242312670928
+    second: _ttack3_4
+  - first:
+      213: -4226708141030746988
+    second: _ttack3_5
+  - first:
+      213: 537953374786594330
+    second: _ttack3_6
+  - first:
+      213: 3200028105452498684
+    second: _ttack3_7
+  - first:
+      213: -6291614597563275510
+    second: _ttack3_8
+  - first:
+      213: 6833398130456001133
+    second: _ttack3_9
+  - first:
+      213: 3612580941748756869
+    second: _ttack3_10
+  - first:
+      213: 529249867765656694
+    second: _ttack3_11
+  - first:
+      213: 1362770883885004206
+    second: _ttack3_12
+  - first:
+      213: 1057279742284875699
+    second: _ttack3_13
+  - first:
+      213: -2896015356594734564
+    second: _ttack3_14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: _ttack3_0
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 58
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dea05901925c38d0800000000000000
+      internalID: -2865324480034459950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _ttack3_1
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 58
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49dd4da029c7f2320800000000000000
+      internalID: 2535382081921670548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _ttack3_2
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 58
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd57525eda31a280800000000000000
+      internalID: -9033874650989896253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _ttack3_3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 58
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08547d37b7df8b7d0800000000000000
+      internalID: -2902291253173992064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _ttack3_4
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 58
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 031613bae890df1d0800000000000000
+      internalID: -3315483242312670928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _ttack3_5
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 59
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4945c9cf657b755c0800000000000000
+      internalID: -4226708141030746988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
