@@ -51,6 +51,9 @@ TagManager:
   - name: Characters
     uniqueID: 240894965
     locked: 0
+  - name: Projectile
+    uniqueID: 3523562731
+    locked: 0
   - name: Effect
     uniqueID: 214306575
     locked: 0

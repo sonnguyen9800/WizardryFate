@@ -8,7 +8,8 @@ public class AnimateWizard : MonoBehaviour
     public enum AnimateState {
         IDLE,
         RUNNING,
-        JUMP
+        JUMP,
+        LIGHT_ATTACK
     }
 
 
