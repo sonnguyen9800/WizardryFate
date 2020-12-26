@@ -13,7 +13,10 @@ public class FlyingEye : MonoBehaviour
 {
     // Start is called before the first frame update
     private Damageable damageable;
+
+
     public CharacterType type = CharacterType.MONSTER;
+     
     private void Awake() {
         damageable = GetComponent<Damageable>();
     }
@@ -29,5 +32,15 @@ public class FlyingEye : MonoBehaviour
         
     }
 
+    private void FixedUpdate() {
+        
+    }
+
+    private void OnDamaged(){
+        
+    }
+
+    
+ 
 
 }

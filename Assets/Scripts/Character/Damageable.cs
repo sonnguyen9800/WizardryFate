@@ -21,9 +21,10 @@ public class Damageable : MonoBehaviour
     public Action OnHealthChanged { get; set; }
     public Action<float> OnDamageTaken = delegate { };
     public Action<float> OnHeal = delegate { };
+
     public Action OnDead = delegate { };
     private bool isAlive = true;
-
+    public bool isInvicible = false;
 
     // Start is called before the first frame update
     private void Start()
@@ -36,10 +37,14 @@ public class Damageable : MonoBehaviour
     }
     public void TakeDamage(float amount)
     {
-        currentHP -= amount;
-        ClampHP();
+        if (!isInvicible){
+            currentHP -= amount;
+            ClampHP();
+            OnHealthChanged?.Invoke();
+        }
+
         OnDamageTaken?.Invoke(amount);
-        OnHealthChanged?.Invoke();
+
     }
     public void Heal(float amount)
     {
