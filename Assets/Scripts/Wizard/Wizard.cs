@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent (typeof (Controller2D))]
-
-
 [RequireComponent (typeof (AnimateWizard))]
+
 public class Wizard : MonoBehaviour
 {
     [Header("Character Type")]

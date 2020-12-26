@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2314224479369766752}
   - component: {fileID: 7378542049700784903}
   - component: {fileID: 5051716557431170648}
+  - component: {fileID: 4051596896508168355}
+  - component: {fileID: 4092466035319214286}
   m_Layer: 0
   m_Name: Magic Shoot
   m_TagString: Untagged
@@ -130,3 +132,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVFX: {fileID: 1043978614733368, guid: 64b6b675aa49b16459f7ce363e98b4f8, type: 3}
+--- !u!58 &4051596896508168355
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2314224479369766753}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0016036034, y: -0.009622097}
+  serializedVersion: 2
+  m_Radius: 0.14840508
+--- !u!114 &4092466035319214286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2314224479369766753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083a050f75dcf7547a5c20a36701c625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRadius: 0.148
+  damage: 10
+  damageableLayer:
+    serializedVersion: 2
+    m_Bits: 2048
+  hitBoxPosition: {fileID: 2314224479369766754}

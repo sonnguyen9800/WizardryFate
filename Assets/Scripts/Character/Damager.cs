@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(CircleCollider2D))]
 public class Damager : MonoBehaviour
 {
-    private BoxCollider2D boxCollider2D;
+    private CircleCollider2D circleCollider2D;
 
+    [SerializeField][Range(0.01f, 2f)] private float attackRadius;
+    [SerializeField] private float damage;
+    [SerializeField] LayerMask damageableLayer;
+    [SerializeField] Transform hitBoxPosition;
     private void Awake() {
-        boxCollider2D = GetComponent<BoxCollider2D>();
+        circleCollider2D = GetComponent<CircleCollider2D>();
     }
     // Start is called before the first frame update
     void Start()
@@ -16,11 +20,28 @@ public class Damager : MonoBehaviour
         
     }
 
+    private void CheckAttackHitBox(){
+        Collider2D[] objectCollided = Physics2D.OverlapCircleAll(hitBoxPosition.position, attackRadius, damageableLayer );
+        foreach (Collider2D collider in objectCollided){
+            Damageable damageable = collider.transform.GetComponentInParent<Damageable>();
+            damageable.TakeDamage(damage);
+            Destroy(gameObject);
+        }
+    }
 
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void FixedUpdate() {
+        CheckAttackHitBox();
+    }
+
+    private void OnDrawGizmos() {
+        Gizmos.DrawWireSphere(transform.position, attackRadius);
+
     }
 }

@@ -20,7 +20,7 @@ public class Attack : MonoBehaviour
         if (firepoint == null){
             Debug.Log("No firepoint");
         }else {
-            Debug.Log("Find the firepoint");
+            //Debug.Log("Find the firepoint");
         }
         
         animateWizard = GetComponent<AnimateWizard>();

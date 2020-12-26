@@ -258,7 +258,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 1676668275}
   m_Lens:
-    FieldOfView: 50
+    FieldOfView: 40
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -502,7 +502,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec4d37464aeec046b59e0294827376f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   parallaxEffect: 2
 --- !u!1 &564075125
 GameObject:
@@ -631,8 +630,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4816986638695744444, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
   m_PrefabInstance: {fileID: 4816986639405785187}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &920052704
-BoxCollider2D:
+--- !u!70 &920052704
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -644,32 +643,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.35, y: 0.32}
-    newSize: {x: 0.25, y: 0.23}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.35, y: 0.32}
-  m_EdgeRadius: 0
---- !u!114 &920052705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 920052703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52744ef6f3ced5848a5e0ab552c7f4b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 1
+  m_Offset: {x: -0.043436795, y: -0.02540636}
+  m_Size: {x: 0.26312643, y: 0.26312733}
+  m_Direction: 0
 --- !u!1 &1028567112
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,7 +973,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec4d37464aeec046b59e0294827376f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   parallaxEffect: 0.2
 --- !u!1 &1105519977
 GameObject:
@@ -1096,7 +1071,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec4d37464aeec046b59e0294827376f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   parallaxEffect: 0.2
 --- !u!1 &1126354384
 GameObject:
@@ -7726,7 +7700,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec4d37464aeec046b59e0294827376f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   parallaxEffect: 0.1
 --- !u!1 &1244641418
 GameObject:
@@ -8229,7 +8202,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 50
+  field of view: 40
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -8423,7 +8396,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec4d37464aeec046b59e0294827376f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   parallaxEffect: 0.1
 --- !u!1 &1508310794
 GameObject:
@@ -8604,7 +8576,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec4d37464aeec046b59e0294827376f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   parallaxEffect: 0
 --- !u!4 &1676668275 stripped
 Transform:
@@ -9314,7 +9285,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec4d37464aeec046b59e0294827376f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   parallaxEffect: 0
 --- !u!1 &1958614816
 GameObject:
@@ -9413,7 +9383,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec4d37464aeec046b59e0294827376f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   parallaxEffect: 0
 --- !u!1 &2015669599
 GameObject:
@@ -9512,7 +9481,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec4d37464aeec046b59e0294827376f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   parallaxEffect: 0
 --- !u!1 &2095238826
 GameObject:
@@ -9693,7 +9661,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec4d37464aeec046b59e0294827376f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   parallaxEffect: 0
 --- !u!1 &2103157341
 GameObject:
@@ -9889,5 +9856,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlyingEye
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 920052704, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}

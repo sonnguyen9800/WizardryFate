@@ -6,6 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof (Damageable))]
 [RequireComponent(typeof(Damager))]
 [RequireComponent(typeof(CharacterType))]
+[RequireComponent(typeof(CapsuleCollider2D))]
+
 
 public class FlyingEye : MonoBehaviour
 {
@@ -27,5 +29,5 @@ public class FlyingEye : MonoBehaviour
         
     }
 
-    
+
 }
