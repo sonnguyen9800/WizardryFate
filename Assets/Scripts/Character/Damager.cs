@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CircleCollider2D))]
 public class Damager : MonoBehaviour
 {
-    private CircleCollider2D circleCollider2D;
 
     [SerializeField][Range(0.01f, 2f)] private float attackRadius;
     [SerializeField] private float damage;
     [SerializeField] LayerMask damageableLayer;
     [SerializeField] Transform hitBoxPosition;
     private void Awake() {
-        circleCollider2D = GetComponent<CircleCollider2D>();
     }
     // Start is called before the first frame update
     void Start()
@@ -21,8 +18,13 @@ public class Damager : MonoBehaviour
     }
 
     private void CheckAttackHitBox(){
-        Collider2D[] objectCollided = Physics2D.OverlapCircleAll(hitBoxPosition.position, attackRadius, damageableLayer );
+        Collider2D[] objectCollided = Physics2D.OverlapCircleAll(hitBoxPosition.position, 
+        attackRadius, damageableLayer );
+        //print("Object Found:" + objectCollided.Length);
+        //         Collider2D[] objectCollided2 = Physics2D.CircleCastAll(hitBoxPosition.position, 
+        // attackRadius, new Vector2(0.1f, 0.1f),  damageableLayer );
         foreach (Collider2D collider in objectCollided){
+            //print("Detect");
             Damageable damageable = collider.transform.GetComponentInParent<Damageable>();
             damageable.TakeDamage(damage);
             Destroy(gameObject);
@@ -41,7 +43,7 @@ public class Damager : MonoBehaviour
     }
 
     private void OnDrawGizmos() {
-        Gizmos.DrawWireSphere(transform.position, attackRadius);
+        Gizmos.DrawWireSphere(hitBoxPosition.position, attackRadius);
 
     }
 }

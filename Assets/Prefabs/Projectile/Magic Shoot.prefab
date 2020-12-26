@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2314224479369766752}
   - component: {fileID: 7378542049700784903}
   - component: {fileID: 5051716557431170648}
-  - component: {fileID: 4051596896508168355}
   - component: {fileID: 4092466035319214286}
   m_Layer: 0
   m_Name: Magic Shoot
@@ -30,9 +29,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2314224479369766753}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.659, y: -12.63, z: 0}
+  m_LocalPosition: {x: -4.542, y: -12.652, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1143802194937167245}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bdd6871a290fec4bb3788f9ba7c7853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  step: 0.056
+  step: 0.2
 --- !u!114 &5051716557431170648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,22 +132,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVFX: {fileID: 1043978614733368, guid: 64b6b675aa49b16459f7ce363e98b4f8, type: 3}
---- !u!58 &4051596896508168355
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2314224479369766753}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0016036034, y: -0.009622097}
-  serializedVersion: 2
-  m_Radius: 0.14840508
 --- !u!114 &4092466035319214286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,9 +144,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 083a050f75dcf7547a5c20a36701c625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRadius: 0.1
+  attackRadius: 0.118
   damage: 10
   damageableLayer:
     serializedVersion: 2
     m_Bits: 2048
-  hitBoxPosition: {fileID: 2314224479369766754}
+  hitBoxPosition: {fileID: 1143802194937167245}
+--- !u!1 &3881845328578206989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1143802194937167245}
+  m_Layer: 0
+  m_Name: HitBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1143802194937167245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3881845328578206989}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.02, y: 0.021, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2314224479369766754}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
