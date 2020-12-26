@@ -10,6 +10,7 @@ public class OnDamaged : MonoBehaviour
     // Start is called before the first frame update
     private Damageable damageable;
 
+
     [Header("Blink Effect")]
     [SerializeField][Range(0.01f, 0.5f)] float  blinkTime;
     public bool isBlinkWhiteOnHit;
@@ -24,6 +25,11 @@ public class OnDamaged : MonoBehaviour
     [Range(0.01f, 0.5f)] public float knockbackAmount;
     private Wizard _playerWizard;
 
+    [Header("Effect on Dead")]
+    public Material deadMat;
+    [Range(0.1f, 2.5f)] public float deadbackTimeAmount;
+    public GameObject _bloodVFX;
+
 
     private void Awake() {
         damageable = GetComponent<Damageable>();
@@ -31,6 +37,7 @@ public class OnDamaged : MonoBehaviour
         _defaultMaterial = _spriteRenderer.material;
         _playerWizard = FindObjectOfType<Wizard>();
 
+        
     }
 
     void Start()
@@ -41,6 +48,7 @@ public class OnDamaged : MonoBehaviour
         if (isKnockable){
             damageable.OnDamageTaken += KnockBack;
         }
+        damageable.OnDead += Die;
     }
 
     void KnockBack(float _){
@@ -61,5 +69,28 @@ public class OnDamaged : MonoBehaviour
         _spriteRenderer.material = _defaultMaterial;
 
     }
+
+    void Die(){
+        _spriteRenderer.material = deadMat;
+        StartCoroutine(BlinkRed());
+        //gameObject.SetActive(false);
+
+       
+
+
+
+    }
+
+    public IEnumerator BlinkRed(){
+        yield return new WaitForSeconds(deadbackTimeAmount);
+        if (_bloodVFX != null){
+                    GameObject gj = Instantiate(_bloodVFX, this.transform.position, this.transform.rotation);
+                    Destroy(gj, 1);
+                }
+
+        Destroy(gameObject);
+    }
+
+
 
 }

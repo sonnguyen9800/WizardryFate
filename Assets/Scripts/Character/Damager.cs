@@ -18,18 +18,27 @@ public class Damager : MonoBehaviour
     }
 
     private void CheckAttackHitBox(){
-        Collider2D[] objectCollided = Physics2D.OverlapCircleAll(hitBoxPosition.position, 
+        Collider2D objectCollided = Physics2D.OverlapCircle(hitBoxPosition.position, 
         attackRadius, damageableLayer );
         //print("Object Found:" + objectCollided.Length);
         //         Collider2D[] objectCollided2 = Physics2D.CircleCastAll(hitBoxPosition.position, 
         // attackRadius, new Vector2(0.1f, 0.1f),  damageableLayer );
-        foreach (Collider2D collider in objectCollided){
-            //print("Detect");
-            Damageable damageable = collider.transform.GetComponentInParent<Damageable>();
+        if (objectCollided == null) return;
+        Damageable damageable = objectCollided.transform.GetComponentInParent<Damageable>();
             damageable.TakeDamage(damage);
             Destroy(gameObject);
-        }
+        // foreach (Collider2D collider in objectCollided){
+        //     //print("Detect");
+            
+        // }
     }
+
+    // private void OnCollisionEnter2D(Collision2D other) {
+    //     if (other.transform.GetComponentInParent<Damageable>() && 
+    //     other.gameObject.layer == damageableLayer){
+    //             print("Detect the collision");
+    //     }
+    // }
 
 
     // Update is called once per frame

@@ -9808,6 +9808,14 @@ PrefabInstance:
       value: -0.013750076
       objectReference: {fileID: 0}
     - target: {fileID: 2268188798013031054, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
+      propertyPath: deadMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 667a6bad6644e4b45924ada72db9c988, type: 2}
+    - target: {fileID: 2268188798013031054, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
+      propertyPath: _bloodVFX
+      value: 
+      objectReference: {fileID: 1005737634677538, guid: 01d2881829f100149b8d756dc1062c65, type: 3}
+    - target: {fileID: 2268188798013031054, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
       propertyPath: blinkTime
       value: 0.06
       objectReference: {fileID: 0}
@@ -9815,17 +9823,25 @@ PrefabInstance:
       propertyPath: knockbackAmount
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 2268188798013031054, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
+      propertyPath: deadbackTimeAmount
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4816986638695744384, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
+      propertyPath: isInvicible
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4816986638695744387, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4816986638695744387, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.285
+      value: -5.651
       objectReference: {fileID: 0}
     - target: {fileID: 4816986638695744387, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.648
+      value: -12.314
       objectReference: {fileID: 0}
     - target: {fileID: 4816986638695744387, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
       propertyPath: m_LocalPosition.z

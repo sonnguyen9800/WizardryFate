@@ -6,8 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof (Damageable))]
 [RequireComponent(typeof(Damager))]
 [RequireComponent(typeof(CharacterType))]
-[RequireComponent(typeof(CapsuleCollider2D))]
-
+[RequireComponent(typeof(SpriteRenderer))]
 
 public class FlyingEye : MonoBehaviour
 {
@@ -16,31 +15,27 @@ public class FlyingEye : MonoBehaviour
 
 
     public CharacterType type = CharacterType.MONSTER;
-     
+    private SpriteRenderer _spriteRenderer;
+
+
     private void Awake() {
         damageable = GetComponent<Damageable>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+
     }
 
     void Start()
     {
-        
+      // damageable.OnDead += Die;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Die(){
+        Destroy(gameObject);
     }
 
-    private void FixedUpdate() {
-        
-    }
 
-    private void OnDamaged(){
-        
-    }
 
-    
- 
 
+
+   
 }
