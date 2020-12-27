@@ -5,33 +5,37 @@ using UnityEngine;
 [RequireComponent(typeof(AnimateWizard))]
 public class Attack : MonoBehaviour
 {
-   public float fireRate = 0;
-   public float Damage = 10;
-   public LayerMask nottoHit;
+    public float fireRate = 0;
+    public float Damage = 10;
+    public LayerMask nottoHit;
 
-   float TimeToFire =0;
+    float TimeToFire = 0;
 
     Transform firepoint;
 
     public GameObject magicShootPrefab;
     private AnimateWizard animateWizard;
-    private void Awake() {
+    private void Awake()
+    {
         firepoint = transform.Find("ShootingPoint");
-        if (firepoint == null){
+        if (firepoint == null)
+        {
             Debug.Log("No firepoint");
         }
-        
+
         animateWizard = GetComponent<AnimateWizard>();
     }
 
-    private void Update() {
-        
-        
-        if (Input.GetButtonDown("Fire1")){
+    private void Update()
+    {
+
+
+        if (Input.GetButtonDown("Fire1"))
+        {
             animateWizard.state = AnimateWizard.AnimateState.LIGHT_ATTACK;
             Shoot();
         }
-                
+
 
         // if (fireRate == 0){
         //     if (Input.GetButtonDown("Fire1")){
@@ -47,7 +51,8 @@ public class Attack : MonoBehaviour
         // }
     }
 
-    private void Shoot(){
+    private void Shoot()
+    {
         //print("Shoot");
 
 
@@ -58,8 +63,8 @@ public class Attack : MonoBehaviour
         print("Target: " + mousePosition);
 
         Vector2 firePointPos = new Vector2(firepoint.transform.position.x, firepoint.transform.position.y);
-        RaycastHit2D hit = Physics2D.Raycast(firePointPos, 
-        mousePos2d-firePointPos,
+        RaycastHit2D hit = Physics2D.Raycast(firePointPos,
+        mousePos2d - firePointPos,
         200, nottoHit);
 
         Debug.DrawLine(firePointPos, mousePosition);
@@ -68,9 +73,9 @@ public class Attack : MonoBehaviour
         mouse_pos.y = mousePosition.y - firePointPos.y;
 
 
-        float angle = Mathf.Atan2(mouse_pos.y, mouse_pos.x)*Mathf.Rad2Deg;
-        firepoint.rotation = Quaternion.Euler(0,0,angle);
-        
+        float angle = Mathf.Atan2(mouse_pos.y, mouse_pos.x) * Mathf.Rad2Deg;
+        firepoint.rotation = Quaternion.Euler(0, 0, angle);
+
         print("Angle" + angle);
 
 

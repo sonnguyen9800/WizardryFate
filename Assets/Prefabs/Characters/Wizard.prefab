@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3026396863948526922}
   - component: {fileID: 3026396863948526921}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3026396864103105553}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShootingPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 3026396864258941560}
   - component: {fileID: 3026396864258941540}
   - component: {fileID: 3026396864258941542}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: 240894965
   m_SortingLayer: 3
   m_SortingOrder: 10
-  m_Sprite: {fileID: 3786416459866339964, guid: 086637e53cb538e45a4b57227b01ef7f, type: 3}
+  m_Sprite: {fileID: 4322028758180713587, guid: cf0001c4646b0e64fa40e27eea11055d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -205,18 +205,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.024169803, y: 0.67457867}
+  m_Offset: {x: -0.033264518, y: 0.43469667}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.890625, y: 1.34375}
+    oldSize: {x: 0.57, y: 0.86}
     newSize: {x: 0.57, y: 0.86}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.85833955, y: 1.3525658}
+  m_Size: {x: 0.554682, y: 0.86305904}
   m_EdgeRadius: 0
 --- !u!114 &3026396864258941541
 MonoBehaviour:
