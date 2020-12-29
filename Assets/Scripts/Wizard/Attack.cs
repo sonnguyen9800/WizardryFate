@@ -60,7 +60,6 @@ public class Attack : MonoBehaviour
 
         Vector2 mousePos2d = new Vector2(mousePosition.x, mousePosition.y);
         //mousePos2d.Normalize();
-        print("Target: " + mousePosition);
 
         Vector2 firePointPos = new Vector2(firepoint.transform.position.x, firepoint.transform.position.y);
         RaycastHit2D hit = Physics2D.Raycast(firePointPos,
@@ -75,8 +74,6 @@ public class Attack : MonoBehaviour
 
         float angle = Mathf.Atan2(mouse_pos.y, mouse_pos.x) * Mathf.Rad2Deg;
         firepoint.rotation = Quaternion.Euler(0, 0, angle);
-
-        print("Angle" + angle);
 
 
         GameObject shootMagic = Instantiate(magicShootPrefab);
