@@ -14320,7 +14320,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.84
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000bfadedb537de4ed6f5c35b0e2b5dd70d
@@ -14616,9 +14616,49 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3026396863948526920, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026396863948526922, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.173
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026396863948526922, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.645
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026396864103105552, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026396864103105553, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.174
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026396864103105553, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.676
+      objectReference: {fileID: 0}
     - target: {fileID: 3026396864258941539, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
       propertyPath: m_Name
       value: Wizard
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026396864258941539, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026396864258941543, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8695011
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026396864258941543, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.43147564
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026396864258941543, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3026396864258941563, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
       propertyPath: m_RootOrder
