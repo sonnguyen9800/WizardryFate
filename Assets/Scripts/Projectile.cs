@@ -41,6 +41,10 @@ namespace Origin
         {
             this.transform.rotation = Quaternion.Euler(0, 0, angle - 90);
         }
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            Debug.Log("collding with " + other.gameObject.name);
+        }
     }
 
 }
