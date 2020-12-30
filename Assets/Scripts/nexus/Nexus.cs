@@ -24,9 +24,6 @@ public class Nexus : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.CompareTag("Player"))
-        {
-            print("collide with player "+ col.gameObject.name);
-        }
+            print("Nexus said: collide with  "+ col.gameObject.name);
     }
 }

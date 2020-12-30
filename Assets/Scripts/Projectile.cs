@@ -43,7 +43,7 @@ namespace Origin
         }
         void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log("collding with " + other.gameObject.name);
+            Debug.Log("Fire ball said: collding with " + other.gameObject.name);
         }
     }
 
