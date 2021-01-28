@@ -1,29 +1,29 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Nexus : MonoBehaviour
 {
     [SerializeField]
-    enum element
+    enum Element{
+    FIRE,
+    WATER,
+    THUNDER,
+    EARTH
+    };
+    Light lt;
+    void Start()
     {
-        Fire,
-        Water,
-        Earth
+        lt = GetComponent<Light>();
     }
-    
-    void Awake()
+    void Update()
     {
         
     }
-    // Update is called once per frame
-    void Update()
+    void OnTriggerStay2D(Collider2D other)
     {
-
-    }
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
-            print("Nexus said: collide with  "+ col.gameObject.name);
+        if (Input.GetKeyDown(KeyCode.X) & other.gameObject.name =="Wizard"){
+            lt.enabled = false;
+        }
     }
 }

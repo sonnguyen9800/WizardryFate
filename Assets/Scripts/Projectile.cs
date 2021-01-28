@@ -43,7 +43,10 @@ namespace Origin
         }
         void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log("Fire ball said: collding with " + other.gameObject.name);
+            if (other.gameObject.name != "Wizard")
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
