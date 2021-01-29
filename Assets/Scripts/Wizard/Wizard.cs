@@ -62,11 +62,11 @@ public class Wizard : MonoBehaviour
 
         if (movementVelocity.x > 1)
         {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            transform.localScale = new Vector3(1, 1, 1);
         }
         else if (movementVelocity.x < -1)
         {
-            transform.rotation = Quaternion.Euler(0, -180, 0);
+            transform.localScale = new Vector3(-1, 1, 1);
         }
         bool isGrounded = controller2D.CollisionInfo.below;
         if (!isGrounded)
