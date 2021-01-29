@@ -5,68 +5,47 @@ using UnityEngine;
 [RequireComponent(typeof(AnimateWizard))]
 public class Attack : MonoBehaviour
 {
-   public float fireRate = 0;
-   public float Damage = 10;
-   public LayerMask nottoHit;
-
-   float TimeToFire =0;
-
-    Transform firepoint;
-
-    public GameObject magicShootPrefab;
+    [SerializeField] private float fireRate = 0;
+    [SerializeField] private float damage = 10;
+    [SerializeField] private LayerMask notToHitLayer;
+    [SerializeField] private GameObject magicShootPrefab;
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private KeyCode fireKey = KeyCode.Mouse0;
+    private Camera cam;
+    private float timeToFire = 0;
     private AnimateWizard animateWizard;
-    private void Awake() {
-        firepoint = transform.Find("ShootingPoint");
-        if (firepoint == null){
-            Debug.Log("No firepoint");
-        }else {
-            //Debug.Log("Find the firepoint");
-        }
-        
+    private void Awake()
+    {
+        cam = Camera.main;
         animateWizard = GetComponent<AnimateWizard>();
     }
 
-    private void Update() {
-        
-                
-
-        if (fireRate == 0){
-            if (Input.GetButtonDown("Fire1")){
-                Shoot();
-            }
-        } else {
-            if (Input.GetButtonDown("Fire1") && Time.time > TimeToFire){
-                    TimeToFire = Time.time+ 1/fireRate;
-                    Shoot();
-            }
-
-
+    private void Update()
+    {
+        if (Input.GetKeyDown(fireKey))
+        {
+            animateWizard.State = WizardState.LIGHT_ATTACK;
+            Shoot();
         }
+
     }
 
-    private void Shoot(){
-        //print("Shoot");
+    private void Shoot()
+    {
+        Vector3 mousePosition = cam.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 10));
+        print(mousePosition);
+        Vector3 direction = mousePosition - firePoint.position;
+        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, direction, 200, notToHitLayer);
+        Debug.DrawLine(firePoint.position, mousePosition);
 
 
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 10));
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        firePoint.rotation = Quaternion.Euler(0, 0, angle);
 
-        Vector2 mousePos2d = new Vector2(mousePosition.x, mousePosition.y);
-        Vector2 firePointPos = new Vector2(firepoint.transform.position.x, firepoint.transform.position.y);
-        Vector3 mouse_pos;
-        mouse_pos.x = mousePosition.x - firePointPos.x;
-        mouse_pos.y = mousePosition.y - firePointPos.y;
-
-
-        float angle = Mathf.Atan2(mouse_pos.y, mouse_pos.x)*Mathf.Rad2Deg;
-        firepoint.rotation = Quaternion.Euler(0,0,angle);
-
-        GameObject shootMagic = Instantiate(magicShootPrefab);
-        shootMagic.transform.position = firepoint.transform.position;
-        Origin.Projectile gameProjectile = shootMagic.GetComponent<Origin.Projectile>();
-        gameProjectile.setTarget(mousePosition);
-        gameProjectile.setAngle(angle + 90);
-
-
+        Projectile magicShoot = Instantiate(magicShootPrefab).GetComponent<Projectile>();
+        magicShoot.transform.position = firePoint.transform.position;
+        magicShoot.TargetPosition = mousePosition;
+        magicShoot.SetAngle(angle + 90);
     }
 
 }

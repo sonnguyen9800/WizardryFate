@@ -17,7 +17,7 @@ TagManager:
   - Ground
   - Background
   - Player
-  - Monster
+  - Projectile
   - 
   - 
   - 
@@ -52,8 +52,8 @@ TagManager:
     uniqueID: 240894965
     locked: 0
   - name: Projectile
-    uniqueID: 3523562731
+    uniqueID: 214306575
     locked: 0
   - name: Effect
-    uniqueID: 214306575
+    uniqueID: 232217899
     locked: 0
