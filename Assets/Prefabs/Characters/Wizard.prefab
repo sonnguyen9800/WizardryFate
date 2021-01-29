@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3026396863948526922}
   - component: {fileID: 3026396863948526921}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3026396863948526920}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 0.7, z: 0}
+  m_LocalPosition: {x: 0.173, y: 0.645, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3026396864258941563}
@@ -81,7 +81,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3026396864103105553}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ShootingPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3026396864103105552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.39, y: 1.228, z: 0}
+  m_LocalPosition: {x: 0.174, y: 0.676, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3026396864258941563}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 3026396864258941560}
   - component: {fileID: 3026396864258941540}
   - component: {fileID: 3026396864258941542}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 6de6168f63803bf4da5321dd30e8dddc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -202,10 +202,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.018274069, y: 0.4302864}
+  m_Offset: {x: -0.018274069, y: 0.43147564}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -216,7 +216,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5426898, y: 0.8718796}
+  m_Size: {x: 0.5426898, y: 0.8695011}
   m_EdgeRadius: 0
 --- !u!114 &3026396864258941541
 MonoBehaviour:
@@ -230,7 +230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e01447eeced00543ad74654397c1a4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
 --- !u!114 &3026396864258941561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,8 +264,8 @@ MonoBehaviour:
   jumpHeight: 1.25
   timeToJumpApex: 0.5
   accelerationTimeAirborne: 0.5
-  RunAndIdle: 1.1
-  movementVelocity: {x: 0, y: 0}
+  runAndIdle: 0.5
+  jumpKey: 32
 --- !u!95 &3026396864258941540
 Animator:
   serializedVersion: 3
@@ -299,8 +298,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 1
-  Damage: 10
-  nottoHit:
+  damage: 10
+  notToHitLayer:
     serializedVersion: 2
-    m_Bits: 2871
+    m_Bits: 1024
   magicShootPrefab: {fileID: 489606712986722031, guid: fbbfbeee9b87cf64f95fe33c31f159bc, type: 3}
+  firePoint: {fileID: 3026396864103105553}
+  fireKey: 323

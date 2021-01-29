@@ -2,52 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Origin
+public class Projectile : MonoBehaviour
 {
 
-    public class Projectile : MonoBehaviour
+    [SerializeField] [Range(0, 40f)] private float flySpeed = 20f;
+    public Vector3 TargetPosition { get; set; }
+    private bool isFired = false;
+    private void Update()
     {
+        if (TargetPosition == null) return;
+        transform.position = Vector3.MoveTowards(transform.position, TargetPosition, flySpeed * Time.deltaTime);
 
-        [SerializeField] [Range(0, 0.6f)] public float step;
-        private Vector3 targetPosition;
-        private bool isFired = false;
-        // Start is called before the first frame update
-        void Start()
+        if (Vector2.Distance(TargetPosition, transform.position) < 0.1f)
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            if (targetPosition == null) return;
-            //transform.Translate(Vector3.right* Time.deltaTime*10);
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
-
-            if (transform.position == targetPosition)
-            {
-                Destroy(gameObject);
-
-            }
-
-        }
-
-        public void setTarget(Vector3 target)
-        {
-            this.targetPosition = target;
-        }
-
-        public void setAngle(float angle)
-        {
-            this.transform.rotation = Quaternion.Euler(0, 0, angle - 90);
-        }
-        void OnTriggerEnter2D(Collider2D other)
-        {
-            if (other.gameObject.name != "Wizard")
-            {
-                Destroy(gameObject);
-            }
+            Destroy(gameObject);
         }
     }
-
+    public void SetAngle(float angle)
+    {
+        transform.rotation = Quaternion.Euler(0, 0, angle - 90);
+    }
 }
+

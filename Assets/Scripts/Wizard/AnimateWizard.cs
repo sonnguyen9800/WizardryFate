@@ -4,55 +4,45 @@ using UnityEngine;
 
 public class AnimateWizard : MonoBehaviour
 {
+    private Animator animator;
 
-    public enum AnimateState {
-        IDLE,
-        RUNNING,
-        JUMP,
-        LIGHT_ATTACK
-    }
+    private WizardState state = WizardState.IDLE;
+    public WizardState State { get => state; set => state = value; }
 
-
-
-    // Start is called before the first frame update
-    Animator animator;
-
-    public AnimateState state = AnimateState.IDLE;
-
-    void Awake()
-    {   
-        animator = gameObject.GetComponent<Animator>();
-    }
-    
-    void Start()
+    private void Awake()
     {
-        
+        animator = GetComponent<Animator>();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
-        if (state ==  AnimateState.IDLE){
+
+        if (state == WizardState.IDLE)
+        {
             animator.SetBool("isGrounded", true);
             animator.SetBool("isRunning", false);
             animator.SetBool("lightAttack", false);
+            return;
 
-        } 
-        else if (state == AnimateState.JUMP){
+        }
+        if (state == WizardState.JUMP)
+        {
             animator.SetBool("isGrounded", false);
             animator.SetBool("isRunning", false);
-        } 
-        
-        else if (state == AnimateState.RUNNING){
+            return;
+        }
+
+        if (state == WizardState.RUNNING)
+        {
             animator.SetBool("isGrounded", true);
             animator.SetBool("isRunning", true);
             animator.SetBool("lightAttack", false);
+            return;
 
         }
-        
-        else if (state == AnimateState.LIGHT_ATTACK){
+        if (state == WizardState.LIGHT_ATTACK)
+        {
             animator.SetBool("lightAttack", true);
+            return;
         }
     }
 }

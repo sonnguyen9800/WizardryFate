@@ -4,26 +4,25 @@ using UnityEngine;
 
 public class Nexus : MonoBehaviour
 {
-    [SerializeField]
-    enum Element{
-    FIRE,
-    WATER,
-    THUNDER,
-    EARTH
+    private enum Element
+    {
+        FIRE,
+        WATER,
+        THUNDER,
+        EARTH
     };
-    Light lt;
+    [SerializeField] private Element element;
+    [SerializeField] private KeyCode activeKey = KeyCode.X;
+    private Light _light;
     void Start()
     {
-        lt = GetComponent<Light>();
-    }
-    void Update()
-    {
-        
+        _light = GetComponent<Light>();
     }
     void OnTriggerStay2D(Collider2D other)
     {
-        if (Input.GetKeyDown(KeyCode.X) & other.gameObject.name =="Wizard"){
-            lt.enabled = false;
+        if (Input.GetKeyDown(activeKey) && other.GetComponent<Wizard>() != null)
+        {
+            _light.enabled = false;
         }
     }
 }
