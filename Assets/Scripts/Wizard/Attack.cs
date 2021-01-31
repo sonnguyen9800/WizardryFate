@@ -7,6 +7,7 @@ public class Attack : MonoBehaviour
 {
     //[SerializeField] private float fireRate = 0;
     //[SerializeField] private float damage = 10;
+    [SerializeField] [Range(0.5f, 7.5f)] private float flySpeed;
     [SerializeField] private LayerMask notToHitLayer;
     [SerializeField] private GameObject magicShootPrefab;
     [SerializeField] private Transform firePoint;
@@ -45,7 +46,7 @@ public class Attack : MonoBehaviour
         Projectile magicShoot = Instantiate(magicShootPrefab).GetComponent<Projectile>();
         magicShoot.transform.position = firePoint.transform.position;
         magicShoot.TargetPosition = mousePosition;
-        magicShoot.flySpeed = 4.0f;
+        magicShoot.flySpeed = this.flySpeed;
         magicShoot.SetAngle(angle + 90);
     }
 
