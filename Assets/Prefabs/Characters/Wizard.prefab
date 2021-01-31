@@ -328,10 +328,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea760559562e4d438e4b325f184c86f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flySpeed: 3
+  flySpeed: 4
   notToHitLayer:
     serializedVersion: 2
     m_Bits: 1024
-  magicShootPrefab: {fileID: 489606712986722031, guid: fbbfbeee9b87cf64f95fe33c31f159bc, type: 3}
+  magicShootPrefab: {fileID: 2314224479369766753, guid: 19f7c7a5fc2bc224aa35936c97cc268a, type: 3}
   firePoint: {fileID: 3026396864103105553}
   fireKey: 323
