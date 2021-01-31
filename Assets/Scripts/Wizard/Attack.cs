@@ -5,14 +5,14 @@ using UnityEngine;
 [RequireComponent(typeof(AnimateWizard))]
 public class Attack : MonoBehaviour
 {
-    [SerializeField] private float fireRate = 0;
-    [SerializeField] private float damage = 10;
+    //[SerializeField] private float fireRate = 0;
+    //[SerializeField] private float damage = 10;
     [SerializeField] private LayerMask notToHitLayer;
     [SerializeField] private GameObject magicShootPrefab;
     [SerializeField] private Transform firePoint;
     [SerializeField] private KeyCode fireKey = KeyCode.Mouse0;
     private Camera cam;
-    private float timeToFire = 0;
+    //private float timeToFire = 0;
     private AnimateWizard animateWizard;
     private void Awake()
     {
@@ -45,6 +45,7 @@ public class Attack : MonoBehaviour
         Projectile magicShoot = Instantiate(magicShootPrefab).GetComponent<Projectile>();
         magicShoot.transform.position = firePoint.transform.position;
         magicShoot.TargetPosition = mousePosition;
+        magicShoot.flySpeed = 4.0f;
         magicShoot.SetAngle(angle + 90);
     }
 
