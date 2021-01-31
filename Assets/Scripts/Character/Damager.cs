@@ -33,12 +33,7 @@ public class Damager : MonoBehaviour
         // }
     }
 
-    // private void OnCollisionEnter2D(Collision2D other) {
-    //     if (other.transform.GetComponentInParent<Damageable>() && 
-    //     other.gameObject.layer == damageableLayer){
-    //             print("Detect the collision");
-    //     }
-    // }
+
 
 
     // Update is called once per frame

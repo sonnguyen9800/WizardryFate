@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7378542049700784903}
   - component: {fileID: 5051716557431170648}
   - component: {fileID: 4092466035319214286}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Magic Shoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -771404565
-  m_SortingLayer: 4
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 85d67e972ebd5ef45a5a8dfaaa0f5810, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bdd6871a290fec4bb3788f9ba7c7853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  step: 0.2
+  flySpeed: 20
 --- !u!114 &5051716557431170648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 083a050f75dcf7547a5c20a36701c625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRadius: 0.17
+  attackRadius: 0.5
   damage: 10
   damageableLayer:
     serializedVersion: 2
@@ -159,7 +159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1143802194937167245}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}

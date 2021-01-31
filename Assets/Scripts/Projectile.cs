@@ -15,6 +15,7 @@ public class Projectile : MonoBehaviour
 
         if (Vector2.Distance(TargetPosition, transform.position) < 0.1f)
         {
+            
             Destroy(gameObject);
         }
     }
