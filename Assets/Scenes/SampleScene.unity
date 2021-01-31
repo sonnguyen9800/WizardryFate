@@ -12016,10 +12016,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4816986638695744384, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
-      propertyPath: isInvicible
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4816986638695744387, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -12030,7 +12026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4816986638695744387, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.702154
+      value: -12.7255
       objectReference: {fileID: 0}
     - target: {fileID: 4816986638695744387, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14709,6 +14705,14 @@ PrefabInstance:
     - target: {fileID: 3026396864258941539, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
       propertyPath: m_Name
       value: Wizard
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026396864258941542, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
+      propertyPath: flySpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026396864258941542, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
+      propertyPath: notToHitLayer.m_Bits
+      value: 5120
       objectReference: {fileID: 0}
     - target: {fileID: 3026396864258941563, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
       propertyPath: m_RootOrder

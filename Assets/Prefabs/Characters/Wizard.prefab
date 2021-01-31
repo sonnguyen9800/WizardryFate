@@ -328,8 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea760559562e4d438e4b325f184c86f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 1
-  damage: 10
+  flySpeed: 3
   notToHitLayer:
     serializedVersion: 2
     m_Bits: 1024

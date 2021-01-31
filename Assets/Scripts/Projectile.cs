@@ -5,12 +5,10 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-
     public float flySpeed;
     public Vector3 TargetPosition { get; set; }
     private void Update()
     {
-        //print("Fly Speed: " + flySpeed);
         if (TargetPosition == null) return;
         transform.position = Vector3.MoveTowards(transform.position, TargetPosition, flySpeed * Time.deltaTime);
 

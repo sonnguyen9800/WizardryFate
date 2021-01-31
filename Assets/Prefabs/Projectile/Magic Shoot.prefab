@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2314224479369766753}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.542, y: -12.652, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -4.5032, y: -12.6559, z: 0}
+  m_LocalScale: {x: 1.1213684, y: 0.9878645, z: 1}
   m_Children:
   - {fileID: 1143802194937167245}
   m_Father: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 214306575
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 85d67e972ebd5ef45a5a8dfaaa0f5810, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94da85c51abf13342a5a3620ee1901b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyedVFX: {fileID: 1043978614733368, guid: 64b6b675aa49b16459f7ce363e98b4f8, type: 3}
+  destroyedVFX: {fileID: 1043978614733368, guid: 23a7430cfb9caff4799cbe9409a8c7f9, type: 3}
 --- !u!114 &4092466035319214286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,12 +144,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 083a050f75dcf7547a5c20a36701c625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRadius: 0.01
+  attackRadius: 0.17
   damage: 10
   damageableLayer:
     serializedVersion: 2
     m_Bits: 4096
-  hitBoxPosition: {fileID: 1143802194937167245}
+  hitBoxPosition: {fileID: 2314224479369766754}
 --- !u!1 &3881845328578206989
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 920052705}
   - component: {fileID: 920052704}
   - component: {fileID: 2268188798013031054}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: FlyingEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 4816986638695744444}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.341, y: -12.655, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 2, y: 1.8537837, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 240894965
-  m_SortingLayer: 3
+  m_SortingLayerID: -662363155
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -2013565662355475531, guid: 65fbc931ea832924192ff8e4acdb5bb4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -121,7 +121,7 @@ MonoBehaviour:
   maxHP: 100
   currentHP: 0
   life: 1
-  isInvicible: 1
+  isInvicible: 0
 --- !u!114 &920052705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,3 +168,6 @@ MonoBehaviour:
   matWhite: {fileID: 2100000, guid: 9dbbb87be171f624dad055d3f0d45295, type: 2}
   isKnockable: 1
   knockbackAmount: 0.02
+  deadMat: {fileID: 2100000, guid: 667a6bad6644e4b45924ada72db9c988, type: 2}
+  deadbackTimeAmount: 0
+  _bloodVFX: {fileID: 1005737634677538, guid: 651ef2bf8076d2d4cb5eccd257a247d9, type: 3}
