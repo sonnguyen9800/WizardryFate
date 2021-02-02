@@ -13,6 +13,7 @@ public class Nexus : MonoBehaviour
     };
     [SerializeField] private Element element;
     [SerializeField] private KeyCode activeKey = KeyCode.X;
+    [SerializeField] private GameObject EmptyNexus;
     private Light _light;
     void Start()
     {
@@ -22,7 +23,10 @@ public class Nexus : MonoBehaviour
     {
         if (Input.GetKeyDown(activeKey) && other.GetComponent<Wizard>() != null)
         {
-            _light.enabled = false;
+            EmptyNexus.transform.position = gameObject.transform.position;
+            Destroy(gameObject);
+            Instantiate(EmptyNexus);
+            
         }
     }
 }
