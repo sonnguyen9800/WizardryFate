@@ -1,19 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
+public enum SoulElement
+{
+    EMPTY,
+    FIRE,
+    WATER,
+    THUNDER,
+    EARTH
+};
+[System.Serializable]
+public class ElementToNexus
+{
+    public SoulElement soulElement;
+    public GameObject nexusPrefab;
+}
 public class Nexus : MonoBehaviour
 {
-    private enum Element
-    {
-        FIRE,
-        WATER,
-        THUNDER,
-        EARTH
-    };
-    [SerializeField] private Element element;
+
+    [SerializeField] private SoulElement element;
     [SerializeField] private KeyCode activeKey = KeyCode.X;
-    [SerializeField] private GameObject EmptyNexus;
+    [SerializeField] private ElementToNexus[] nexusFactory;
+
     private Light _light;
     void Start()
     {
@@ -21,12 +30,22 @@ public class Nexus : MonoBehaviour
     }
     void OnTriggerStay2D(Collider2D other)
     {
-        if (Input.GetKeyDown(activeKey) && other.GetComponent<Wizard>() != null)
+        if (Input.GetKeyDown(activeKey))
         {
-            EmptyNexus.transform.position = gameObject.transform.position;
-            Destroy(gameObject);
-            Instantiate(EmptyNexus);
-            
+            SoulStealer soulStealer = other.GetComponent<SoulStealer>();
+            if (soulStealer != null)
+            {
+                // Swap
+                SoulElement soulStealerElement = soulStealer.Element;
+                soulStealer.Element = element;
+                element = soulStealerElement;
+
+                ElementToNexus elementToNexus = Array.Find(nexusFactory, etn => etn.soulElement == soulStealerElement);
+                Instantiate(elementToNexus.nexusPrefab, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+
+                
+            }
         }
     }
 }
