@@ -6,25 +6,30 @@ using System;
 public class WizardSouldElement : MonoBehaviour
 {
     [SerializeField] ElementToNexus[] ElementVFX;
-    private SoulStealer soulStealer;
-    private SoulElement oldElement = SoulElement.EMPTY;
+    private SoulStealer _soulStealer;
+    private SoulElement _oldElement = SoulElement.EMPTY;
+    private GameObject _currentElementVFX = null;
+
     void Awake()
     {
-        soulStealer = this.GetComponentInParent<SoulStealer>();
+
+        _soulStealer = this.GetComponentInParent<SoulStealer>();
     }
 
     void Update()
     {
-        if(oldElement != soulStealer.Element)
+        if(_oldElement != _soulStealer.Element)
         {
             ChangeVFX();
         }
     }
     public void ChangeVFX()
-    {
-        ElementToNexus elementToNexus = Array.Find(ElementVFX, etn => etn.soulElement == soulStealer.Element);
-        // Destroy();
-        Instantiate(elementToNexus.nexusPrefab, transform.position, Quaternion.identity);
-        oldElement = soulStealer.Element;
+    {   
+        _oldElement = _soulStealer.Element; // Update old element
+        if (_soulStealer.Element == SoulElement.EMPTY) return;
+        ElementToNexus elementToNexus = Array.Find(ElementVFX, etn => etn.soulElement == _soulStealer.Element);
+        _currentElementVFX =  Instantiate(elementToNexus.nexusPrefab, transform.position, Quaternion.identity);
+
+        
     }
 }
