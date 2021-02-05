@@ -32,6 +32,10 @@ public class SpecialAttack : MonoBehaviour
 
         GameObject thunderskill = Instantiate(thunderskillPrefab, 
             mousePosition, transform.rotation);
-            Destroy(thunderskill,2);
+
+        Projectile magicShoot = thunderskill.GetComponent<Projectile>();
+        magicShoot.transform.position = transform.position;
+        magicShoot.TargetPosition = mousePosition;
+        magicShoot.flySpeed = 2.0f;
     }
 }

@@ -14760,6 +14760,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3026396864258941542, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
+      propertyPath: magicShootPrefab
+      value: 
+      objectReference: {fileID: 2314224479369766753, guid: 19f7c7a5fc2bc224aa35936c97cc268a, type: 3}
     - target: {fileID: 3026396864258941562, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -14836,4 +14840,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireKey: 324
-  thunderskillPrefab: {fileID: 7002464839929012885, guid: d3c8d0adba7761f42bee3f6dc7acfd74, type: 3}
+  thunderskillPrefab: {fileID: 6378100332894833376, guid: fa159d8471cc9c6469a01d9e857bc62e, type: 3}
