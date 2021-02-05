@@ -11,4 +11,9 @@ public class Monster : MonoBehaviour
     [SerializeField] public float fireRate = 0.1f; // Time between attack
 
     [SerializeField] public SoulElement element = SoulElement.EMPTY;
+
+    private void Update() {
+        if (stun > 0){            
+        }
+    }
 }
