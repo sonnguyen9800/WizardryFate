@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Damager : MonoBehaviour
 {
-    [SerializeField][Range(0.01f, 2f)] private float attackRadius;
+    [SerializeField][Range(0.01f, 5f)] private float attackRadius;
     [SerializeField] private float damage;
     [SerializeField] LayerMask damageableLayer;
     [SerializeField] Transform hitBoxPosition;

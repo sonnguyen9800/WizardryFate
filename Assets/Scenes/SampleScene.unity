@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4591824021134115009, guid: 9b561ec0c1a3016459b3a04914f22355, type: 3}
       propertyPath: m_Name
-      value: NexusFire (1)
+      value: NexusFire
       objectReference: {fileID: 0}
     - target: {fileID: 4591824021134115015, guid: 9b561ec0c1a3016459b3a04914f22355, type: 3}
       propertyPath: m_RootOrder
@@ -14774,7 +14774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3026396864258941563, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3026396864258941563, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14818,60 +14818,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
---- !u!1001 &4591824021585414075
-PrefabInstance:
+--- !u!1 &3026396863670341385 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3026396864258941539, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
+  m_PrefabInstance: {fileID: 3026396863670341384}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3026396863670341386
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4591824021134115009, guid: 9b561ec0c1a3016459b3a04914f22355, type: 3}
-      propertyPath: m_Name
-      value: NexusFire
-      objectReference: {fileID: 0}
-    - target: {fileID: 4591824021134115015, guid: 9b561ec0c1a3016459b3a04914f22355, type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 4591824021134115015, guid: 9b561ec0c1a3016459b3a04914f22355, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4591824021134115015, guid: 9b561ec0c1a3016459b3a04914f22355, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -9.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 4591824021134115015, guid: 9b561ec0c1a3016459b3a04914f22355, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4591824021134115015, guid: 9b561ec0c1a3016459b3a04914f22355, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4591824021134115015, guid: 9b561ec0c1a3016459b3a04914f22355, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4591824021134115015, guid: 9b561ec0c1a3016459b3a04914f22355, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4591824021134115015, guid: 9b561ec0c1a3016459b3a04914f22355, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4591824021134115015, guid: 9b561ec0c1a3016459b3a04914f22355, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4591824021134115015, guid: 9b561ec0c1a3016459b3a04914f22355, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4591824021134115015, guid: 9b561ec0c1a3016459b3a04914f22355, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9b561ec0c1a3016459b3a04914f22355, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3026396863670341385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f396b03350610f44293e9ed2f4e8a6fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireKey: 324
+  thunderskillPrefab: {fileID: 7002464839929012885, guid: d3c8d0adba7761f42bee3f6dc7acfd74, type: 3}
