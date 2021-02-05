@@ -36,6 +36,6 @@ public class SpecialAttack : MonoBehaviour
         Projectile magicShoot = thunderskill.GetComponent<Projectile>();
         magicShoot.transform.position = transform.position;
         magicShoot.TargetPosition = mousePosition;
-        magicShoot.flySpeed = 2.0f;
+        //magicShoot.flySpeed = 2.0f;
     }
 }

@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 4106448484857424725}
   - component: {fileID: 8939513512468380484}
   - component: {fileID: 2269515428035368445}
-  m_Layer: 0
+  - component: {fileID: 3754778411382145268}
+  - component: {fileID: 3018673556644656543}
+  m_Layer: 11
   m_Name: ThunderSpell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,6 +35,7 @@ Transform:
   m_Children:
   - {fileID: 8237487187142702959}
   - {fileID: 9147325625421213685}
+  - {fileID: 1468773596133180366}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3623,7 +3626,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
     type: 0
     collisionMode: 0
@@ -4837,7 +4840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bdd6871a290fec4bb3788f9ba7c7853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flySpeed: 0.25
+  flySpeed: 0.8
 --- !u!114 &2269515428035368445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4851,6 +4854,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVFX: {fileID: 4680906101633083468, guid: 6a1181a46ef34b24c868df5e48b1f288, type: 3}
+--- !u!114 &3754778411382145268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6378100332894833376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 807d205b9800d2c4696093bc2d98e169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layersTobeHit:
+    serializedVersion: 2
+    m_Bits: 4096
+  _damage: 10
+  hitBoxPosition: {fileID: 1468773596133180366}
+  attackRadius: 0.1
+--- !u!70 &3018673556644656543
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6378100332894833376}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2.1299999, y: 2.1299999}
+  m_Direction: 0
 --- !u!1 &6720221129739718535
 GameObject:
   m_ObjectHideFlags: 0
@@ -4862,7 +4899,7 @@ GameObject:
   - component: {fileID: 8237487187142702959}
   - component: {fileID: 1896752245141615396}
   - component: {fileID: 8054936369343209706}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8470,7 +8507,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
     type: 0
     collisionMode: 0
@@ -9672,6 +9709,36 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!1 &7510361628285310947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1468773596133180366}
+  m_Layer: 11
+  m_Name: Hitbox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1468773596133180366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7510361628285310947}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7637870829448411659}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8772838870268932216
 GameObject:
   m_ObjectHideFlags: 0
@@ -9683,7 +9750,7 @@ GameObject:
   - component: {fileID: 9147325625421213685}
   - component: {fileID: 1594594976310303906}
   - component: {fileID: 4879939078686304697}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pixel 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13358,7 +13425,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
     type: 0
     collisionMode: 0

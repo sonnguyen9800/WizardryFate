@@ -32,10 +32,4 @@ public class FlyingEye : MonoBehaviour
     void Die(){
         Destroy(gameObject);
     }
-
-
-
-
-
-   
 }

@@ -9,14 +9,18 @@ public class Damager : MonoBehaviour
     [SerializeField] LayerMask damageableLayer;
     [SerializeField] Transform hitBoxPosition;
 
-    private void Awake() {
-    }
-
     private void CheckAttackHitBox(){
-        Collider2D objectCollided = Physics2D.OverlapCircle(hitBoxPosition.position, attackRadius, damageableLayer );
-        if (objectCollided == null) return;
-        Damageable damageable = objectCollided.transform.GetComponentInParent<Damageable>();
-        damageable.TakeDamage(damage);
+        Collider2D[] objectCollided = Physics2D.OverlapCircleAll(hitBoxPosition.position, attackRadius, damageableLayer );
+        if (objectCollided.Length == 0) return;
+        
+        
+        foreach (Collider2D collided in objectCollided)
+        {
+            Damageable damageable = collided.transform.GetComponentInParent<Damageable>();
+            damageable.TakeDamage(damage);
+        }
+        // Damageable damageable = objectCollided.transform.GetComponentInParent<Damageable>();
+        // damageable.TakeDamage(damage);
         Destroy(gameObject);
     }
 
