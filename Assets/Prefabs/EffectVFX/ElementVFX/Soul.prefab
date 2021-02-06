@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 383043772652595167}
-  - component: {fileID: 383043772652595164}
+  - component: {fileID: 7525735972939432037}
   m_Layer: 0
   m_Name: Soul
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &383043772652595164
+--- !u!114 &7525735972939432037
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,17 +40,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 383043772652595166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80f28c3643da2cf4690c04e42f036607, type: 3}
+  m_Script: {fileID: 11500000, guid: 87af5c67e5dc2124e8c8d1f702cab3d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ElementVFX:
-  - soulElement: 0
-    nexusPrefab: {fileID: 5799477829237081595, guid: 8a8fdb6b4a49e874bbf4c85fd6c462c2, type: 3}
-  - soulElement: 1
-    nexusPrefab: {fileID: 5799477829237081595, guid: 32e8c6df72edd7642938536c6dcea86b, type: 3}
-  - soulElement: 2
-    nexusPrefab: {fileID: 4491073282904073355, guid: 3066837d4278d2c46849d8bf30f29b0e, type: 3}
-  - soulElement: 3
-    nexusPrefab: {fileID: 6891808529680235121, guid: 33867b93c8e51cf42a430aa8f1bca08b, type: 3}
-  - soulElement: 4
-    nexusPrefab: {fileID: 5826823370180529763, guid: f3009c657dcb5374ea32be86f11cf612, type: 3}
+  elementFactory: {fileID: 11400000, guid: 16983015a511d6b4d8853bcff181ab61, type: 2}

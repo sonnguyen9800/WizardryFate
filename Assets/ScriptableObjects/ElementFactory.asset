@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 383f4c9c00cd4204db1afd937e9048e4, type: 3}
+  m_Name: ElementFactory
+  m_EditorClassIdentifier: 
+  elementInfos:
+  - SoulElement: 0
+    NexusPrefab: {fileID: 2569277185775991293, guid: 473fad73bc7b6784e80b0eaed4d1e265, type: 3}
+    ElementVFX: {fileID: 0}
+    SkillPrefab: {fileID: 0}
+  - SoulElement: 1
+    NexusPrefab: {fileID: 4591824021134115009, guid: 9b561ec0c1a3016459b3a04914f22355, type: 3}
+    ElementVFX: {fileID: 5799477829237081595, guid: 32e8c6df72edd7642938536c6dcea86b, type: 3}
+    SkillPrefab: {fileID: 0}
+  - SoulElement: 2
+    NexusPrefab: {fileID: 8073814092148456181, guid: 18b489eb6d6eda8468d4c01a2d27da23, type: 3}
+    ElementVFX: {fileID: 4491073282904073355, guid: 3066837d4278d2c46849d8bf30f29b0e, type: 3}
+    SkillPrefab: {fileID: 0}
+  - SoulElement: 3
+    NexusPrefab: {fileID: 1143228082918259958, guid: 00a4405b06e1c374c8189aaecb94f52b, type: 3}
+    ElementVFX: {fileID: 6891808529680235121, guid: 33867b93c8e51cf42a430aa8f1bca08b, type: 3}
+    SkillPrefab: {fileID: 6378100332894833376, guid: fa159d8471cc9c6469a01d9e857bc62e, type: 3}
+  - SoulElement: 4
+    NexusPrefab: {fileID: 8788864379829934189, guid: 7613718a089280146b5c17f765e2b0ab, type: 3}
+    ElementVFX: {fileID: 5826823370180529763, guid: f3009c657dcb5374ea32be86f11cf612, type: 3}
+    SkillPrefab: {fileID: 0}

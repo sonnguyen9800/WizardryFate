@@ -4922,17 +4922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   element: 2
   activeKey: 120
-  nexusFactory:
-  - soulElement: 0
-    nexusPrefab: {fileID: 2569277185775991293, guid: 473fad73bc7b6784e80b0eaed4d1e265, type: 3}
-  - soulElement: 1
-    nexusPrefab: {fileID: 4591824021134115009, guid: 9b561ec0c1a3016459b3a04914f22355, type: 3}
-  - soulElement: 2
-    nexusPrefab: {fileID: 8073814092148456181}
-  - soulElement: 3
-    nexusPrefab: {fileID: 1143228082918259958, guid: 00a4405b06e1c374c8189aaecb94f52b, type: 3}
-  - soulElement: 4
-    nexusPrefab: {fileID: 8788864379829934189, guid: 7613718a089280146b5c17f765e2b0ab, type: 3}
+  elementFactory: {fileID: 11400000, guid: 16983015a511d6b4d8853bcff181ab61, type: 2}
 --- !u!58 &8073814092148456182
 CircleCollider2D:
   m_ObjectHideFlags: 0

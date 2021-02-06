@@ -10,19 +10,12 @@ public enum SoulElement
     THUNDER,
     EARTH
 };
-[System.Serializable]
-public class ElementToNexus
-{
-    public SoulElement soulElement;
-    public GameObject nexusPrefab;
-}
 public class Nexus : MonoBehaviour
 {
 
     [SerializeField] private SoulElement element;
     [SerializeField] private KeyCode activeKey = KeyCode.X;
-    [SerializeField] private ElementToNexus[] nexusFactory;
-
+    [SerializeField] private ElementFactory elementFactory;
     private Light _light;
     void Start()
     {
@@ -40,11 +33,10 @@ public class Nexus : MonoBehaviour
                 soulStealer.Element = element;
                 element = soulStealerElement;
 
-                ElementToNexus elementToNexus = Array.Find(nexusFactory, etn => etn.soulElement == soulStealerElement);
-                Instantiate(elementToNexus.nexusPrefab, transform.position, Quaternion.identity);
+                Instantiate(elementFactory.GetNexusPrefab(element), transform.position, Quaternion.identity);
                 Destroy(gameObject);
 
-                
+
             }
         }
     }
