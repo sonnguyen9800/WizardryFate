@@ -15067,3 +15067,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireKey: 324
   thunderskillPrefab: {fileID: 6378100332894833376, guid: fa159d8471cc9c6469a01d9e857bc62e, type: 3}
+  earthskillPrefab: {fileID: 1579968178435886339, guid: 6727d3d23e44460468b0798ba6117cdf, type: 3}
+  waterskillPrefab: {fileID: 0}
+  fireskillPrefab: {fileID: 0}

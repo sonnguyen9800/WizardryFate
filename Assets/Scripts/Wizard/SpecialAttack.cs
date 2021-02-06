@@ -9,8 +9,13 @@ public class SpecialAttack : MonoBehaviour
 
 
     [SerializeField] GameObject thunderskillPrefab;
-    private Camera _cam;
+    [SerializeField] GameObject earthskillPrefab;
+    [SerializeField] GameObject waterskillPrefab;
+    [SerializeField] GameObject fireskillPrefab;
 
+
+
+    private Camera _cam;
     private SoulStealer _soulStealer;
 
 
@@ -32,14 +37,22 @@ public class SpecialAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(fireKey))
         {
-            CastSpellThunder();
+            if (_soulStealer.Element == SoulElement.THUNDER){
+                CastSpell(thunderskillPrefab);
+            } else if (_soulStealer.Element == SoulElement.FIRE){
+                CastSpell(fireskillPrefab);
+            } else if (_soulStealer.Element == SoulElement.WATER){
+                CastSpell(waterskillPrefab);
+            } else if (_soulStealer.Element == SoulElement.EARTH){
+                CastSpell(earthskillPrefab);
+            }
         }
     }
 
-    void CastSpellThunder(){
+    void CastSpell(GameObject abilityPrefab){
         Vector3 mousePosition = _cam.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 10));
 
-        GameObject thunderskill = Instantiate(thunderskillPrefab, 
+        GameObject thunderskill = Instantiate(abilityPrefab, 
             mousePosition, transform.rotation);
 
         Projectile magicShoot = thunderskill.GetComponent<Projectile>();
@@ -49,14 +62,7 @@ public class SpecialAttack : MonoBehaviour
     }
 
 
-    void CastSpellEarth(){
-        
-    }
-    void CastSpellWater(){
 
-    }
-    void CastSpellFire(){
-
-    }
+   
 
 }
