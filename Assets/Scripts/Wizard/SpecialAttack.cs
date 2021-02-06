@@ -33,10 +33,21 @@ public class SpecialAttack : MonoBehaviour
             }
             else if (_soulStealer.Element == SoulElement.EARTH)
             {
-                CastSpell(skillPrefab);
+                CastDropSpell(skillPrefab);
             }
         }
+        
     }
+
+
+    // Spawn spell object from mouse drop
+    void CastDropSpell(GameObject abilityPrefab){
+        Vector3 mousePosition = _cam.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 10));
+        GameObject thunderskill = Instantiate(abilityPrefab,
+                    mousePosition, transform.rotation);
+    }
+
+
     void CastSpell(GameObject abilityPrefab)
     {
         Vector3 mousePosition = _cam.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 10));
