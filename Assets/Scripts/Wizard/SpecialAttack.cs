@@ -7,12 +7,21 @@ public class SpecialAttack : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private KeyCode fireKey = KeyCode.Mouse0;
 
+
     [SerializeField] GameObject thunderskillPrefab;
     private Camera _cam;
 
+    private SoulStealer _soulStealer;
+
+
+
     private void Awake() {
+         
         _cam = Camera.main;
+        _soulStealer = GetComponent<SoulStealer>();
+
     }
+
     void Start()
     {
         
@@ -23,11 +32,11 @@ public class SpecialAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(fireKey))
         {
-            CastSpell();
+            CastSpellThunder();
         }
     }
 
-    void CastSpell(){
+    void CastSpellThunder(){
         Vector3 mousePosition = _cam.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 10));
 
         GameObject thunderskill = Instantiate(thunderskillPrefab, 
@@ -38,4 +47,16 @@ public class SpecialAttack : MonoBehaviour
         magicShoot.TargetPosition = mousePosition;
         //magicShoot.flySpeed = 2.0f;
     }
+
+
+    void CastSpellEarth(){
+        
+    }
+    void CastSpellWater(){
+
+    }
+    void CastSpellFire(){
+
+    }
+
 }
