@@ -15056,25 +15056,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
---- !u!1 &3026396863670341385 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3026396864258941539, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
-  m_PrefabInstance: {fileID: 3026396863670341384}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3026396863670341386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3026396863670341385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f396b03350610f44293e9ed2f4e8a6fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireKey: 324
-  thunderskillPrefab: {fileID: 6378100332894833376, guid: fa159d8471cc9c6469a01d9e857bc62e, type: 3}
-  earthskillPrefab: {fileID: 1579968178435886339, guid: 6727d3d23e44460468b0798ba6117cdf, type: 3}
-  waterskillPrefab: {fileID: 0}
-  fireskillPrefab: {fileID: 1524366556588946, guid: 091124e35de7dc448b574251ec181a9b, type: 3}

@@ -20,7 +20,7 @@ MonoBehaviour:
   - SoulElement: 1
     NexusPrefab: {fileID: 4591824021134115009, guid: 9b561ec0c1a3016459b3a04914f22355, type: 3}
     ElementVFX: {fileID: 5799477829237081595, guid: 32e8c6df72edd7642938536c6dcea86b, type: 3}
-    SkillPrefab: {fileID: 0}
+    SkillPrefab: {fileID: 1524366556588946, guid: 091124e35de7dc448b574251ec181a9b, type: 3}
   - SoulElement: 2
     NexusPrefab: {fileID: 8073814092148456181, guid: 18b489eb6d6eda8468d4c01a2d27da23, type: 3}
     ElementVFX: {fileID: 4491073282904073355, guid: 3066837d4278d2c46849d8bf30f29b0e, type: 3}
