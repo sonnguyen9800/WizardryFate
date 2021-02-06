@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2268188798013031054}
   m_Layer: 12
   m_Name: FlyingEye
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,6 +134,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52744ef6f3ced5848a5e0ab552c7f4b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stun: 0
+  poison: 0
+  speed: 0.1
+  fireRate: 0.1
+  element: 0
   type: 1
 --- !u!70 &920052704
 CapsuleCollider2D:

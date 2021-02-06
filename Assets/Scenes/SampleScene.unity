@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlyingEye (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4816986638695744444, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
 --- !u!1001 &85859948
@@ -12169,6 +12173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlyingEye
       objectReference: {fileID: 0}
+    - target: {fileID: 4816986638695744444, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
 --- !u!1 &1447532236
@@ -15069,4 +15077,4 @@ MonoBehaviour:
   thunderskillPrefab: {fileID: 6378100332894833376, guid: fa159d8471cc9c6469a01d9e857bc62e, type: 3}
   earthskillPrefab: {fileID: 1579968178435886339, guid: 6727d3d23e44460468b0798ba6117cdf, type: 3}
   waterskillPrefab: {fileID: 0}
-  fireskillPrefab: {fileID: 0}
+  fireskillPrefab: {fileID: 1524366556588946, guid: 091124e35de7dc448b574251ec181a9b, type: 3}

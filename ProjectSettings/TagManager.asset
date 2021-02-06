@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - WizardTop
+  - Enemy
   layers:
   - Default
   - TransparentFX
