@@ -12,6 +12,10 @@ public class ElementFactory : ScriptableObject
         public GameObject NexusPrefab;
         public GameObject ElementVFX;
         public GameObject SkillPrefab;
+
+        public float cooldownTime;
+        public float timer  ;
+
     }
     [SerializeField] private ElementInfo[] elementInfos;
     private Dictionary<SoulElement, ElementInfo> elementMap = new Dictionary<SoulElement, ElementInfo>();
@@ -37,5 +41,14 @@ public class ElementFactory : ScriptableObject
     public GameObject GetSkillPrefab(SoulElement soulElement)
     {
         return elementMap[soulElement].SkillPrefab;
+    }
+
+    // Return cooldown time
+    public float getCooldownTime(SoulElement soulElement){
+        return elementMap[soulElement].cooldownTime;
+    }
+
+    public ElementInfo[] returnElementInfos(){
+        return elementInfos;
     }
 }

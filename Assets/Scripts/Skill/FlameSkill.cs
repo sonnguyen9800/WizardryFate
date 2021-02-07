@@ -9,7 +9,7 @@ public class FlameSkill : MonoBehaviour
     {
         if(other.tag == "Enemy")
         {
-            Debug.Log(other.name);
+            //Debug.Log(other.name);
             Damageable damageable = other.GetComponentInParent<Damageable>();
             damageable.TakeDamage(5);
         }
