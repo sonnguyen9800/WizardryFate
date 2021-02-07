@@ -69,9 +69,15 @@ public class Wizard : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         }
         bool isGrounded = controller2D.CollisionInfo.below;
-        if (!isGrounded)
+        if (!isGrounded && jumpVelocity >= 0)
         {
             animateWizard.State = WizardState.JUMP;
+            return;
+        }
+
+        if (!isGrounded && jumpVelocity < 0)
+        {
+            animateWizard.State = WizardState.FALL;
             return;
         }
 

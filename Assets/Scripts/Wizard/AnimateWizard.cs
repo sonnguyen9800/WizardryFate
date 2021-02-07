@@ -31,6 +31,13 @@ public class AnimateWizard : MonoBehaviour
             return;
         }
 
+        if (state == WizardState.FALL)
+        {
+            animator.SetBool("isGrounded", false);
+            animator.SetBool("isFalling", true);
+            return;
+        }
+
         if (state == WizardState.RUNNING)
         {
             animator.SetBool("isGrounded", true);

@@ -8,5 +8,6 @@ public enum WizardState
     IDLE,
     RUNNING,
     JUMP,
+    FALL,
     LIGHT_ATTACK
 }
