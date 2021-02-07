@@ -6,7 +6,7 @@ public class AnimateWizard : MonoBehaviour
 {
     private Animator animator;
 
-    private WizardState state = WizardState.IDLE;
+    public WizardState state = WizardState.IDLE;
     public WizardState State { get => state; set => state = value; }
 
     private void Awake()
@@ -44,7 +44,6 @@ public class AnimateWizard : MonoBehaviour
             animator.SetBool("isRunning", true);
             animator.SetBool("lightAttack", false);
             return;
-
         }
         if (state == WizardState.LIGHT_ATTACK)
         {

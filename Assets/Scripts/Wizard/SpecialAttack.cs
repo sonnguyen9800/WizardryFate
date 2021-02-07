@@ -5,6 +5,8 @@ using UnityEngine;
 public class SpecialAttack : MonoBehaviour
 {
     [SerializeField] private ElementFactory elementFactory;
+
+    [SerializeField] private Transform _firepoint;
     [SerializeField] private KeyCode fireKey = KeyCode.Mouse0;
     private Camera _cam;
     private SoulStealer _soulStealer;
@@ -56,7 +58,7 @@ public class SpecialAttack : MonoBehaviour
             mousePosition, transform.rotation);
 
         Projectile magicShoot = thunderskill.GetComponent<Projectile>();
-        magicShoot.transform.position = transform.position;
+        magicShoot.transform.position = _firepoint.position;
         magicShoot.TargetPosition = mousePosition;
         //magicShoot.flySpeed = 2.0f;
     }
