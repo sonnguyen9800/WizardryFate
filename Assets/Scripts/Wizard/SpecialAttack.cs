@@ -82,6 +82,7 @@ public class SpecialAttack : MonoBehaviour
             {
                 CastDropSpell(skillPrefab);
             }
+            
             setCooldownTime(_soulStealer.Element, elementFactory.getCooldownTime(_soulStealer.Element));
 
         }
