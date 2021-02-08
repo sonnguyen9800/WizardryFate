@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class SpecialAttack : MonoBehaviour
 {
     [SerializeField] private ElementFactory elementFactory;
-
     [SerializeField] private Transform _firepoint;
     [SerializeField] private KeyCode fireKey = KeyCode.Mouse0;
 
@@ -23,17 +21,15 @@ public class SpecialAttack : MonoBehaviour
             currentTimer -= time;
         }
     }
-    [SerializeField]
     Dictionary<SoulElement, SkillTimer> skillTimerMap = new Dictionary<SoulElement, SkillTimer>();
-
     // Get cooldown timer
     private float getCooldownTime(SoulElement soulElement){
         return skillTimerMap[soulElement].currentTimer;
     }
-
     private void setCooldownTime(SoulElement soulElement, float cooldown){
         skillTimerMap[soulElement].currentTimer = cooldown;
     }
+
     private Camera _cam;
     private Vector3 mousePosition;
     private Vector3 _direction;
@@ -42,7 +38,6 @@ public class SpecialAttack : MonoBehaviour
     {
         _cam = Camera.main;
         _soulStealer = GetComponent<SoulStealer>();
-
         // Initialize the map of skill and their timer
         foreach (var elementInfo in elementFactory.returnElementInfos())
         {
@@ -63,8 +58,7 @@ public class SpecialAttack : MonoBehaviour
         // Initialize mouse first
         mousePosition = _cam.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 10));
         _direction = mousePosition - _firepoint.position;
-        float angle = Mathf.Atan2(_direction.y, _direction.x) * Mathf.Rad2Deg;
-        _firepoint.rotation = Quaternion.Euler(0, 0, angle);
+        _firepoint.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(_direction.y, _direction.x) * Mathf.Rad2Deg);
         if (Input.GetKeyDown(fireKey))
         {
             GameObject skillPrefab = elementFactory.GetSkillPrefab(_soulStealer.Element);
@@ -76,7 +70,8 @@ public class SpecialAttack : MonoBehaviour
             }
             else if (_soulStealer.Element == SoulElement.FIRE && getCooldownTime(SoulElement.FIRE) <= 0 )
             {
-                CastContinousSpell(mousePosition, skillPrefab, _firepoint); // Set prefab and the firepoint
+                GameObject skill = CastContinousSpell(mousePosition, skillPrefab, _firepoint); // Set prefab and the firepoint
+                Destroy(skill, elementFactory.getCooldownTime(_soulStealer.Element)*0.6f); // Destroy skill after preiod of time
                 setCooldownTime(_soulStealer.Element, elementFactory.getCooldownTime(_soulStealer.Element));
             }
             else if (_soulStealer.Element == SoulElement.WATER && getCooldownTime(SoulElement.WATER) <= 0)
@@ -95,20 +90,19 @@ public class SpecialAttack : MonoBehaviour
 
 
     // Spawn spell object from mouse drop
-    void CastDropSpell(Vector3 mousePosition, GameObject abilityPrefab){
+    private void CastDropSpell(Vector3 mousePosition, GameObject abilityPrefab){
         Instantiate(abilityPrefab,mousePosition, transform.rotation);
     }
-
-    void CastContinousSpell(Vector3 mousePosition, GameObject abilityPrefab, Transform firepoint){
+    private GameObject CastContinousSpell(Vector3 mousePosition, GameObject abilityPrefab, Transform firepoint){
         GameObject skill = Instantiate(abilityPrefab,
-            mousePosition, transform.rotation);
+            firepoint.position, transform.rotation);
         FollowFirePoint follow = skill.GetComponent<FollowFirePoint>();
         follow.setFirepoint(firepoint);
-        Destroy(skill, 3);
+        return skill;
     }
 
 
-    void CastSpell(Vector3 mousePosition, GameObject abilityPrefab)
+    private void CastSpell(Vector3 mousePosition, GameObject abilityPrefab)
     {
         GameObject skill = Instantiate(abilityPrefab, mousePosition, transform.rotation);
         Projectile magicShoot = skill.GetComponent<Projectile>();
