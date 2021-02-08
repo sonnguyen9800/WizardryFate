@@ -35,6 +35,8 @@ public class SpecialAttack : MonoBehaviour
         skillTimerMap[soulElement].currentTimer = cooldown;
     }
     private Camera _cam;
+    private Vector3 mousePosition;
+    private Vector3 _direction;
     private SoulStealer _soulStealer;
     private void Awake()
     {
@@ -49,8 +51,6 @@ public class SpecialAttack : MonoBehaviour
         }
     }
 
-
-
     private void FixedUpdate() {
         // Reduce cooldown each frame
         foreach(var item in skillTimerMap.Keys)
@@ -60,50 +60,58 @@ public class SpecialAttack : MonoBehaviour
     }
     void Update()
     {
-
+        // Initialize mouse first
+        mousePosition = _cam.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 10));
+        _direction = mousePosition - _firepoint.position;
+        float angle = Mathf.Atan2(_direction.y, _direction.x) * Mathf.Rad2Deg;
+        _firepoint.rotation = Quaternion.Euler(0, 0, angle);
         if (Input.GetKeyDown(fireKey))
         {
             GameObject skillPrefab = elementFactory.GetSkillPrefab(_soulStealer.Element);
             if (skillPrefab == null) return;
             if (_soulStealer.Element == SoulElement.THUNDER && getCooldownTime(SoulElement.THUNDER) <= 0)
             {
-                CastSpell(skillPrefab);
-
+                CastSpell(mousePosition, skillPrefab);
+                setCooldownTime(_soulStealer.Element, elementFactory.getCooldownTime(_soulStealer.Element));
             }
             else if (_soulStealer.Element == SoulElement.FIRE && getCooldownTime(SoulElement.FIRE) <= 0 )
             {
-                CastSpell(skillPrefab);
+                CastContinousSpell(mousePosition, skillPrefab, _firepoint); // Set prefab and the firepoint
+                setCooldownTime(_soulStealer.Element, elementFactory.getCooldownTime(_soulStealer.Element));
             }
             else if (_soulStealer.Element == SoulElement.WATER && getCooldownTime(SoulElement.WATER) <= 0)
             {
-                CastSpell(skillPrefab);
+                CastSpell(mousePosition, skillPrefab);
+                setCooldownTime(_soulStealer.Element, elementFactory.getCooldownTime(_soulStealer.Element));
             }
             else if (_soulStealer.Element == SoulElement.EARTH && getCooldownTime(SoulElement.EARTH) <= 0)
             {
-                CastDropSpell(skillPrefab);
+                CastDropSpell(mousePosition, skillPrefab);
+                setCooldownTime(_soulStealer.Element, elementFactory.getCooldownTime(_soulStealer.Element));
             }
-            setCooldownTime(_soulStealer.Element, elementFactory.getCooldownTime(_soulStealer.Element));
         }
         
     }
 
 
     // Spawn spell object from mouse drop
-    void CastDropSpell(GameObject abilityPrefab){
-        Vector3 mousePosition = _cam.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 10));
-        GameObject thunderskill = Instantiate(abilityPrefab,
-                    mousePosition, transform.rotation);
+    void CastDropSpell(Vector3 mousePosition, GameObject abilityPrefab){
+        Instantiate(abilityPrefab,mousePosition, transform.rotation);
+    }
+
+    void CastContinousSpell(Vector3 mousePosition, GameObject abilityPrefab, Transform firepoint){
+        GameObject skill = Instantiate(abilityPrefab,
+            mousePosition, transform.rotation);
+        FollowFirePoint follow = skill.GetComponent<FollowFirePoint>();
+        follow.setFirepoint(firepoint);
+        Destroy(skill, 3);
     }
 
 
-    void CastSpell(GameObject abilityPrefab)
+    void CastSpell(Vector3 mousePosition, GameObject abilityPrefab)
     {
-        Vector3 mousePosition = _cam.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 10));
-
-        GameObject thunderskill = Instantiate(abilityPrefab,
-            mousePosition, transform.rotation);
-
-        Projectile magicShoot = thunderskill.GetComponent<Projectile>();
+        GameObject skill = Instantiate(abilityPrefab, mousePosition, transform.rotation);
+        Projectile magicShoot = skill.GetComponent<Projectile>();
         magicShoot.transform.position = _firepoint.position;
         magicShoot.TargetPosition = mousePosition;
         //magicShoot.flySpeed = 2.0f;

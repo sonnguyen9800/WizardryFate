@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4378621626812136
 Transform:
   m_ObjectHideFlags: 0
@@ -4825,6 +4825,7 @@ GameObject:
   - component: {fileID: 199078391504273796}
   - component: {fileID: 2612194364746106919}
   - component: {fileID: -5232446112500541327}
+  - component: {fileID: 8073234337139880421}
   m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
@@ -9654,6 +9655,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flySpeed: 0
+--- !u!114 &8073234337139880421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524366556588946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e39c72fcf1e3a41ba04845f3fa50d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1855212628494160
 GameObject:
   m_ObjectHideFlags: 0

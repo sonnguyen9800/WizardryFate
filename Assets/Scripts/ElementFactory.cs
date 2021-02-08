@@ -14,7 +14,7 @@ public class ElementFactory : ScriptableObject
         public GameObject SkillPrefab;
 
         public float cooldownTime;
-        public float timer  ;
+        //public float timer  ;
 
     }
     [SerializeField] private ElementInfo[] elementInfos;
