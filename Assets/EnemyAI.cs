@@ -14,48 +14,31 @@ public class EnemyAI : MonoBehaviour
     public Path path;
 
     public Transform target;
-    [SerializeField][Range(0.0f, 100.0f)]
-    public float speed = 0.5f;
-
+    [SerializeField][Range(0.0f, 100.0f)] public float speed = 0.5f;
 
     public float nextPointDis = 3f; // Threshold to move to next point
-
     int currentPoint = 0;
     //bool reachedEnd = false;
-
-    [SerializeField]
-    private GameObject _enemyAttackProjectile;
-
-
-    
+    [SerializeField] private GameObject _enemyAttackProjectile;
     // Predefined path
-    [SerializeField]
-    Transform[] waypoints;
+    [SerializeField] Transform[] waypoints;
+
     // Seeker
     Seeker seeker;
 
-    [SerializeField]
-    public float timeToCalNewPath = 0.0f;
+    [SerializeField] public float timeToCalNewPath = 0.0f;
     public float repeatRate = 0.5f;
 
     // Initialize Player game object;
     GameObject player;
-
     // AI FSM
     [SerializeField] [Range(0.01f, 5f)] private float attackRange;
-
-
-    [SerializeField] [Range(0.01f, 5f)]
-    private AIState state = AIState.HUNTING;
-
-
-    [SerializeField]
-    private float _raycastLength;
+    [SerializeField] [Range(0.01f, 5f)] private AIState state = AIState.HUNTING;
+    [SerializeField] private float _raycastLength;
     // Customize waypoints
     public void setWaypoints(Transform[] waypoints)
     {
         this.waypoints = waypoints;
-
     }
 
     private void Wait()
@@ -101,8 +84,6 @@ public class EnemyAI : MonoBehaviour
         {
             state = AIState.ATTACK;
         }
-        
-        // 
 
     }
 
@@ -111,7 +92,6 @@ public class EnemyAI : MonoBehaviour
         if (player.transform.position.x > transform.position.x)
         {
             transform.rotation = Quaternion.identity;
-
         } else
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
@@ -124,8 +104,6 @@ public class EnemyAI : MonoBehaviour
         GameObject projectile = Instantiate(_enemyAttackProjectile, transform.position, transform.rotation);
         // Need to navigate attack direction
         Destroy(projectile, 3);
-
-
         state = AIState.HUNTING;
     }
 
@@ -135,6 +113,7 @@ public class EnemyAI : MonoBehaviour
         seeker = GetComponent<Seeker>();
         InvokeRepeating("UpdatePath", timeToCalNewPath, repeatRate);
         player = GameObject.FindGameObjectWithTag("Player");
+        state = AIState.HUNTING;
     }
 
     private void UpdatePath()
@@ -165,21 +144,19 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //if (state == AIState.WAIT)
-        // {
-        //     Wait();
-        // }
-        //else if (state == AIState.HUNTING)
-        // {
-        //     print("HUNTING");
-        //     Approaching();
-        // }
-        //else if (state == AIState.ATTACK)
-        // {
-        //     Attack();
-        // }
-        Approaching();
-    }
+        print(state);
 
-   
+        switch (state)
+        {
+            case AIState.WAIT:
+                Wait();
+                break;
+            case AIState.HUNTING:
+                Approaching();
+                break;
+            case AIState.ATTACK:
+                Attack();
+                break;
+        }
+    }
 }
