@@ -10,6 +10,7 @@ public class Damager : MonoBehaviour
     [SerializeField] Transform hitBoxPosition;
     
 
+
     private void CheckAttackHitBox(){
         Collider2D[] objectCollided = Physics2D.OverlapCircleAll(hitBoxPosition.position, attackRadius, damageableLayer );
         if (objectCollided.Length == 0) return;
