@@ -15,7 +15,6 @@ public class Damager : MonoBehaviour
         Collider2D[] objectCollided = Physics2D.OverlapCircleAll(hitBoxPosition.position, attackRadius, damageableLayer );
         if (objectCollided.Length == 0) return;
         
-        
         foreach (Collider2D collided in objectCollided)
         {
             Damageable damageable = collided.transform.GetComponentInParent<Damageable>();

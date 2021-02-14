@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Pathfinding;
+using System.Collections;
 
 public enum AIState
 {
@@ -8,14 +9,20 @@ public enum AIState
     ATTACK
 }
 
+public enum FaceToward
+{
+    LEFT = -1,
+    RIGHT = 1
+}
+
+
 // Fly monser AI
 public class EnemyAI : MonoBehaviour
 {
     public Path path;
 
     public Transform target;
-    [SerializeField][Range(0.0f, 100.0f)] public float speed = 0.5f;
-
+    [SerializeField] public float speed = 1.5f;
     public float nextPointDis = 3f; // Threshold to move to next point
     int currentPoint = 0;
     //bool reachedEnd = false;
@@ -32,30 +39,61 @@ public class EnemyAI : MonoBehaviour
     // Initialize Player game object;
     GameObject player;
     // AI FSM
-    [SerializeField] [Range(0.01f, 5f)] private float attackRange;
-    [SerializeField] [Range(0.01f, 5f)] private AIState state = AIState.HUNTING;
-    [SerializeField] private float _raycastLength;
+    [SerializeField] [Range(4f, 10f)] private float attackRange;
+    [SerializeField]  private AIState state = AIState.HUNTING;
+
+    // Raycast Hit to check 
+    
+    [SerializeField] [Range(4f, 10f)] private float _raycastLength = 4.0f;
+    RaycastHit2D[] hits;
+
+
+    // Attack Mode:
+    private float firerate = 1.0f;
+    private float currentTimer = 0.0f;
+    // Animation Sprite
+    private FaceToward face; // Indicate the face of 
+    [SerializeField] 
+    private float speedProjectile = 5.0f;
+
     // Customize waypoints
+
     public void setWaypoints(Transform[] waypoints)
     {
         this.waypoints = waypoints;
     }
 
+
+
+
     private void Wait()
     {
-        if (waypoints.Length == 0) return; // check lenght of predefined path
-        System.Random random = new System.Random();
-
-        // Move according to the waypoints
-        var rndMember = waypoints[random.Next(waypoints.Length)];
-        transform.position = Vector3.MoveTowards(transform.position, rndMember.position, speed * Time.deltaTime);
-
         // Check Distance player and Enemy
         var distance = Vector2.Distance(player.transform.position, transform.position);
         if (distance < attackRange)
         {
             state = AIState.HUNTING;
         }
+        if (waypoints.Length == 0) return; // check lenght of predefined path
+        System.Random random = new System.Random();
+
+        // Move according to the waypoints
+        var rndMember = waypoints[random.Next(waypoints.Length)];
+        transform.position = Vector3.MoveTowards(transform.position, rndMember.position, speed * Time.deltaTime);      
+    }
+
+
+    private bool CheckRayCastCollide()
+    {
+        hits = Physics2D.RaycastAll(transform.position, new Vector2((int)face, 0), _raycastLength);
+        Debug.DrawLine(transform.position, new Vector3(transform.position.x + (int)face* _raycastLength, transform.position.y));
+        foreach (var hit in hits)
+        {
+            if (hit.collider.tag == "Player") {
+                return true;
+            }
+        }
+        return false;
     }
 
     private void Approaching()
@@ -70,21 +108,13 @@ public class EnemyAI : MonoBehaviour
 
         // Flip the sprite to player
         FlipSpriteAnimate();
-        return;
-
 
         // Check condition to move to next state        
         if (Vector2.Distance(player.transform.position, transform.position) > attackRange){
             state = AIState.WAIT; // Move back to wait state
+            return;
         }
-
-        //Get the first object hit by the ray
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, _raycastLength);
-        if (hit.collider != null && hit.collider.tag == "Player")
-        {
-            state = AIState.ATTACK;
-        }
-
+        state = CheckRayCastCollide() ? AIState.ATTACK : AIState.HUNTING;
     }
 
     private void FlipSpriteAnimate()
@@ -92,20 +122,32 @@ public class EnemyAI : MonoBehaviour
         if (player.transform.position.x > transform.position.x)
         {
             transform.rotation = Quaternion.identity;
+            face = FaceToward.RIGHT;
+
         } else
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
+            face = FaceToward.LEFT;
         }
-        //throw new System.NotImplementedException();
     }
 
     private void Attack()
     {
+        if (!CheckRayCastCollide()) { state = AIState.HUNTING; }
+        currentTimer -= Time.deltaTime;
+        if (currentTimer < 0.0f) { currentTimer = 0; }
+        if (currentTimer > 0.0f) return;
+
         GameObject projectile = Instantiate(_enemyAttackProjectile, transform.position, transform.rotation);
-        // Need to navigate attack direction
-        Destroy(projectile, 3);
-        state = AIState.HUNTING;
+
+        currentTimer = firerate;
+        Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+        rb.AddForce(new Vector2((int)face, 0) * speedProjectile, ForceMode2D.Impulse);
+
+        Destroy(projectile, 10);
+        
     }
+
 
 
     private void Awake()
@@ -114,6 +156,7 @@ public class EnemyAI : MonoBehaviour
         InvokeRepeating("UpdatePath", timeToCalNewPath, repeatRate);
         player = GameObject.FindGameObjectWithTag("Player");
         state = AIState.HUNTING;
+        face = FaceToward.RIGHT;
     }
 
     private void UpdatePath()
@@ -138,13 +181,14 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        speed = 1.5f;
+        speedProjectile = 4.5f;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        print(state);
+        //print(state);
 
         switch (state)
         {
@@ -158,5 +202,13 @@ public class EnemyAI : MonoBehaviour
                 Attack();
                 break;
         }
+    }
+
+    void OnDrawGizmos()
+    {
+        // Draw a yellow sphere at the transform's position
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+        
     }
 }
