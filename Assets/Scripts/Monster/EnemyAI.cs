@@ -36,14 +36,14 @@ public class EnemyAI : MonoBehaviour
     // Predefined path
 
     [Header("Seeker")]
-    Seeker _seeker;
+    public Seeker _seeker;
 
     [SerializeField] private float _timeToCalNewPath = 0.0f;
     [SerializeField] private float repeatRate = 0.5f;
 
 
     // Initialize Player game object;
-    GameObject player;
+    public GameObject player;
 
     [Header("FSM")]
     [SerializeField] private AIState state = AIState.HUNTING;
@@ -79,7 +79,9 @@ public class EnemyAI : MonoBehaviour
         face = FaceToward.RIGHT;
     }
 
-    private void UpdatePath()
+
+
+    public virtual void UpdatePath()
     {
         if (_seeker.IsDone())
         {
@@ -88,7 +90,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private void onPathComplete(Path p)
+    public void onPathComplete(Path p)
     {
         if (!p.error)
         {

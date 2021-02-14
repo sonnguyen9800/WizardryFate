@@ -12146,9 +12146,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1419895691, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419895691, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 2084112229}
+    - target: {fileID: 1419895691, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
+      propertyPath: firerate
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419895691, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
+      propertyPath: SearchRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419895691, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
+      propertyPath: _raycastLength
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4816986638695744387, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
       propertyPath: m_RootOrder
       value: 13
