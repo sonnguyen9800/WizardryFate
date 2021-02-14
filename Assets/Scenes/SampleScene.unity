@@ -12145,10 +12145,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 920052705, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 1419895691, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 2084112229}
     - target: {fileID: 4816986638695744387, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -12197,68 +12197,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlyingEye
       objectReference: {fileID: 0}
-    - target: {fileID: 4816986638695744444, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
---- !u!1 &1419895690 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4816986638695744444, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
-  m_PrefabInstance: {fileID: 1419895689}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1419895691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1419895690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83683677d0358f94497c74f30fdf9ace, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 2084112229}
-  speed: 0
-  nextPointDis: 0.3
-  _enemyAttackProjectile: {fileID: 2615891961974780847, guid: fcf97db095a9f0443b28efe35d6d7557, type: 3}
-  waypoints: []
-  timeToCalNewPath: 0
-  repeatRate: 0.5
-  attackRange: 4
-  state: 0
-  _raycastLength: 4.89
-  speedProjectile: 1
---- !u!114 &1419895692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1419895690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  drawGizmos: 1
-  detailedGizmos: 0
-  startEndModifier:
-    addPoints: 0
-    exactStartPoint: 3
-    exactEndPoint: 3
-    useRaycasting: 0
-    mask:
-      serializedVersion: 2
-      m_Bits: 4294967295
-    useGraphRaycasting: 0
-  traversableTags: -1
-  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  graphMask:
-    value: -1
 --- !u!1 &1447532236
 GameObject:
   m_ObjectHideFlags: 0

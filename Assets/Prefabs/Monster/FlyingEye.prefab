@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 920052705}
   - component: {fileID: 920052704}
   - component: {fileID: 2268188798013031054}
+  - component: {fileID: 1419895691}
+  - component: {fileID: 1419895692}
   m_Layer: 12
   m_Name: FlyingEye
   m_TagString: Enemy
@@ -134,12 +136,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52744ef6f3ced5848a5e0ab552c7f4b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stun: 0
-  poison: 0
-  speed: 0.1
-  fireRate: 0.1
-  element: 0
   type: 1
+  speed: 0.1
+  stoppingDistance: 0
+  retreatDistance: 0
+  startTimeBtwShots: 0
+  projectile: {fileID: 0}
+  player: {fileID: 0}
 --- !u!70 &920052704
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -176,3 +179,54 @@ MonoBehaviour:
   deadMat: {fileID: 2100000, guid: 667a6bad6644e4b45924ada72db9c988, type: 2}
   deadbackTimeAmount: 0
   _bloodVFX: {fileID: 1005737634677538, guid: 651ef2bf8076d2d4cb5eccd257a247d9, type: 3}
+--- !u!114 &1419895691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4816986638695744444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83683677d0358f94497c74f30fdf9ace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 0
+  nextPointDis: 0.3
+  _enemyAttackProjectile: {fileID: 2615891961974780847, guid: fcf97db095a9f0443b28efe35d6d7557, type: 3}
+  waypoints: []
+  timeToCalNewPath: 0
+  repeatRate: 0.5
+  attackRange: 4
+  state: 0
+  _raycastLength: 4.89
+  speedProjectile: 1
+--- !u!114 &1419895692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4816986638695744444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
