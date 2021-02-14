@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4822093562750125671}
   - component: {fileID: 4822093562750125670}
   - component: {fileID: 4822093562750125669}
+  - component: {fileID: 2806257717364779213}
   m_Layer: 0
   m_Name: MadLove
   m_TagString: Untagged
@@ -102,3 +103,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2806257717364779213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4822093562750125672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b097c55bcf5a96145aed9a3335ddf8b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 1.5
+  nextPointDis: 3
+  _enemyAttackProjectile: {fileID: 0}
+  waypoints: []
+  timeToCalNewPath: 0
+  repeatRate: 0.5
+  attackRange: 0
+  state: 1
+  _raycastLength: 4
+  speedProjectile: 5
