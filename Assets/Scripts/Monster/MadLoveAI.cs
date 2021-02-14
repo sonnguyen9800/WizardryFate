@@ -24,14 +24,4 @@ public class MadLoveAI : EnemyAI
     [SerializeField]
     private FlyingZone zone; // Working Zone of the system
 
-
-
-    public override void UpdatePath()
-    {
-        if (_seeker.IsDone())
-        {
-            _seeker.StartPath
-            (transform.position, player.transform.position, onPathComplete);
-        }
-    }
 }

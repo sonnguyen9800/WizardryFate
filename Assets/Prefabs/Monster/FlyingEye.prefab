@@ -138,9 +138,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   speed: 0.1
-  stoppingDistance: 0
-  retreatDistance: 0
-  startTimeBtwShots: 0
   projectile: {fileID: 0}
   player: {fileID: 0}
 --- !u!70 &920052704
@@ -153,7 +150,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.04508114, y: -0.03691697}
@@ -191,17 +188,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83683677d0358f94497c74f30fdf9ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 0
+  speed: 1.5
   nextPointDis: 0.3
   _enemyAttackProjectile: {fileID: 2615891961974780847, guid: fcf97db095a9f0443b28efe35d6d7557, type: 3}
-  waypoints: []
-  timeToCalNewPath: 0
+  _seeker: {fileID: 0}
+  _timeToCalNewPath: 0
   repeatRate: 0.5
-  attackRange: 4
+  player: {fileID: 0}
   state: 0
-  _raycastLength: 4.89
-  speedProjectile: 1
+  waypoints: []
+  SearchRange: 5
+  _raycastLength: 5
+  firerate: 0.4
+  thurstProjectile: 8
 --- !u!114 &1419895692
 MonoBehaviour:
   m_ObjectHideFlags: 0
