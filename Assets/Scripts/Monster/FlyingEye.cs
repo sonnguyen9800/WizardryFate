@@ -7,37 +7,34 @@ using UnityEngine;
 [RequireComponent(typeof(Damager))]
 [RequireComponent(typeof(CharacterType))]
 [RequireComponent(typeof(SpriteRenderer))]
-
+[RequireComponent(typeof(EnemyAI))]
 public class FlyingEye : MonoBehaviour
 {
     // Start is called before the first frame update
     private Damageable damageable;
-
-
     public CharacterType type = CharacterType.MONSTER;
     private SpriteRenderer _spriteRenderer;
 
     public float speed;
-    public float stoppingDistance;
-    public float retreatDistance;
+
 
     private float timeBtwShots;
-    public float startTimeBtwShots;
 
     public GameObject projectile;
-    public Transform player;
+
+    public GameObject player;
 
     private void Awake() {
         damageable = GetComponent<Damageable>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
 
+        player = GameObject.FindGameObjectWithTag("Player"); // Get reference to player
     }
 
     void Start()
     {
         // damageable.OnDead += Die;
 
-        player = GameObject.FindGameObjectWithTag("Player").transform;
 
     }
 
