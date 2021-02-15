@@ -8,7 +8,7 @@ public class Damager : MonoBehaviour
     [SerializeField] private float damage;
     [SerializeField] LayerMask damageableLayer;
     [SerializeField] Transform hitBoxPosition;
-    
+    [SerializeField] LayerMask tobeDestroyedLayer; // Layer that destroy this object on hit
 
 
     private void CheckAttackHitBox(){
@@ -25,8 +25,16 @@ public class Damager : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private void CheckDestroyHitbox()
+    {
+        Collider2D[] objectCollided = Physics2D.OverlapCircleAll(hitBoxPosition.position, attackRadius, tobeDestroyedLayer);
+        if (objectCollided.Length > 0) 
+        Destroy(gameObject);
+    }
+
     private void FixedUpdate() {
         CheckAttackHitBox();
+        CheckDestroyHitbox();
     }
 
     private void OnDrawGizmos() {

@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - WizardTop
   - Enemy
+  - PlayerTarget
+  - DropLeft
+  - DropRight
   layers:
   - Default
   - TransparentFX

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 162739925}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WizardTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,6 +30,36 @@ Transform:
   m_Father: {fileID: 3026396864258941563}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &526049091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 526049092}
+  m_Layer: 10
+  m_Name: WizardDropPoint
+  m_TagString: DropLeft
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &526049092
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526049091}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.098, y: 2.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3026396864258941563}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &862374118
 GameObject:
   m_ObjectHideFlags: 0
@@ -39,7 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 862374119}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: JUMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +99,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1294231569}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FALL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1372368345}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: IDLE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2028385498}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RUN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,9 +189,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2084112229}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Middle
-  m_TagString: Untagged
+  m_TagString: PlayerTarget
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -190,7 +220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3026396863948526922}
   - component: {fileID: 3026396863948526921}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3026396864103105553}
   - component: {fileID: 556879928}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShootingPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,7 +347,8 @@ GameObject:
   - component: {fileID: 3026396864258941542}
   - component: {fileID: 739036115}
   - component: {fileID: 3026396863670341386}
-  m_Layer: 0
+  - component: {fileID: 2003212093}
+  m_Layer: 10
   m_Name: Wizard
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -344,6 +375,7 @@ Transform:
   - {fileID: 862374119}
   - {fileID: 1294231569}
   - {fileID: 2084112229}
+  - {fileID: 526049092}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -539,6 +571,22 @@ MonoBehaviour:
   elementFactory: {fileID: 11400000, guid: 16983015a511d6b4d8853bcff181ab61, type: 2}
   _firepoint: {fileID: 3026396864103105553}
   fireKey: 324
+--- !u!114 &2003212093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3026396864258941539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8725f18ff356cfe4d859d2e4b7367ce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 10000
+  currentHP: 0
+  life: 1
+  isInvicible: 0
 --- !u!1001 &3219849029315636618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -549,6 +597,10 @@ PrefabInstance:
     - target: {fileID: 383043772652595166, guid: 00c65cdbc957bfe43843abad23eb8ddb, type: 3}
       propertyPath: m_Name
       value: Soul
+      objectReference: {fileID: 0}
+    - target: {fileID: 383043772652595166, guid: 00c65cdbc957bfe43843abad23eb8ddb, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 383043772652595167, guid: 00c65cdbc957bfe43843abad23eb8ddb, type: 3}
       propertyPath: m_RootOrder
