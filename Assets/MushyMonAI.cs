@@ -12,7 +12,6 @@ public class MushyMonAI : MonoBehaviour
     private float _currentTimer = 0;
     private FaceToward face;
     [SerializeField] private float thurst = 1f;
-    private float moveSpeed = 2f;
     private void Awake()
     {
         rigidbody2D = gameObject.GetComponent<Rigidbody2D>();

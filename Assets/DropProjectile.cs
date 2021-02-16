@@ -18,7 +18,7 @@ public class DropProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_currentTimer > 0) { print("WAITING"); _currentTimer -= Time.deltaTime; return; }
+        if (_currentTimer > 0) {  _currentTimer -= Time.deltaTime; return; }
         GameObject projectile =  Instantiate(dropProjectile, transform.position, Quaternion.identity);
         _currentTimer = fireRate;
 
