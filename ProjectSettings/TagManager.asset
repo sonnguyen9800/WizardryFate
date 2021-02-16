@@ -9,7 +9,6 @@ TagManager:
   - Enemy
   - PlayerTarget
   - DropLeft
-  - DropRight
   layers:
   - Default
   - TransparentFX
