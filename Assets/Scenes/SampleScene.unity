@@ -12253,6 +12253,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3026396864258941539, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
   m_PrefabInstance: {fileID: 3026396863670341384}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1486279360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486279358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94da85c51abf13342a5a3620ee1901b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyedVFX: {fileID: 3361476288379333034, guid: 97494a25cdf86ca41a0ed7dea92f55cb, type: 3}
 --- !u!114 &1486279370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12270,6 +12283,26 @@ MonoBehaviour:
   spriteBlinkingTotalTimer: 0
   spriteBlinkingTotalDuration: 1
   startBlinking: 0
+--- !u!114 &1486279371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486279358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 523094bc1eb0d0b44b43a286d8141778, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blinkTime: 0.2
+  isBlinkWhiteOnHit: 1
+  matWhite: {fileID: 2100000, guid: 9dbbb87be171f624dad055d3f0d45295, type: 2}
+  isKnockable: 0
+  knockbackAmount: 0
+  deadMat: {fileID: 2100000, guid: 784a0c51dd0ca7744abbcd6204d36801, type: 2}
+  deadbackTimeAmount: 0
+  _bloodVFX: {fileID: 1005737634677538, guid: 651ef2bf8076d2d4cb5eccd257a247d9, type: 3}
 --- !u!1 &1508310794
 GameObject:
   m_ObjectHideFlags: 0
@@ -14980,6 +15013,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2003212093, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
+      propertyPath: maxHP
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2003212093, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
       propertyPath: isInvicible
       value: 1

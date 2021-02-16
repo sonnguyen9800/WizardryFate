@@ -35,6 +35,7 @@ public class MushyMonAI : MonoBehaviour
 
     private void FlipSpriteAnimate()
     {
+        if (player == null) return;
         if (player.transform.position.x > transform.position.x)
         {
             transform.rotation = Quaternion.identity;

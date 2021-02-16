@@ -10,7 +10,7 @@ public class OnDamageTaken : MonoBehaviour
     {
         damageable = GetComponent<Damageable>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        //damageable.OnDamageTaken += SpriteBlinkingEffect;
+        damageable.OnDamageTaken += swiftBlink;
     }
     public float spriteBlinkingTimer = 0.0f;
     public float spriteBlinkingMiniDuration = 0.1f;
@@ -20,13 +20,18 @@ public class OnDamageTaken : MonoBehaviour
     public bool startBlinking = false;
     void Update()
     {
+
         if (startBlinking)
         {
-            //SpriteBlinkingEffect();
+            SpriteBlinkingEffect();
         }
     }
 
-    private void SpriteBlinkingEffect(float _)
+    void swiftBlink(float _){
+        startBlinking = true;
+    }
+
+    private void SpriteBlinkingEffect()
     {
         damageable.isInvicible = true; // Turn on Invicible
         spriteBlinkingTotalTimer += Time.deltaTime;
@@ -36,6 +41,7 @@ public class OnDamageTaken : MonoBehaviour
             spriteBlinkingTotalTimer = 0.0f;
             gameObject.GetComponent<SpriteRenderer>().enabled = true;   // according to 
                                                                              //your sprite
+            startBlinking = false;
             return;
         }
 
