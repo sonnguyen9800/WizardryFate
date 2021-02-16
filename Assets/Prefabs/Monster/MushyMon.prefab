@@ -13,9 +13,13 @@ GameObject:
   - component: {fileID: 6219634069513094961}
   - component: {fileID: -4635410983870877581}
   - component: {fileID: 879097819155299042}
-  m_Layer: 0
+  - component: {fileID: 1790331092}
+  - component: {fileID: 1790331093}
+  - component: {fileID: 1790331094}
+  - component: {fileID: 1790331095}
+  m_Layer: 12
   m_Name: MushyMon
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,8 +119,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 0.69771016
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -137,3 +141,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d6a43d035eb77748aedc72cdd5dbba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveRate: 2
+  thurst: 1.5
+--- !u!61 &1790331092
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6219634069513094960}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 16.66293, y: 26.17}
+    newSize: {x: 16.675709, y: 26.17}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.66293, y: 26.17}
+  m_EdgeRadius: 0
+--- !u!114 &1790331093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6219634069513094960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083a050f75dcf7547a5c20a36701c625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRadius: 0.5
+  damage: 30
+  damageableLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  hitBoxPosition: {fileID: 6219634069513094991}
+  tobeDestroyedLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  destroyedAfterHit: 0
+--- !u!114 &1790331094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6219634069513094960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8725f18ff356cfe4d859d2e4b7367ce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 100
+  currentHP: 0
+  life: 1
+  isInvicible: 0
+--- !u!114 &1790331095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6219634069513094960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 523094bc1eb0d0b44b43a286d8141778, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blinkTime: 0.1
+  isBlinkWhiteOnHit: 1
+  matWhite: {fileID: 2100000, guid: 9dbbb87be171f624dad055d3f0d45295, type: 2}
+  isKnockable: 1
+  knockbackAmount: 0.5
+  deadMat: {fileID: 2100000, guid: 784a0c51dd0ca7744abbcd6204d36801, type: 2}
+  deadbackTimeAmount: 0.2
+  _bloodVFX: {fileID: 1005737634677538, guid: 651ef2bf8076d2d4cb5eccd257a247d9, type: 3}
