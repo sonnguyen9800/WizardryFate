@@ -30,7 +30,7 @@ public class MushyMonAI : MonoBehaviour
     {
         rigidbody2D.AddForce(new Vector2((int)face, 1)*thurst, ForceMode2D.Impulse);
         //rigidbody2D.AddForce(0, moveSpeed * Time.deltaTime, 0);
-        print("Move");
+        //print("Move");
     }
 
     private void FlipSpriteAnimate()

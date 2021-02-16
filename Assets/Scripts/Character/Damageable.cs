@@ -26,6 +26,7 @@ public class Damageable : MonoBehaviour
     private bool isAlive = true;
     public bool isInvicible = false;
 
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -42,6 +43,7 @@ public class Damageable : MonoBehaviour
             ClampHP();
             OnHealthChanged?.Invoke();
         }
+        
 
         OnDamageTaken?.Invoke(amount);
 
@@ -81,5 +83,13 @@ public class Damageable : MonoBehaviour
         OnDead?.Invoke();
         isAlive = false;
     }
+
+
     public float Percentage => currentHP / maxHP;
+
+    
+
+
+
+
 }

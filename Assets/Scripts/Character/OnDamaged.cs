@@ -36,8 +36,6 @@ public class OnDamaged : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _defaultMaterial = _spriteRenderer.material;
         _playerWizard = FindObjectOfType<Wizard>();
-
-        
     }
 
     void Start()
