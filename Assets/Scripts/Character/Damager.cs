@@ -9,7 +9,7 @@ public class Damager : MonoBehaviour
     [SerializeField] LayerMask damageableLayer;
     [SerializeField] Transform hitBoxPosition;
     [SerializeField] LayerMask tobeDestroyedLayer; // Layer that destroy this object on hit
-
+    [SerializeField] bool destroyedAfterHit = true;
 
     private void CheckAttackHitBox(){
         Collider2D[] objectCollided = Physics2D.OverlapCircleAll(hitBoxPosition.position, attackRadius, damageableLayer );
@@ -22,6 +22,7 @@ public class Damager : MonoBehaviour
         }
         // Damageable damageable = objectCollided.transform.GetComponentInParent<Damageable>();
         // damageable.TakeDamage(damage);
+        if (!destroyedAfterHit) return;
         Destroy(gameObject);
     }
 
