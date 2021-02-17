@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - PlayerTarget
   - DropLeft
+  - WaveMonster
   layers:
   - Default
   - TransparentFX

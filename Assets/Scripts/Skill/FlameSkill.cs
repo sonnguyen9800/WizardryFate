@@ -11,7 +11,7 @@ public class FlameSkill : MonoBehaviour
         {
             //Debug.Log(other.name);
             Damageable damageable = other.GetComponentInParent<Damageable>();
-            damageable.TakeDamage(5);
+            damageable.TakeDamage(30);
         }
         
     }

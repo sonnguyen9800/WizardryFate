@@ -14644,9 +14644,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitBoxPosition: {fileID: 3440413173671032659}
-  attackRadius: 0.4
+  attackRadius: 0.9
   layersTobeHit:
     serializedVersion: 2
     m_Bits: 4096
   _stunTime: 1
-  _damage: 50
+  _damage: 100

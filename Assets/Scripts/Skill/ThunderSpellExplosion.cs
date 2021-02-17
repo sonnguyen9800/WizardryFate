@@ -21,8 +21,8 @@ public class ThunderSpellExplosion : MonoBehaviour
         if (objectCollided.Length == 0) return;        
         foreach (Collider2D collided in objectCollided)
         {
-            Monster monsterAffected = collided.transform.GetComponentInParent<Monster>();
-            monsterAffected.stun = _stunTime;
+            // Monster monsterAffected = collided.transform.GetComponentInParent<Monster>();
+            // monsterAffected.stun = _stunTime;
             Damageable damageable = collided.transform.GetComponentInParent<Damageable>();
             damageable.TakeDamage(_damage);
         }

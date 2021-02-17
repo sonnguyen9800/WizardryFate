@@ -197,7 +197,7 @@ MonoBehaviour:
   player: {fileID: 0}
   state: 0
   waypoints: []
-  SearchRange: 5
+  SearchRange: 10
   _raycastLength: 5
   firerate: 0.4
   thurstProjectile: 8
