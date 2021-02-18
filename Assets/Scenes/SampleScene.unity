@@ -15104,9 +15104,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1486279371, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
+      propertyPath: redColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486279371, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
       propertyPath: FloatingText
       value: 
       objectReference: {fileID: 3274585352348847152, guid: 845608eb86d562f489abb23c33263359, type: 3}
+    - target: {fileID: 2003212093, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
+      propertyPath: isInvicible
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3026396863670341386, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
       propertyPath: playerStats
       value: 

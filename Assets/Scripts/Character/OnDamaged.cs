@@ -31,6 +31,7 @@ public class OnDamaged : MonoBehaviour
     public GameObject _bloodVFX;
     [Header("Popup Damage Taken")]
     public GameObject FloatingText;
+    public bool redColor;
 
     private void Awake() {
         damageable = GetComponent<Damageable>();
@@ -93,6 +94,7 @@ public class OnDamaged : MonoBehaviour
         GameObject go = Instantiate(FloatingText, transform.position, Quaternion.identity);
         FloatingText text = go.GetComponent<FloatingText>();
         text.returnTMPro().text = damage.ToString();
+        if (redColor) { text.returnTMPro().color = Color.red; }
     }
 
 }

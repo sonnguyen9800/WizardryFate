@@ -14,12 +14,10 @@ public class FloatingText : MonoBehaviour
     [SerializeField]
     public string content;
 
-
 	void Start () 
     {
         //Debug.Log(GetComponent<Renderer>().sortingLayerName);
         _fadeTime = 1.5f;
-
         StartCoroutine(FadeTextTo(0, _fadeTime, textMesh));
     }
     private void Awake() {
