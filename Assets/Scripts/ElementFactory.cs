@@ -13,6 +13,7 @@ public class ElementFactory : ScriptableObject
         public GameObject ElementVFX;
         public GameObject SkillPrefab;
 
+        public float damageRate;
         public float cooldownTime;
 
     }

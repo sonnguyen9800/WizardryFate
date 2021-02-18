@@ -29,13 +29,16 @@ public class OnDamaged : MonoBehaviour
     public Material deadMat;
     [Range(0.1f, 2.5f)] public float deadbackTimeAmount;
     public GameObject _bloodVFX;
-
+    [Header("Popup Damage Taken")]
+    public GameObject FloatingText;
 
     private void Awake() {
         damageable = GetComponent<Damageable>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _defaultMaterial = _spriteRenderer.material;
         _playerWizard = FindObjectOfType<Wizard>();
+
+          
     }
 
     void Start()
@@ -47,6 +50,7 @@ public class OnDamaged : MonoBehaviour
             damageable.OnDamageTaken += KnockBack;
         }
         damageable.OnDead += Die;
+        damageable.OnDamageTaken += ShowUpText;
     }
 
     void KnockBack(float _){
@@ -72,11 +76,6 @@ public class OnDamaged : MonoBehaviour
         _spriteRenderer.material = deadMat;
         StartCoroutine(BlinkRed());
         //gameObject.SetActive(false);
-
-       
-
-
-
     }
 
     public IEnumerator BlinkRed(){
@@ -89,6 +88,11 @@ public class OnDamaged : MonoBehaviour
         Destroy(gameObject);
     }
 
-
+    public void ShowUpText(float damage)
+    {
+        GameObject go = Instantiate(FloatingText, transform.position, Quaternion.identity);
+        FloatingText text = go.GetComponent<FloatingText>();
+        text.returnTMPro().text = damage.ToString();
+    }
 
 }

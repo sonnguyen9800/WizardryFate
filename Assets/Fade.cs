@@ -1,45 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-// Script to create floating text for damage popup / status ailment info
-
-public class FloatingText : MonoBehaviour
-{   
-    public string layerToPushTo;
-    private float moveUpSpeed = 0.8f;
-    private TMPro.TextMeshPro textMesh;
+public class Fade : MonoBehaviour
+{
+    public Text text;
+    private bool fadeIn;
     private float _fadeTime;
 
-    [SerializeField]
-    public string content;
-
-
-	void Start () 
+    private TextMesh textMesh;
+    private void Awake()
     {
-        //Debug.Log(GetComponent<Renderer>().sortingLayerName);
-        _fadeTime = 1.5f;
-
-        StartCoroutine(FadeTextTo(0, _fadeTime, textMesh));
-    }
-    private void Awake() {
-        GetComponent<Renderer>().sortingLayerName = "Projectile";
-        textMesh = GetComponent<TMPro.TextMeshPro>();
-        textMesh.text = content;
-    }
-    public TMPro.TextMeshPro returnTMPro()
-    {
-        return textMesh;
+        textMesh = GetComponent<TextMesh>();
+        
     }
     // Start is called before the first frame update
+    void Start()
+    {
+        _fadeTime = 0;
+        fadeIn = false;
+
+        StartCoroutine(FadeTextTo(0, 1.5f, textMesh));
+    }
+
+    
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.up*moveUpSpeed*Time.deltaTime);
+        
     }
 
-    public IEnumerator FadeTextTo(float targetAlpha, float maxDuration, TMPro.TextMeshPro textMesh)
+
+
+    public IEnumerator FadeTextTo(float targetAlpha, float maxDuration, TextMesh textMesh)
     {
         // more efficient to get both colors beforehand
         var fromColor = textMesh.color;
@@ -57,7 +52,6 @@ public class FloatingText : MonoBehaviour
             //lerpFactor = Mathf.SmoothStep(0, 1, lerpFactor);
 
             textMesh.color = Color.Lerp(fromColor, toColor, lerpFactor);
-            transform.Translate(Vector2.up*Time.deltaTime*moveUpSpeed);
 
             // avoid overshooting
             passedTime += Mathf.Min(Time.deltaTime, actualDuration - passedTime);
@@ -66,6 +60,6 @@ public class FloatingText : MonoBehaviour
 
         // just to be sure in the end always set it once
         textMesh.color = toColor;
-        Destroy(gameObject);
     }
 }
+

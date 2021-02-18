@@ -6,6 +6,10 @@ using UnityEngine;
 [RequireComponent(typeof(AnimateWizard))]
 public class Wizard : MonoBehaviour
 {
+    [Header("Stats")]
+    //CharacterStats stats = 
+    public CharacterStats CharacterStats;
+
     [Header("Movement Speed")]
     [SerializeField] [Range(0, 10)] private int moveSpeed;
     [SerializeField] [Range(0, 1)] private float accelerationTimeGround = 0.1f;

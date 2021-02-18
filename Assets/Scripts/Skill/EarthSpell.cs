@@ -11,6 +11,14 @@ public class EarthSpell : MonoBehaviour
     [SerializeField] Transform hitBoxPosition;
     
     private List<Damageable> _PastDamageables = new List<Damageable>();
+
+    private Damager _damager;
+    private void Awake() {
+        _damager = GetComponent<Damager>();
+        damage = _damager.damage;
+    }
+
+
     private void CheckAttackHitBox(){
         Collider2D[] touchDestroyed = Physics2D.OverlapCircleAll(hitBoxPosition.position, attackRadius, explosionLayer );
         if (touchDestroyed.Length > 0) {

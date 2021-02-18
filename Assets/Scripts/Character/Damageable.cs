@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Damageable : MonoBehaviour
 {
+    [SerializeField] CharacterStats stats;
     // Health of the instance
     [Header("Set max HP")]
     public float maxHP;
@@ -27,6 +28,7 @@ public class Damageable : MonoBehaviour
     public bool isInvicible = false;
 
 
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -42,10 +44,11 @@ public class Damageable : MonoBehaviour
             currentHP -= amount;
             ClampHP();
             OnHealthChanged?.Invoke();
-        }
-        
+            OnDamageTaken?.Invoke(amount);
 
-        OnDamageTaken?.Invoke(amount);
+        }
+
+
 
     }
     public void Heal(float amount)

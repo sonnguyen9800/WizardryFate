@@ -6,19 +6,23 @@ using UnityEngine;
 [RequireComponent(typeof(AnimateWizard))]
 public class Attack : MonoBehaviour
 {
-    //[SerializeField] private float fireRate = 0;
-    //[SerializeField] private float damage = 10;
+    [Header("Character Stats")]
+
+    [SerializeField] CharacterStats stats;
+
+
+    [Header("Attack Stats")]
     [SerializeField] [Range(0.5f, 7.5f)] private float flySpeed;
     [SerializeField] private LayerMask notToHitLayer;
     [SerializeField] private GameObject magicShootPrefab;
     [SerializeField] private Transform firePoint;
     [SerializeField] private KeyCode fireKey = KeyCode.Mouse0;
-    private Camera cam;
-    //private float timeToFire = 0;
+    private Camera _cam;
     private AnimateWizard animateWizard;
+
     private void Awake()
     {
-        cam = Camera.main;
+        _cam = Camera.main;
         animateWizard = GetComponent<AnimateWizard>();
     }
 
@@ -34,7 +38,7 @@ public class Attack : MonoBehaviour
 
     private void Shoot()
     {
-        Vector3 mousePosition = cam.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 10));
+        Vector3 mousePosition = _cam.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 10));
         //print(mousePosition);
         Vector3 direction = mousePosition - firePoint.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -47,8 +51,12 @@ public class Attack : MonoBehaviour
         Projectile magicShoot = projectileSpawn.GetComponent<Projectile>();
         magicShoot.transform.position = firePoint.transform.position;
         magicShoot.TargetPosition = mousePosition;
-        magicShoot.flySpeed = this.flySpeed;
         magicShoot.SetAngle(angle + 90);
+
+        // Set status for prefab projectile
+        magicShoot.flySpeed = stats.projectileSpeed;
+        Damager damager = projectileSpawn.GetComponent<Damager>();
+        damager.damage = stats.baseDamage; // Set Damage to base damage
     }
 
 }

@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class SpecialAttack : MonoBehaviour
 {
+    [Header("Status")]
+    [SerializeField] CharacterStats playerStats;
+    [Header("Special Skill")]
     [SerializeField] private ElementFactory elementFactory;
     [SerializeField] private Transform _firepoint;
     [SerializeField] private KeyCode fireKey = KeyCode.Mouse0;

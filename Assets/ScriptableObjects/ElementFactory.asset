@@ -17,24 +17,29 @@ MonoBehaviour:
     NexusPrefab: {fileID: 2569277185775991293, guid: 473fad73bc7b6784e80b0eaed4d1e265, type: 3}
     ElementVFX: {fileID: 0}
     SkillPrefab: {fileID: 0}
+    damageRate: 0
     cooldownTime: 0
   - SoulElement: 1
     NexusPrefab: {fileID: 4591824021134115009, guid: 9b561ec0c1a3016459b3a04914f22355, type: 3}
     ElementVFX: {fileID: 5799477829237081595, guid: 32e8c6df72edd7642938536c6dcea86b, type: 3}
     SkillPrefab: {fileID: 1524366556588946, guid: 091124e35de7dc448b574251ec181a9b, type: 3}
-    cooldownTime: 5
+    damageRate: 2
+    cooldownTime: 4
   - SoulElement: 2
     NexusPrefab: {fileID: 8073814092148456181, guid: 18b489eb6d6eda8468d4c01a2d27da23, type: 3}
     ElementVFX: {fileID: 4491073282904073355, guid: 3066837d4278d2c46849d8bf30f29b0e, type: 3}
     SkillPrefab: {fileID: 0}
+    damageRate: 0
     cooldownTime: 1
   - SoulElement: 3
     NexusPrefab: {fileID: 1143228082918259958, guid: 00a4405b06e1c374c8189aaecb94f52b, type: 3}
     ElementVFX: {fileID: 6891808529680235121, guid: 33867b93c8e51cf42a430aa8f1bca08b, type: 3}
     SkillPrefab: {fileID: 6378100332894833376, guid: fa159d8471cc9c6469a01d9e857bc62e, type: 3}
+    damageRate: 3
     cooldownTime: 1
   - SoulElement: 4
     NexusPrefab: {fileID: 8788864379829934189, guid: 7613718a089280146b5c17f765e2b0ab, type: 3}
     ElementVFX: {fileID: 5826823370180529763, guid: f3009c657dcb5374ea32be86f11cf612, type: 3}
     SkillPrefab: {fileID: 4102630641624510073, guid: 513977d269e7ca54dba039c68bc37a9e, type: 3}
+    damageRate: 2.5
     cooldownTime: 1

@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable() {
         waveGeneratorsGameObject = GameObject.FindGameObjectsWithTag("WaveMonster");
-        print("Found " + waveGeneratorsGameObject.Length + " objects");
+        //print("Found " + waveGeneratorsGameObject.Length + " objects");
     }
     private void Awake() {
         // foreach (var gameobject in waveGeneratorsGameObject){
@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void swiftWaves(bool status){
-        print("Lenght" + waveGeneratorsGameObject.Length);
+       //print("Lenght" + waveGeneratorsGameObject.Length);
         for(int i = 0;i < waveGeneratorsGameObject.Length; i++){
             //print(waveGeneratorsGameObject[i].name);
             waveGeneratorsGameObject[i].SetActive(status);
@@ -47,10 +47,10 @@ public class GameManager : MonoBehaviour
         
         _currentTimer += Time.deltaTime;
         if (_currentTimer >= victoryTimer && _player != null){
-            Debug.Log("Victory");
+            //Debug.Log("Victory");
             // Change Scene
         } else if (_player == null) {
-            Debug.Log("Defeated");
+            //Debug.Log("Defeated");
             // Chance Scene
         }
         

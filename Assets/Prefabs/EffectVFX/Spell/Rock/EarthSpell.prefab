@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4102630641624510074}
   - component: {fileID: 4102630641624510077}
   - component: {fileID: 4102630641624510076}
+  - component: {fileID: 8540366937656262469}
   m_Layer: 0
   m_Name: EarthSpell
   m_TagString: Untagged
@@ -140,3 +141,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVFX: {fileID: 8446338941929994206, guid: 92ee53e77bd20b64fb6844e7a08a080d, type: 3}
+--- !u!114 &8540366937656262469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4102630641624510073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083a050f75dcf7547a5c20a36701c625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRadius: 0.5
+  damage: 0
+  damageableLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  hitBoxPosition: {fileID: 4102630641624510075}
+  tobeDestroyedLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  destroyedAfterHit: 1
+  causeDamage: 1

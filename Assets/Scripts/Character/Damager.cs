@@ -5,13 +5,15 @@ using UnityEngine;
 public class Damager : MonoBehaviour
 {
     [SerializeField][Range(0.01f, 5f)] private float attackRadius;
-    [SerializeField] private float damage;
+    [SerializeField] public float damage;
     [SerializeField] LayerMask damageableLayer;
     [SerializeField] Transform hitBoxPosition;
     [SerializeField] LayerMask tobeDestroyedLayer; // Layer that destroy this object on hit
     [SerializeField] bool destroyedAfterHit = true;
 
+    [SerializeField] bool causeDamage = true; // If false -> This does cause damage, provide reference to damage instead
     private void CheckAttackHitBox(){
+        if (!causeDamage) return;
         Collider2D[] objectCollided = Physics2D.OverlapCircleAll(hitBoxPosition.position, attackRadius, damageableLayer );
         if (objectCollided.Length == 0) return;
         
