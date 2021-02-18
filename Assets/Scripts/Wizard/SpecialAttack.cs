@@ -68,23 +68,23 @@ public class SpecialAttack : MonoBehaviour
             if (skillPrefab == null) return;
             if (_soulStealer.Element == SoulElement.THUNDER && getCooldownTime(SoulElement.THUNDER) <= 0)
             {
-                CastSpell(mousePosition, skillPrefab);
+                CastSpell(mousePosition, skillPrefab, SoulElement.THUNDER);
                 setCooldownTime(_soulStealer.Element, elementFactory.getCooldownTime(_soulStealer.Element));
             }
             else if (_soulStealer.Element == SoulElement.FIRE && getCooldownTime(SoulElement.FIRE) <= 0 )
             {
-                GameObject skill = CastContinousSpell(mousePosition, skillPrefab, _firepoint); // Set prefab and the firepoint
+                GameObject skill = CastContinousSpell(mousePosition, skillPrefab, _firepoint, SoulElement.FIRE); // Set prefab and the firepoint
                 Destroy(skill, elementFactory.getCooldownTime(_soulStealer.Element)*0.6f); // Destroy skill after preiod of time
                 setCooldownTime(_soulStealer.Element, elementFactory.getCooldownTime(_soulStealer.Element));
             }
             else if (_soulStealer.Element == SoulElement.WATER && getCooldownTime(SoulElement.WATER) <= 0)
             {
-                CastSpell(mousePosition, skillPrefab);
+                CastSpell(mousePosition, skillPrefab, SoulElement.THUNDER);
                 setCooldownTime(_soulStealer.Element, elementFactory.getCooldownTime(_soulStealer.Element));
             }
             else if (_soulStealer.Element == SoulElement.EARTH && getCooldownTime(SoulElement.EARTH) <= 0)
             {
-                CastDropSpell(mousePosition, skillPrefab);
+                CastDropSpell(mousePosition, skillPrefab, SoulElement.EARTH);
                 setCooldownTime(_soulStealer.Element, elementFactory.getCooldownTime(_soulStealer.Element));
             }
         }
@@ -93,24 +93,37 @@ public class SpecialAttack : MonoBehaviour
 
 
     // Spawn spell object from mouse drop
-    private void CastDropSpell(Vector3 mousePosition, GameObject abilityPrefab){
-        Instantiate(abilityPrefab,mousePosition, transform.rotation);
+    private void CastDropSpell(Vector3 mousePosition, GameObject abilityPrefab, SoulElement soulElement){
+       GameObject go = Instantiate(abilityPrefab,mousePosition, transform.rotation);
+        Damager goDamager = go.GetComponent<Damager>();
+        if (goDamager == null) return;
+        goDamager.damage = playerStats.baseDamage * elementFactory.GetElementDamageRate(soulElement); // Set damage
     }
-    private GameObject CastContinousSpell(Vector3 mousePosition, GameObject abilityPrefab, Transform firepoint){
+    private GameObject CastContinousSpell(Vector3 mousePosition, GameObject abilityPrefab, Transform firepoint, SoulElement soulElement){
         GameObject skill = Instantiate(abilityPrefab,
             firepoint.position, transform.rotation);
         FollowFirePoint follow = skill.GetComponent<FollowFirePoint>();
         follow.setFirepoint(firepoint);
+
+        // Set damage
+        Damager damager = skill.GetComponent<Damager>();
+        if (damager == null) return skill;
+        damager.damage = playerStats.baseDamage * elementFactory.GetElementDamageRate(soulElement);
+
         return skill;
     }
 
 
-    private void CastSpell(Vector3 mousePosition, GameObject abilityPrefab)
+    private void CastSpell(Vector3 mousePosition, GameObject abilityPrefab, SoulElement soulElement)
     {
         GameObject skill = Instantiate(abilityPrefab, mousePosition, transform.rotation);
         Projectile magicShoot = skill.GetComponent<Projectile>();
         magicShoot.transform.position = _firepoint.position;
         magicShoot.TargetPosition = mousePosition;
-        //magicShoot.flySpeed = 2.0f;
+        // Set damage
+        Damager damager = skill.GetComponent<Damager>();
+        if (damager == null) 
+        damager.damage = playerStats.baseDamage * elementFactory.GetElementDamageRate(soulElement);
+
     }
 }

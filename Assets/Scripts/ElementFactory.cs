@@ -30,6 +30,12 @@ public class ElementFactory : ScriptableObject
     {
         return elementMap[soulElement];
     }
+
+    public float GetElementDamageRate(SoulElement soulElement)
+    {
+        return elementMap[soulElement].damageRate;
+    }
+
     public GameObject GetNexusPrefab(SoulElement soulElement)
     {
         return elementMap[soulElement].NexusPrefab;
