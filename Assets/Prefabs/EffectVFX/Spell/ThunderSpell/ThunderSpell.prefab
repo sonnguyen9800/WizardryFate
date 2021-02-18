@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2269515428035368445}
   - component: {fileID: 3754778411382145268}
   - component: {fileID: 3018673556644656543}
+  - component: {fileID: 6909629305863165181}
   m_Layer: 11
   m_Name: ThunderSpell
   m_TagString: Untagged
@@ -4840,7 +4841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bdd6871a290fec4bb3788f9ba7c7853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flySpeed: 3.5
+  flySpeed: 4
 --- !u!114 &2269515428035368445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4869,7 +4870,8 @@ MonoBehaviour:
   _damage: 25
   damageables: []
   hitBoxPosition: {fileID: 1468773596133180366}
-  attackRadius: 0.1
+  attackRadius: 0.2
+  blastRadius: 2
   layersTobeHit:
     serializedVersion: 2
     m_Bits: 4096
@@ -4889,6 +4891,29 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 2.1299999, y: 2.1299999}
   m_Direction: 0
+--- !u!114 &6909629305863165181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6378100332894833376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083a050f75dcf7547a5c20a36701c625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRadius: 0
+  damage: 0
+  damageableLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  hitBoxPosition: {fileID: 7637870829448411659}
+  tobeDestroyedLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  destroyedAfterHit: 0
+  causeDamage: 0
 --- !u!1 &6720221129739718535
 GameObject:
   m_ObjectHideFlags: 0

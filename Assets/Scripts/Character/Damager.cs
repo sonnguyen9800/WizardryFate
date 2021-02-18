@@ -41,6 +41,7 @@ public class Damager : MonoBehaviour
     }
 
     private void OnDrawGizmos() {
+        if (hitBoxPosition == null) return;
         Gizmos.DrawWireSphere(hitBoxPosition.position, attackRadius);
 
     }
