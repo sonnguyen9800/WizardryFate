@@ -20,6 +20,10 @@ public class Damager : MonoBehaviour
         foreach (Collider2D collided in objectCollided)
         {
             Damageable damageable = collided.transform.GetComponentInParent<Damageable>();
+            if (damageable == null) 
+            {
+                continue;
+            }
             damageable.TakeDamage(damage);
         }
         // Damageable damageable = objectCollided.transform.GetComponentInParent<Damageable>();
