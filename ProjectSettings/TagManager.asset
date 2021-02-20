@@ -10,6 +10,7 @@ TagManager:
   - PlayerTarget
   - DropLeft
   - WaveMonster
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - Projectile
   - Enemy
   - FloatingText
-  - 
+  - Item
   - 
   - 
   - 
@@ -65,9 +66,9 @@ TagManager:
   - name: Effect
     uniqueID: 232217899
     locked: 0
+  - name: Item
+    uniqueID: 2808059935
+    locked: 0
   - name: TextSFX
     uniqueID: 1721899127
-    locked: 0
-  - name: New Layer
-    uniqueID: 2808059935
     locked: 0
