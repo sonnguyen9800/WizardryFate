@@ -32,8 +32,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4816986638695744444}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.341, y: -12.655, z: 0}
-  m_LocalScale: {x: 2, y: 1.8537837, z: 2}
+  m_LocalPosition: {x: -5.363, y: -12.629, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: -662363155
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2013565662355475531, guid: 65fbc931ea832924192ff8e4acdb5bb4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c23f2c55ee66760498ce3c243630da61, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +99,7 @@ Animator:
   m_GameObject: {fileID: 4816986638695744444}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 24e788605f2c31d43885023c6921b663, type: 2}
+  m_Controller: {fileID: 9100000, guid: c8cea87883ec01d4d9e021f05a77992a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -154,8 +154,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04508114, y: -0.03691697}
-  m_Size: {x: 0.25654936, y: 0.25654936}
+  m_Offset: {x: -0.037108183, y: 0.0100492835}
+  m_Size: {x: 0.97039175, y: 0.97039175}
   m_Direction: 0
 --- !u!114 &2268188798013031054
 MonoBehaviour:
@@ -178,6 +178,7 @@ MonoBehaviour:
   deadbackTimeAmount: 0
   _bloodVFX: {fileID: 1005737634677538, guid: 651ef2bf8076d2d4cb5eccd257a247d9, type: 3}
   FloatingText: {fileID: 3274585352348847152, guid: 845608eb86d562f489abb23c33263359, type: 3}
+  redColor: 0
 --- !u!114 &1419895691
 MonoBehaviour:
   m_ObjectHideFlags: 0
