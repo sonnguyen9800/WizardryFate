@@ -30,7 +30,7 @@ public class Attack : MonoBehaviour
     {
         if (Input.GetKeyDown(fireKey))
         {
-            animateWizard.State = WizardState.LIGHT_ATTACK;
+            //animateWizard.State = WizardState.LIGHT_ATTACK;
             Shoot();
         }
 

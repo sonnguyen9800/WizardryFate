@@ -42,7 +42,6 @@ public class AnimateWizard : MonoBehaviour
         {
             animator.SetBool("isGrounded", true);
             animator.SetBool("isRunning", true);
-            animator.SetBool("lightAttack", false);
             return;
         }
         if (state == WizardState.LIGHT_ATTACK)
