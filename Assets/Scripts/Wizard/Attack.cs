@@ -8,7 +8,6 @@ public class Attack : MonoBehaviour
 {
     [Header("Character Stats")]
 
-    [SerializeField] CharacterStats stats;
 
 
     [Header("Attack Stats")]
@@ -18,12 +17,15 @@ public class Attack : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private KeyCode fireKey = KeyCode.Mouse0;
     private Camera _cam;
-    private AnimateWizard animateWizard;
 
+
+    Wizard _wizard;
     private void Awake()
     {
         _cam = Camera.main;
-        animateWizard = GetComponent<AnimateWizard>();
+
+        _wizard = GetComponent<Wizard>();
+
     }
 
     private void Update()
@@ -53,10 +55,13 @@ public class Attack : MonoBehaviour
         magicShoot.TargetPosition = mousePosition;
         magicShoot.SetAngle(angle + 90);
 
+
         // Set status for prefab projectile
-        magicShoot.flySpeed = stats.projectileSpeed;
+        if (_wizard == null) return; // Check if wizard exist or not
+        magicShoot.flySpeed = _wizard.projectilespeed;
         Damager damager = projectileSpawn.GetComponent<Damager>();
-        damager.damage = stats.baseDamage; // Set Damage to base damage
+        if (damager == null) return;
+        damager.damage = _wizard.damage; // Set Damage to base damage
     }
 
 }

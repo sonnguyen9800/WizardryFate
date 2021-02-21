@@ -9,6 +9,10 @@ public class Wizard : MonoBehaviour
     [Header("Stats")]
     //CharacterStats stats = 
     public CharacterStats CharacterStats;
+    public float damage;
+    public float projectilespeed;
+    public float amour;
+
 
     [Header("Movement Speed")]
     [SerializeField] [Range(0, 10)] private int moveSpeed;
@@ -33,6 +37,12 @@ public class Wizard : MonoBehaviour
     {
         controller2D = GetComponent<Controller2D>();
         animateWizard = GetComponent<AnimateWizard>();
+
+        // Initialize stats
+        damage = CharacterStats.baseDamage;
+        projectilespeed = CharacterStats.projectileSpeed;
+        amour = CharacterStats.baseAmour;
+        
     }
     void Start()
     {

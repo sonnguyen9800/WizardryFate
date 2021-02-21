@@ -10,6 +10,8 @@ public class SpecialAttack : MonoBehaviour
     [SerializeField] private Transform _firepoint;
     [SerializeField] private KeyCode fireKey = KeyCode.Mouse0;
 
+
+    Wizard _wizard;
     [System.Serializable]
     public class SkillTimer{
         SoulElement element;
@@ -47,6 +49,7 @@ public class SpecialAttack : MonoBehaviour
             SkillTimer skillTimer = new SkillTimer(elementInfo.SoulElement, elementInfo.cooldownTime);
             skillTimerMap[elementInfo.SoulElement] = skillTimer;
         }
+        _wizard = GetComponent<Wizard>();
     }
 
     private void FixedUpdate() {
@@ -97,7 +100,7 @@ public class SpecialAttack : MonoBehaviour
        GameObject go = Instantiate(abilityPrefab,mousePosition, transform.rotation);
         Damager goDamager = go.GetComponent<Damager>();
         if (goDamager == null) return;
-        goDamager.damage = playerStats.baseDamage * elementFactory.GetElementDamageRate(soulElement); // Set damage
+        goDamager.damage = _wizard.damage * elementFactory.GetElementDamageRate(soulElement); // Set damage
     }
     private GameObject CastContinousSpell(Vector3 mousePosition, GameObject abilityPrefab, Transform firepoint, SoulElement soulElement){
         GameObject skill = Instantiate(abilityPrefab,
@@ -108,7 +111,7 @@ public class SpecialAttack : MonoBehaviour
         // Set damage
         Damager damager = skill.GetComponent<Damager>();
         if (damager == null) return skill;
-        damager.damage = playerStats.baseDamage * elementFactory.GetElementDamageRate(soulElement);
+        damager.damage = _wizard.damage * elementFactory.GetElementDamageRate(soulElement);
 
         return skill;
     }
@@ -118,12 +121,15 @@ public class SpecialAttack : MonoBehaviour
     {
         GameObject skill = Instantiate(abilityPrefab, mousePosition, transform.rotation);
         Projectile magicShoot = skill.GetComponent<Projectile>();
+        if (magicShoot == null) return;
         magicShoot.transform.position = _firepoint.position;
         magicShoot.TargetPosition = mousePosition;
+        
+        magicShoot.flySpeed = _wizard.projectilespeed * 0.5f;
         // Set damage
         Damager damager = skill.GetComponent<Damager>();
         if (damager == null) 
-        damager.damage = playerStats.baseDamage * elementFactory.GetElementDamageRate(soulElement);
+        damager.damage = _wizard.damage * elementFactory.GetElementDamageRate(soulElement);
 
     }
 }

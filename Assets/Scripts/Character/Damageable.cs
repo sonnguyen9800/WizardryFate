@@ -31,10 +31,7 @@ public class Damageable : MonoBehaviour
 
     private void Awake()
     {
-        if (stats == null)
-        {
-            print("NULL ????");
-        }
+        if (stats == null) return;
         maxHP = stats.maxHitpoints;
     }
 
