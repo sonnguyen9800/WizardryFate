@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SpecialAttack : MonoBehaviour
@@ -137,5 +137,5 @@ public class SpecialAttack : MonoBehaviour
         skill.transform.position = new Vector3(playerPos.x + 1, playerPos.y, playerPos.z);
         GameObject skill2 = Instantiate(abilityPrefab );
         skill2.transform.position = new Vector3(playerPos.x - 1, playerPos.y, playerPos.z);
-    }
-}
+        Destroy(skill, 5);
+        Destroy(skill2, 5);
