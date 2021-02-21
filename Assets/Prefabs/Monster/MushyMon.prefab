@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1790331093}
   - component: {fileID: 1790331094}
   - component: {fileID: 1790331095}
+  - component: {fileID: 2184974273617670859}
   m_Layer: 12
   m_Name: MushyMon
   m_TagString: Enemy
@@ -230,3 +231,17 @@ MonoBehaviour:
   deadbackTimeAmount: 0.2
   _bloodVFX: {fileID: 1005737634677538, guid: 651ef2bf8076d2d4cb5eccd257a247d9, type: 3}
   FloatingText: {fileID: 3274585352348847152, guid: 845608eb86d562f489abb23c33263359, type: 3}
+  redColor: 0
+--- !u!114 &2184974273617670859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6219634069513094960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1307c7e9051e1f0489e8e0763e33b629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropFactory: {fileID: 11400000, guid: 416a0dc01d00e52488c9b3d5dfec071d, type: 2}

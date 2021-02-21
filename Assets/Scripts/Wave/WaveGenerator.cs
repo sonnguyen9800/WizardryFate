@@ -47,6 +47,7 @@ public class WaveGenerator : MonoBehaviour
         }
 
         if (_spawnTimer > 0) { _spawnTimer -= Time.deltaTime; return;}
+        if (_player == null) return;
         if (Vector2.Distance(transform.position, _player.transform.position) <= _range){
             Instantiate(monstersPrefab[rand.Next(monstersPrefab.Length)], transform.position, Quaternion.identity);
             _spawnTimer = _spawnTimerRate;

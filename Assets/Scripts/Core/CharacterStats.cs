@@ -8,6 +8,7 @@ public class CharacterStats : ScriptableObject {
     [SerializeField] CharacterType characterType;
     [SerializeField] public float maxHitpoints;
     [SerializeField] public float baseDamage;
+    [SerializeField] public float baseAmour;
     [SerializeField] public float baseCooldown;
     [SerializeField] public float baseDamageFirerate; //For those who need
     [SerializeField] public float projectileSpeed; //For those who need

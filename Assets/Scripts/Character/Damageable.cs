@@ -34,10 +34,19 @@ public class Damageable : MonoBehaviour
     {
         ResetHP();
     }
+
+
+
     private void Update()
     {
         if (currentHP <= 0) ReduceLife();
     }
+
+    public CharacterStats getStats()
+    {
+        return stats;
+    }
+
     public void TakeDamage(float amount)
     {
         if (!isInvicible){

@@ -9,13 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ff8ee3ac4ce9b148b5d62a0a606f6e9, type: 3}
-  m_Name: Wizard
+  m_Script: {fileID: 11500000, guid: 5f6c9833373ab2d4381a47e7589b8a04, type: 3}
+  m_Name: DropSet
   m_EditorClassIdentifier: 
-  characterType: 0
-  maxHitpoints: 3000
-  baseDamage: 300
-  baseAmour: 1
-  baseCooldown: 1
-  baseDamageFirerate: 1
-  projectileSpeed: 4.5
+  dropsList:
+  - itemPrefab: {fileID: 5507322760724133775, guid: 0f4bd83711ffc89479fc83edc05de778, type: 3}
+    droprate: 0.7

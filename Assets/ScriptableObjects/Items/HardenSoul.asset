@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ff8ee3ac4ce9b148b5d62a0a606f6e9, type: 3}
-  m_Name: Wizard
+  m_Script: {fileID: 11500000, guid: be5043ccef6f20c41b79d4ff5e59a8ff, type: 3}
+  m_Name: HardenSoul
   m_EditorClassIdentifier: 
-  characterType: 0
-  maxHitpoints: 3000
-  baseDamage: 300
-  baseAmour: 1
-  baseCooldown: 1
-  baseDamageFirerate: 1
-  projectileSpeed: 4.5
+  name: Titan Soul
+  hpRecover: 0
+  hpLoss: 0
+  amourIncrease: 0
+  damageIncrease: 1
+  increaseHealth: 0
+  increaseProjectileSpeed: 0
