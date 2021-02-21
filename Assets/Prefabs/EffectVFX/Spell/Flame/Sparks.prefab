@@ -9685,7 +9685,7 @@ MonoBehaviour:
   damageableLayer:
     serializedVersion: 2
     m_Bits: 0
-  hitBoxPosition: {fileID: 0}
+  hitBoxPosition: {fileID: 4675702789516478}
   tobeDestroyedLayer:
     serializedVersion: 2
     m_Bits: 0

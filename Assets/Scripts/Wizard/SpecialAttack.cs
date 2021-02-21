@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SpecialAttack : MonoBehaviour
@@ -82,7 +82,9 @@ public class SpecialAttack : MonoBehaviour
             }
             else if (_soulStealer.Element == SoulElement.WATER && getCooldownTime(SoulElement.WATER) <= 0)
             {
-                CastSpell(mousePosition, skillPrefab, SoulElement.THUNDER);
+                //Summon(elementFactory.GetSkillPrefab);
+                //GameObject clone = elementFactory.GetSkillPrefab
+                Summon(elementFactory.GetSkillPrefab(_soulStealer.Element));
                 setCooldownTime(_soulStealer.Element, elementFactory.getCooldownTime(_soulStealer.Element));
             }
             else if (_soulStealer.Element == SoulElement.EARTH && getCooldownTime(SoulElement.EARTH) <= 0)
@@ -131,5 +133,17 @@ public class SpecialAttack : MonoBehaviour
         if (damager == null) 
         damager.damage = _wizard.damage * elementFactory.GetElementDamageRate(soulElement);
 
+    }
+    
+    public void Summon(GameObject abilityPrefab)
+    {
+
+        Vector3 playerPos = transform.position;
+        GameObject skill = Instantiate(abilityPrefab );
+        skill.transform.position = new Vector3(playerPos.x + 1, playerPos.y, playerPos.z);
+        GameObject skill2 = Instantiate(abilityPrefab );
+        skill2.transform.position = new Vector3(playerPos.x - 1, playerPos.y, playerPos.z);
+        Destroy(skill, 2);
+        Destroy(skill2, 2);
     }
 }
