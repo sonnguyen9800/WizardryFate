@@ -7,7 +7,9 @@ public class Damageable : MonoBehaviour
 {
     [SerializeField] CharacterStats stats;
     // Health of the instance
-    [Header("Set max HP")]
+
+
+
     public float maxHP;
     
     public float currentHP;
@@ -26,6 +28,15 @@ public class Damageable : MonoBehaviour
     public Action OnDead = delegate { };
     private bool isAlive = true;
     public bool isInvicible = false;
+
+    private void Awake()
+    {
+        if (stats == null)
+        {
+            print("NULL ????");
+        }
+        maxHP = stats.maxHitpoints;
+    }
 
 
 

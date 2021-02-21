@@ -69,6 +69,8 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private float thurstProjectile = 5.0f;
 
 
+    CharacterStats _iniStats;
+
     // Initilize
     private void Awake()
     {
@@ -77,9 +79,19 @@ public class EnemyAI : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         state = AIState.WAIT;
         face = FaceToward.RIGHT;
+
+        _iniStats = GetComponent<Damageable>().getStats();
     }
 
+    void Start()
+    {
+        speed = 1.5f;
+        thurstProjectile = 4.5f;
 
+        // Initiatate stats
+        firerate = _iniStats.baseDamageFirerate;
+
+    }
 
     public virtual void UpdatePath()
     {
@@ -101,11 +113,7 @@ public class EnemyAI : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
-        speed = 1.5f;
-        thurstProjectile = 4.5f;
-    }
+
 
     // Update is called once per frame
     void FixedUpdate()
@@ -195,6 +203,13 @@ public class EnemyAI : MonoBehaviour
         if (currentTimer > 0.0f) return;
 
         GameObject projectile = Instantiate(_enemyAttackProjectile, transform.position, transform.rotation);
+
+
+        if (_iniStats != null)
+        {
+            Damager damagerProjectile = projectile.GetComponent<Damager>();
+            damagerProjectile.damage = _iniStats.baseDamage;
+        }
 
         currentTimer = firerate;
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();

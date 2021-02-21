@@ -12,10 +12,25 @@ public class MushyMonAI : MonoBehaviour
     private float _currentTimer = 0;
     private FaceToward face;
     [SerializeField] private float thurst = 1f;
+
+
+    CharacterStats _stats;
+    Damager _monsterDamager;
+
     private void Awake()
     {
         rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
+        _stats = GetComponent<Damageable>().getStats();
+        _monsterDamager = GetComponent<Damager>();
+
+    }
+
+    private void Start()
+    {
+        if (_stats == null) return;
+        if (_monsterDamager == null) return;
+        _monsterDamager.damage = _stats.baseDamage;
     }
     private void FixedUpdate()
     {

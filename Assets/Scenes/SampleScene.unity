@@ -477,10 +477,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 879097819155299042, guid: ea189555fade08647832cc01dd80d474, type: 3}
-      propertyPath: thurst
-      value: 1.8
-      objectReference: {fileID: 0}
     - target: {fileID: 6219634069513094960, guid: ea189555fade08647832cc01dd80d474, type: 3}
       propertyPath: m_Name
       value: MushyMon
@@ -491,11 +487,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6219634069513094991, guid: ea189555fade08647832cc01dd80d474, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.04
+      value: -5.92
       objectReference: {fileID: 0}
     - target: {fileID: 6219634069513094991, guid: ea189555fade08647832cc01dd80d474, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.53
+      value: -11.82
       objectReference: {fileID: 0}
     - target: {fileID: 6219634069513094991, guid: ea189555fade08647832cc01dd80d474, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1020,11 +1016,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4816986638695744387, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.1473203
+      value: -7.45
       objectReference: {fileID: 0}
     - target: {fileID: 4816986638695744387, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.158521
+      value: -11.67
       objectReference: {fileID: 0}
     - target: {fileID: 4816986638695744387, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
       propertyPath: m_LocalPosition.z

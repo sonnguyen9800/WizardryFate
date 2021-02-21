@@ -9,9 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f6c9833373ab2d4381a47e7589b8a04, type: 3}
-  m_Name: DropSet
+  m_Script: {fileID: 11500000, guid: 6ff8ee3ac4ce9b148b5d62a0a606f6e9, type: 3}
+  m_Name: SilverWing
   m_EditorClassIdentifier: 
-  dropsList:
-  - itemPrefab: {fileID: 1606516647351835358, guid: 572d5facc474ec94ca1900c15453408d, type: 3}
-    droprate: 0.9
+  characterType: 1
+  maxHitpoints: 300
+  baseDamage: 50
+  baseAmour: 1
+  baseCooldown: 1
+  baseDamageFirerate: 2.5
+  projectileSpeed: 0.8

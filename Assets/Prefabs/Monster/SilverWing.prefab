@@ -12,14 +12,13 @@ GameObject:
   - component: {fileID: 4816986638695744386}
   - component: {fileID: 4816986638695744385}
   - component: {fileID: 4816986638695744384}
-  - component: {fileID: 920052705}
   - component: {fileID: 920052704}
   - component: {fileID: 2268188798013031054}
   - component: {fileID: 1419895691}
   - component: {fileID: 1419895692}
   - component: {fileID: -4157886744047145117}
   m_Layer: 12
-  m_Name: FlyingEye
+  m_Name: SilverWing
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,27 +120,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8725f18ff356cfe4d859d2e4b7367ce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 0}
+  stats: {fileID: 11400000, guid: 2b0600b5b2594d247943415402c69e67, type: 2}
   maxHP: 100
   currentHP: 0
   life: 1
   isInvicible: 0
---- !u!114 &920052705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4816986638695744444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52744ef6f3ced5848a5e0ab552c7f4b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 1
-  speed: 0.1
-  projectile: {fileID: 0}
-  player: {fileID: 0}
 --- !u!70 &920052704
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
