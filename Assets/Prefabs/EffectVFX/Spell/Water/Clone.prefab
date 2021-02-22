@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 5452155520811597272}
   - component: {fileID: 7085878992188524675}
   - component: {fileID: 7085878992632057214}
+  - component: {fileID: -6566380554715419047}
   m_Layer: 10
   m_Name: Clone
   m_TagString: Player
@@ -165,6 +166,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CharacterStats: {fileID: 11400000, guid: 73651189123cd574bad934aaa16d79d5, type: 2}
+  damage: 0
+  projectilespeed: 0
+  amour: 0
   moveSpeed: 3
   accelerationTimeGround: 0.7
   jumpHeight: 1.7
@@ -203,7 +207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea760559562e4d438e4b325f184c86f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 73651189123cd574bad934aaa16d79d5, type: 2}
   flySpeed: 4
   notToHitLayer:
     serializedVersion: 2
@@ -240,7 +243,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94da85c51abf13342a5a3620ee1901b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyedVFX: {fileID: 3361476288379333034, guid: 97494a25cdf86ca41a0ed7dea92f55cb, type: 3}
+  destroyedVFX: {fileID: 1245487429816736, guid: 9f807b4c59a4bc246882325e4d8e29b3, type: 3}
+--- !u!114 &-6566380554715419047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5452155520811597277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e49b3a7e8cc7a4fba19fd7f6738514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _vfxEffect: {fileID: 1245487429816736, guid: 9f807b4c59a4bc246882325e4d8e29b3, type: 3}
 --- !u!1 &5452155520969513902
 GameObject:
   m_ObjectHideFlags: 0

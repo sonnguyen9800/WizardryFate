@@ -55,6 +55,7 @@ public class OnDamaged : MonoBehaviour
     }
 
     void KnockBack(float _){
+        if (_playerWizard == null) return;
         Vector2 direction = -(_playerWizard.transform.position - this.transform.position).normalized;
         this.transform.Translate(direction*knockbackAmount);
     }
