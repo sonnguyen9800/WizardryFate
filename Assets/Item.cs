@@ -11,6 +11,13 @@ public class Item : MonoBehaviour
     Wizard characterStats;
     GameObject prefabVFX;
 
+    [Header("Sound")]
+    private AudioSource _audioSource;
+    private void Awake()
+    {
+        
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject collidedGameObject = collision.gameObject;
@@ -21,7 +28,10 @@ public class Item : MonoBehaviour
 
 
         prefabVFX =  Instantiate(itemFactory.prefabVFX, collidedGameObject.transform.position, Quaternion.identity);
-        Destroy(prefabVFX, 0.65f);
+        _audioSource = prefabVFX.GetComponent<AudioSource>();
+        _audioSource.PlayOneShot(itemFactory.sound);
+
+        Destroy(prefabVFX, 4f);
         if (damageable == null) return;
         if (characterStats == null) return;
         damageable.Heal(damageable.maxHP * (itemFactory.hpRecover / 100));

@@ -16,6 +16,7 @@ public class ItemFactory : ScriptableObject
         public float increaseHealth;
         public float increaseProjectileSpeed;
     public GameObject prefabVFX;
+    public AudioClip sound;
 
 
 }

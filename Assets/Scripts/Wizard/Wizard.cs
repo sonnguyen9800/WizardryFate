@@ -33,6 +33,13 @@ public class Wizard : MonoBehaviour
     private AnimateWizard animateWizard;
     private float velocityXSmoothing;
 
+
+
+    [Header("Sound")]
+    private AudioSource _audioSource;
+
+
+    [SerializeField] public AudioClip jumpSound;
     private void Awake()
     {
         controller2D = GetComponent<Controller2D>();
@@ -42,7 +49,9 @@ public class Wizard : MonoBehaviour
         damage = CharacterStats.baseDamage;
         projectilespeed = CharacterStats.projectileSpeed;
         amour = CharacterStats.baseAmour;
-        
+
+
+        _audioSource = GetComponent<AudioSource>();
     }
     void Start()
     {
@@ -60,6 +69,7 @@ public class Wizard : MonoBehaviour
 
         if (Input.GetKeyDown(jumpKey) && controller2D.CollisionInfo.below)
         {
+            _audioSource.PlayOneShot(jumpSound);
             movementVelocity.y = jumpVelocity;
         }
 

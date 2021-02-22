@@ -11,13 +11,13 @@ public class Damageable : MonoBehaviour
 
 
     public float maxHP;
-    
+
     public float currentHP;
 
 
     [SerializeField]
     private int life = 1;
-    
+
     public float MaxHP { get => maxHP; set => maxHP = value; }
     public int Life { get => life; set => life = value; }
     public Action OnLifeChanged { get; set; }
@@ -29,10 +29,16 @@ public class Damageable : MonoBehaviour
     private bool isAlive = true;
     public bool isInvicible = false;
 
+    [Header("Sound")]
+    private AudioSource audioSource;
+    public AudioClip destroyedSound;
+
     private void Awake()
     {
         if (stats == null) return;
         maxHP = stats.maxHitpoints;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -57,11 +63,16 @@ public class Damageable : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        if (!isInvicible){
+        if (!isInvicible) {
             currentHP -= amount;
             ClampHP();
             OnHealthChanged?.Invoke();
             OnDamageTaken?.Invoke(amount);
+
+
+
+            if (audioSource == null || destroyedSound == null) return;
+            audioSource.PlayOneShot(destroyedSound);
 
         }
 
@@ -99,7 +110,7 @@ public class Damageable : MonoBehaviour
     }
     public void Die()
     {
-        if(!isAlive) return;
+        if (!isAlive) return;
         OnDead?.Invoke();
         isAlive = false;
     }
@@ -107,9 +118,12 @@ public class Damageable : MonoBehaviour
 
     public float Percentage => currentHP / maxHP;
 
-    
 
 
+    private void OnDestroy()
+    {
+        
+    }
 
 
 }

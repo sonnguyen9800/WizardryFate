@@ -20,11 +20,18 @@ public class Attack : MonoBehaviour
 
 
     Wizard _wizard;
+
+    [Header("Sound")]
+    public AudioClip attackSound;
+    private AudioSource _audioSource;
+
     private void Awake()
     {
         _cam = Camera.main;
 
         _wizard = GetComponent<Wizard>();
+
+        _audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -34,6 +41,9 @@ public class Attack : MonoBehaviour
         {
             //animateWizard.State = WizardState.LIGHT_ATTACK;
             Shoot();
+
+            if (attackSound == null || _audioSource == null) return; // Check condition before play sound to avoid crash
+            _audioSource.PlayOneShot(attackSound);
         }
 
     }
