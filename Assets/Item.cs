@@ -31,6 +31,7 @@ public class Item : MonoBehaviour
         _audioSource = prefabVFX.GetComponent<AudioSource>();
         _audioSource.PlayOneShot(itemFactory.sound);
 
+
         Destroy(prefabVFX, 4f);
         if (damageable == null) return;
         if (characterStats == null) return;

@@ -9,6 +9,10 @@ public class DropOnDead : MonoBehaviour
     DropFactory dropFactory;
     System.Random random;
     float randomValue;
+
+    [SerializeField] public float forceOut = 7f;
+    private Rigidbody2D itemBody;
+    private GameObject prefab;
     private void Awake()
     {
         random = new System.Random();
@@ -20,7 +24,13 @@ public class DropOnDead : MonoBehaviour
             randomValue = (float)random.NextDouble();
             if (randomValue < item.droprate)
             {
-                Instantiate(item.itemPrefab, transform.position, Quaternion.identity);
+                prefab = Instantiate(item.itemPrefab, transform.position, Quaternion.identity);
+                itemBody = prefab.GetComponent<Rigidbody2D>();
+                
+                itemBody.AddForce(new Vector3((float)random.NextDouble(), (float)random.NextDouble()
+                                        , (float)random.NextDouble())*forceOut, ForceMode2D.Impulse);
+                
+                //itemBody.velocity = 
             }
         }
     }
