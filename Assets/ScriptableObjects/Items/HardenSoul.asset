@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5043ccef6f20c41b79d4ff5e59a8ff, type: 3}
   m_Name: HardenSoul
   m_EditorClassIdentifier: 
-  name: Titan Soul
+  ItemName: Titan Soul
   hpRecover: 0
   hpLoss: 0
   amourIncrease: 0
   damageIncrease: 1
   increaseHealth: 0
   increaseProjectileSpeed: 0
+  prefabVFX: {fileID: 3551975922917799888, guid: ff4321b498877ee449f1634d0086720c, type: 3}

@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5043ccef6f20c41b79d4ff5e59a8ff, type: 3}
   m_Name: Tear of Wind
   m_EditorClassIdentifier: 
-  name: Tear of Wind
+  ItemName: Tear of Wind
   hpRecover: 2
   hpLoss: 0
   amourIncrease: 0
   damageIncrease: 0
   increaseHealth: 0
   increaseProjectileSpeed: 2
+  prefabVFX: {fileID: 7680007699098629328, guid: 8a9394ca25f8c2f4e8d36f122803775f, type: 3}

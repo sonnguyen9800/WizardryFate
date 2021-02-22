@@ -11,6 +11,7 @@ TagManager:
   - DropLeft
   - WaveMonster
   - Item
+  - BuffLocation
   layers:
   - Default
   - TransparentFX

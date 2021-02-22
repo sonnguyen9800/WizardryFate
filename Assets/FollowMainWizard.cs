@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class FollowMainWizard : MonoBehaviour
 {
-    public GameObject target; //the enemy's target
+    private GameObject target; //the enemy's target
     // Start is called before the first frame update
     void Start()
     {
-        
+        target = GameObject.FindGameObjectWithTag("BuffLocation");
     }
 
     // Update is called once per frame

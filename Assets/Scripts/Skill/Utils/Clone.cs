@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Clone : MonoBehaviour
 {
-    [SerializeField]
-    private float timer = 10;
+
+
 
 }

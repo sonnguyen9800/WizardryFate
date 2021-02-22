@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5043ccef6f20c41b79d4ff5e59a8ff, type: 3}
   m_Name: DragonBlood
   m_EditorClassIdentifier: 
-  name: Dragon Blood
+  ItemName: Dragon Blood
   hpRecover: 0
   hpLoss: 30
   amourIncrease: 10
   damageIncrease: 20
   increaseHealth: 0
   increaseProjectileSpeed: 0
+  prefabVFX: {fileID: 1447336343677385049, guid: 435de7a002ac59f48bbd82a83fb44e28, type: 3}

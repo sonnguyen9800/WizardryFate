@@ -60,6 +60,36 @@ Transform:
   m_Father: {fileID: 3026396864258941563}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &747636129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 747636130}
+  m_Layer: 10
+  m_Name: BuffEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &747636130
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747636129}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.007, y: 0.269, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3026396864258941563}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &862374118
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,6 +409,7 @@ Transform:
   - {fileID: 1294231569}
   - {fileID: 2084112229}
   - {fileID: 526049092}
+  - {fileID: 747636130}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -501,6 +532,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d76f563f87ad5ee439c4db7c5e1f959d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CharacterStats: {fileID: 11400000, guid: 73651189123cd574bad934aaa16d79d5, type: 2}
+  damage: 0
+  projectilespeed: 0
+  amour: 0
   moveSpeed: 3
   accelerationTimeGround: 0.7
   jumpHeight: 1.7
@@ -571,6 +606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f396b03350610f44293e9ed2f4e8a6fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerStats: {fileID: 11400000, guid: 73651189123cd574bad934aaa16d79d5, type: 2}
   elementFactory: {fileID: 11400000, guid: 16983015a511d6b4d8853bcff181ab61, type: 2}
   _firepoint: {fileID: 3026396864103105553}
   fireKey: 324
@@ -586,10 +622,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8725f18ff356cfe4d859d2e4b7367ce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats: {fileID: 11400000, guid: 73651189123cd574bad934aaa16d79d5, type: 2}
   maxHP: 5000
   currentHP: 0
   life: 1
-  isInvicible: 1
+  isInvicible: 0
 --- !u!114 &1486279360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,6 +677,8 @@ MonoBehaviour:
   deadMat: {fileID: 2100000, guid: 784a0c51dd0ca7744abbcd6204d36801, type: 2}
   deadbackTimeAmount: 0
   _bloodVFX: {fileID: 1005737634677538, guid: 651ef2bf8076d2d4cb5eccd257a247d9, type: 3}
+  FloatingText: {fileID: 3274585352348847152, guid: 845608eb86d562f489abb23c33263359, type: 3}
+  redColor: 1
 --- !u!1001 &3219849029315636618
 PrefabInstance:
   m_ObjectHideFlags: 0

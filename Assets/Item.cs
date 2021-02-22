@@ -9,6 +9,7 @@ public class Item : MonoBehaviour
 
     Damageable damageable;
     Wizard characterStats;
+    GameObject prefabVFX;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -18,6 +19,9 @@ public class Item : MonoBehaviour
         damageable = collidedGameObject.GetComponent<Damageable>();
         characterStats = collidedGameObject.GetComponent<Wizard>();
 
+
+        prefabVFX =  Instantiate(itemFactory.prefabVFX, collidedGameObject.transform.position, Quaternion.identity);
+        Destroy(prefabVFX, 0.65f);
         if (damageable == null) return;
         if (characterStats == null) return;
         damageable.Heal(damageable.maxHP * (itemFactory.hpRecover / 100));
@@ -34,6 +38,8 @@ public class Item : MonoBehaviour
         characterStats.damage += itemFactory.damageIncrease * 10;
         characterStats.amour += itemFactory.amourIncrease;
         characterStats.projectilespeed += (itemFactory.increaseProjectileSpeed) / 10;
+
+
 
         // May be more to go
         Destroy(gameObject);

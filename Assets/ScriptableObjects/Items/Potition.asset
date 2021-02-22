@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5043ccef6f20c41b79d4ff5e59a8ff, type: 3}
   m_Name: Potition
   m_EditorClassIdentifier: 
-  name: Potition
-  prefab: {fileID: 5507322760724133775, guid: 0f4bd83711ffc89479fc83edc05de778, type: 3}
+  ItemName: Potion
   hpRecover: 5
+  hpLoss: 0
   amourIncrease: 0
   damageIncrease: 0
   increaseHealth: 0
+  increaseProjectileSpeed: 0
+  prefabVFX: {fileID: 8768435517872336219, guid: 7566a023c75752a41897da04de8fec71, type: 3}

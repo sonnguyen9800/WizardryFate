@@ -15123,38 +15123,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1486279371, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
-      propertyPath: redColor
-      value: 1
+    - target: {fileID: 747636129, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
+      propertyPath: m_TagString
+      value: BuffLocation
       objectReference: {fileID: 0}
-    - target: {fileID: 1486279371, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
-      propertyPath: FloatingText
-      value: 
-      objectReference: {fileID: 3274585352348847152, guid: 845608eb86d562f489abb23c33263359, type: 3}
-    - target: {fileID: 2003212093, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
-      propertyPath: stats
-      value: 
-      objectReference: {fileID: 11400000, guid: 73651189123cd574bad934aaa16d79d5, type: 2}
-    - target: {fileID: 2003212093, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
-      propertyPath: isInvicible
-      value: 0
+    - target: {fileID: 747636130, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.004
       objectReference: {fileID: 0}
-    - target: {fileID: 3026396863670341386, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
-      propertyPath: playerStats
-      value: 
-      objectReference: {fileID: 11400000, guid: 73651189123cd574bad934aaa16d79d5, type: 2}
+    - target: {fileID: 747636130, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.167
+      objectReference: {fileID: 0}
     - target: {fileID: 3026396864258941539, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
       propertyPath: m_Name
       value: Wizard
       objectReference: {fileID: 0}
-    - target: {fileID: 3026396864258941542, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
-      propertyPath: stats
-      value: 
-      objectReference: {fileID: 11400000, guid: 73651189123cd574bad934aaa16d79d5, type: 2}
-    - target: {fileID: 3026396864258941560, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
-      propertyPath: CharacterStats
-      value: 
-      objectReference: {fileID: 11400000, guid: 73651189123cd574bad934aaa16d79d5, type: 2}
     - target: {fileID: 3026396864258941563, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
       propertyPath: m_RootOrder
       value: 4

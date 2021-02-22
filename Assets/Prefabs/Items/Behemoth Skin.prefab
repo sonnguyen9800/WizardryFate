@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1606516647351835331}
   - component: {fileID: 4022707721959558576}
   m_Layer: 14
-  m_Name: Dragon Blood 1
+  m_Name: Behemoth Skin
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

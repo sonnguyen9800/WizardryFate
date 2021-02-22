@@ -8,14 +8,14 @@ using UnityEngine;
 public class ItemFactory : ScriptableObject
 {
    
-        public string name;
+        public string ItemName;
         public float hpRecover;
         public float hpLoss;
         public float amourIncrease;
         public float damageIncrease;
         public float increaseHealth;
         public float increaseProjectileSpeed;
-
+    public GameObject prefabVFX;
 
 
 }

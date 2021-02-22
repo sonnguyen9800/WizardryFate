@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class Fade : MonoBehaviour
 {
     public Text text;
-    private bool fadeIn;
-    private float _fadeTime;
+
 
     private TextMesh textMesh;
     private void Awake()
@@ -18,8 +17,6 @@ public class Fade : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _fadeTime = 0;
-        fadeIn = false;
 
         StartCoroutine(FadeTextTo(0, 1.5f, textMesh));
     }

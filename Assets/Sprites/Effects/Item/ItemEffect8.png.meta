@@ -1,0 +1,388 @@
+fileFormatVersion: 2
+guid: 68368f3ad22bb0640ac7f7aba1d82cc2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4665974574237683113
+    second: ItemEffect8_0
+  - first:
+      213: -2007336027884144586
+    second: ItemEffect8_1
+  - first:
+      213: -7971688149962266215
+    second: ItemEffect8_2
+  - first:
+      213: 2950954182502595087
+    second: ItemEffect8_3
+  - first:
+      213: 7678842811202732974
+    second: ItemEffect8_4
+  - first:
+      213: -2921630995578373476
+    second: ItemEffect8_5
+  - first:
+      213: -5674583798533187744
+    second: ItemEffect8_6
+  - first:
+      213: 2032512359264961503
+    second: ItemEffect8_7
+  - first:
+      213: 7953059213722139631
+    second: ItemEffect8_8
+  - first:
+      213: -7379161166992696638
+    second: ItemEffect8_9
+  - first:
+      213: 520260367877007531
+    second: ItemEffect8_0
+  - first:
+      213: 3557866029660143585
+    second: ItemEffect8_1
+  - first:
+      213: 663165002575293910
+    second: ItemEffect8_2
+  - first:
+      213: -2169223704016776753
+    second: ItemEffect8_3
+  - first:
+      213: 3569099506516540747
+    second: ItemEffect8_4
+  - first:
+      213: -2984222403769461193
+    second: ItemEffect8_5
+  - first:
+      213: -8807596580356620270
+    second: ItemEffect8_6
+  - first:
+      213: -1002631422934693481
+    second: ItemEffect8_7
+  - first:
+      213: 1355419006762168237
+    second: ItemEffect8_8
+  - first:
+      213: -1970332090949239818
+    second: ItemEffect8_9
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ItemEffect8_0
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 471
+        width: 193
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8e5025c06583700800000000000000
+      internalID: 520260367877007531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemEffect8_1
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 472
+        width: 193
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ef7258bd44106130800000000000000
+      internalID: 3557866029660143585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemEffect8_2
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 472
+        width: 193
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dda8f56e09043900800000000000000
+      internalID: 663165002575293910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemEffect8_3
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 472
+        width: 193
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc119b3c88e55e1e0800000000000000
+      internalID: -2169223704016776753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemEffect8_4
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 472
+        width: 191
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4db0fd571df78130800000000000000
+      internalID: 3569099506516540747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemEffect8_5
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 71
+        width: 191
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7361f8ce889e596d0800000000000000
+      internalID: -2984222403769461193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemEffect8_6
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 71
+        width: 192
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21006e6239125c580800000000000000
+      internalID: -8807596580356620270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemEffect8_7
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 71
+        width: 193
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79945537800f512f0800000000000000
+      internalID: -1002631422934693481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemEffect8_8
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 71
+        width: 193
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daf2fd3c76a6fc210800000000000000
+      internalID: 1355419006762168237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemEffect8_9
+      rect:
+        serializedVersion: 2
+        x: 1703
+        y: 71
+        width: 193
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fbfa6d0769f7a4e0800000000000000
+      internalID: -1970332090949239818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

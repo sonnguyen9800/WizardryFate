@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5043ccef6f20c41b79d4ff5e59a8ff, type: 3}
   m_Name: Elixer
   m_EditorClassIdentifier: 
-  name: Elixer
-  prefab: {fileID: 0}
+  ItemName: Elixer
   hpRecover: 100
+  hpLoss: 0
   amourIncrease: 0
   damageIncrease: 0
   increaseHealth: 0
   increaseProjectileSpeed: 0
+  prefabVFX: {fileID: 5918933459618041101, guid: 10de81a4e6b8973409c4ae690cdafcea, type: 3}
