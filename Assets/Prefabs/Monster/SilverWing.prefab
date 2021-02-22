@@ -159,7 +159,7 @@ MonoBehaviour:
   isBlinkWhiteOnHit: 1
   matWhite: {fileID: 2100000, guid: 9dbbb87be171f624dad055d3f0d45295, type: 2}
   isKnockable: 1
-  knockbackAmount: 0.02
+  knockbackAmount: 0.5
   deadMat: {fileID: 2100000, guid: 667a6bad6644e4b45924ada72db9c988, type: 2}
   deadbackTimeAmount: 0
   _bloodVFX: {fileID: 1005737634677538, guid: 651ef2bf8076d2d4cb5eccd257a247d9, type: 3}

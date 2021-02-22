@@ -19,5 +19,5 @@ MonoBehaviour:
   damageIncrease: 0
   increaseHealth: 0
   increaseProjectileSpeed: 2
-  prefabVFX: {fileID: 9166296297609957734, guid: 04bf8dae60a2c454d978aa009d164a77, type: 3}
+  prefabVFX: {fileID: 100000, guid: ada5d62ffe762ce4fbccc70dcdbc9022, type: 3}
   sound: {fileID: 8300000, guid: bedd38893baf0ad4d967455653de5cb2, type: 3}

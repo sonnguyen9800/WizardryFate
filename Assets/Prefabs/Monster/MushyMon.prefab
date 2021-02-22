@@ -227,7 +227,7 @@ MonoBehaviour:
   blinkTime: 0.1
   isBlinkWhiteOnHit: 1
   matWhite: {fileID: 2100000, guid: 9dbbb87be171f624dad055d3f0d45295, type: 2}
-  isKnockable: 1
+  isKnockable: 0
   knockbackAmount: 0.5
   deadMat: {fileID: 2100000, guid: 784a0c51dd0ca7744abbcd6204d36801, type: 2}
   deadbackTimeAmount: 0.2
