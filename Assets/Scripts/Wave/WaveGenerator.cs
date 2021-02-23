@@ -8,17 +8,17 @@ public class WaveGenerator : MonoBehaviour
     [SerializeField]
     GameObject[] monstersPrefab;
 
-    int difficultLevel = 0; // Increased by time, each level of difficulity increased the spawn rate
+    int difficultLevel = 1; // Increased by time, each level of difficulity increased the spawn rate
     [SerializeField] private float  _range = 10f; // Range to spawn monster; only spawn when player is near
 
     private float _currentTimer = 0; // Timer reache a threshold -> increase difficultity level
 
     [SerializeField] private float InitialSpawnInterval = 10f;
-    [SerializeField] private float _thresholdTime = 20f;
+    [SerializeField] private float _thresholdTime = 30f;
 
 
     private float _spawnTimer = 0;
-    private float _spawnTimerRate = 5f; // Timer interval between each spawn
+    private float _spawnTimerRate = 0; // Timer interval between each spawn
 
     private GameObject _player ;
     System.Random rand = new System.Random();  
@@ -28,13 +28,9 @@ public class WaveGenerator : MonoBehaviour
         _spawnTimerRate = InitialSpawnInterval;
     }
 
-    void Start()
-    {
-        
-    }
-
     private void reduceTimeIntervalBetweenSpawn(){
-        _spawnTimerRate = _spawnTimerRate*Mathf.Pow(0.95f, difficultLevel);
+        if (_spawnTimerRate <4f) return;
+        _spawnTimerRate = _spawnTimerRate * Mathf.Log(1 / difficultLevel);
     }
     // Update is called once per frame
     void Update()

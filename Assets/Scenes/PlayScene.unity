@@ -718,7 +718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbb05dff18703624699c2f74d1f7ca1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  victoryTimer: 200
+  victoryTimer: 600
   disableWave: 0
   background: {fileID: 8300000, guid: 09d70fe7a562e214eae219b255e6957a, type: 3}
   timeIndicator: {fileID: 1447133433}
