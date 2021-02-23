@@ -25,8 +25,12 @@ public class DropOnDead : MonoBehaviour
             if (randomValue < item.droprate)
             {
                 prefab = Instantiate(item.itemPrefab, transform.position, Quaternion.identity);
+
                 itemBody = prefab.GetComponent<Rigidbody2D>();
-                
+
+                Item item1 = prefab.GetComponent<Item>();
+                item1.owner = gameObject.name;
+
                 itemBody.AddForce(new Vector3((float)random.NextDouble(), (float)random.NextDouble()
                                         , (float)random.NextDouble())*forceOut, ForceMode2D.Impulse);
                 

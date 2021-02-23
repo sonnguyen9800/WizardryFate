@@ -32,6 +32,8 @@ public class OnDamaged : MonoBehaviour
     [Header("Popup Damage Taken")]
     public GameObject FloatingText;
     public bool redColor;
+    [Header("Main Char")]
+    public bool MainCharacter;
 
     private void Awake() {
         damageable = GetComponent<Damageable>();
@@ -95,7 +97,10 @@ public class OnDamaged : MonoBehaviour
                     Destroy(gj, 1);
                 }
 
-        Destroy(gameObject);
+            Destroy(gameObject);
+       
+
+
     }
 
     public void ShowUpText(float damage)

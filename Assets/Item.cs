@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Item : MonoBehaviour
 {
 
@@ -11,11 +11,22 @@ public class Item : MonoBehaviour
     Wizard characterStats;
     GameObject prefabVFX;
 
+    public string owner;
     [Header("Sound")]
     private AudioSource _audioSource;
     private void Awake()
     {
-        
+        DontDestroyOnLoad(gameObject);
+
+       // print(owner);
+    }
+
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name != "PlayScene")
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

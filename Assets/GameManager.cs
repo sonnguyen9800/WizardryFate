@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     private GameObject _player;
     [SerializeField] bool disableWave = false;
-
+    private Damageable damageable;
     private GameObject[] waveGeneratorsGameObject;
 
     [Header("Audio")]
@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
         // }
         _player = GameObject.FindGameObjectWithTag("Player");
         _audioSource = GetComponent<AudioSource>();
+        damageable = _player.GetComponent<Damageable>();
     }
 
     void Start()
@@ -50,20 +51,30 @@ public class GameManager : MonoBehaviour
     {
         _currentTimer++;
         timeIndicator.text = "Time Left: " + (victoryTimer - _currentTimer).ToString();
-        //_currentTimer += Time.deltaTime;
+
         if (_currentTimer >= victoryTimer && _player != null)
         {
+            ClearItems("Item");
             SceneManager.LoadSceneAsync("VictoryScene");
         }
         else if (_player == null)
         {
-            //Debug.Log("Defeated");
-            // Chance Scene
+            ClearItems("Item");
+
             SceneManager.LoadSceneAsync("DefeatScene");
 
         }
     }
 
+    private void ClearItems(string tag)
+    {
+        GameObject[] items = GameObject.FindGameObjectsWithTag(tag);
+        print("Found " + items.Length);
+        foreach(var item in items)
+        {
+            Destroy(item);
+        }
+    }
     private void swiftWaves(bool status){
        //print("Lenght" + waveGeneratorsGameObject.Length);
         for(int i = 0;i < waveGeneratorsGameObject.Length; i++){
@@ -81,4 +92,6 @@ public class GameManager : MonoBehaviour
         
         
     }
+
+
 }

@@ -113,17 +113,10 @@ public class Damageable : MonoBehaviour
         if (!isAlive) return;
         OnDead?.Invoke();
         isAlive = false;
+        
     }
 
 
     public float Percentage => currentHP / maxHP;
-
-
-
-    private void OnDestroy()
-    {
-        
-    }
-
 
 }
