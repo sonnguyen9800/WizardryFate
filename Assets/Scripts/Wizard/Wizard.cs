@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 [RequireComponent(typeof(Controller2D))]
 [RequireComponent(typeof(AnimateWizard))]
@@ -12,6 +13,10 @@ public class Wizard : MonoBehaviour
     public float damage;
     public float projectilespeed;
     public float amour;
+
+    public Action OnDamageChange { get; set; }
+    [Header("Stats Bar")]
+    [SerializeField] public TMPro.TextMeshProUGUI damageIndicator;
 
 
     [Header("Movement Speed")]
@@ -53,10 +58,18 @@ public class Wizard : MonoBehaviour
 
         _audioSource = GetComponent<AudioSource>();
     }
+
+    public void RenderDamageIndicator()
+    {
+        if (damageIndicator == null) return;
+        damageIndicator.text = "Base Damage: " + (float)Math.Round(damage,1); 
+    }
     void Start()
     {
         gravity = -(2 * jumpHeight) / Mathf.Pow(timeToJumpApex, 2);
         jumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
+
+        RenderDamageIndicator();
     }
     void Update()
     {

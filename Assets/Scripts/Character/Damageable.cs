@@ -33,6 +33,7 @@ public class Damageable : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip destroyedSound;
 
+
     private void Awake()
     {
         if (stats == null) return;
@@ -63,13 +64,12 @@ public class Damageable : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
+        amount = (float)Math.Round(amount, 0);
         if (!isInvicible) {
             currentHP -= amount;
             ClampHP();
             OnHealthChanged?.Invoke();
             OnDamageTaken?.Invoke(amount);
-
-
 
             if (audioSource == null || destroyedSound == null) return;
             audioSource.PlayOneShot(destroyedSound);

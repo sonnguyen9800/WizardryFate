@@ -61,6 +61,7 @@ public class OnDamaged : MonoBehaviour
         {
             transform.Translate(-1 * direction * knockbackAmount);
         } else
+
         {
             transform.Translate(1 * direction * knockbackAmount);
 

@@ -27,7 +27,7 @@ public class Item : MonoBehaviour
         characterStats = collidedGameObject.GetComponent<Wizard>();
 
 
-        prefabVFX =  Instantiate(itemFactory.prefabVFX, collidedGameObject.transform.position, Quaternion.identity);
+        prefabVFX = Instantiate(itemFactory.prefabVFX, collidedGameObject.transform.position, Quaternion.identity);
         _audioSource = prefabVFX.GetComponent<AudioSource>();
         _audioSource.PlayOneShot(itemFactory.sound);
 
@@ -36,7 +36,7 @@ public class Item : MonoBehaviour
         if (damageable == null) return;
         if (characterStats == null) return;
         damageable.Heal(damageable.maxHP * (itemFactory.hpRecover / 100));
-       
+
         if (damageable.isInvicible)
         {
             damageable.isInvicible = false;
@@ -46,7 +46,11 @@ public class Item : MonoBehaviour
             damageable.TakeDamage(damageable.currentHP * (itemFactory.hpLoss / 100));
         }
 
-        characterStats.damage += characterStats.damage*itemFactory.damageIncrease/100;
+        if (itemFactory.damageIncrease > 0)
+        {
+            characterStats.damage += characterStats.damage * itemFactory.damageIncrease / 100;
+            characterStats.RenderDamageIndicator();
+        }
         characterStats.amour += itemFactory.amourIncrease;
         characterStats.projectilespeed += (itemFactory.increaseProjectileSpeed) / 10;
 

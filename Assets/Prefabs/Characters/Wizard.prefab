@@ -537,6 +537,7 @@ MonoBehaviour:
   damage: 0
   projectilespeed: 0
   amour: 0
+  damageIndicator: {fileID: 0}
   moveSpeed: 3
   accelerationTimeGround: 0.7
   jumpHeight: 1.7

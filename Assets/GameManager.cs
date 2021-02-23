@@ -18,6 +18,10 @@ public class GameManager : MonoBehaviour
     [Header("Audio")]
     public AudioClip background;
     private AudioSource _audioSource;
+
+    [Header("Time Indicator")]
+    [SerializeField] public TMPro.TextMeshProUGUI timeIndicator;
+
     private void OnEnable() {
         waveGeneratorsGameObject = GameObject.FindGameObjectsWithTag("WaveMonster");
         //print("Found " + waveGeneratorsGameObject.Length + " objects");
@@ -34,10 +38,28 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        InvokeRepeating("UpdateCounter", 1f, 1f);
         if (_audioSource == null || background == null) return;
         _audioSource.loop = true;
         _audioSource.clip = background;
         _audioSource.Play();
+    }
+
+    private void UpdateCounter()
+    {
+        _currentTimer++;
+        timeIndicator.text = "Time Left: " + (victoryTimer - _currentTimer).ToString();
+        //_currentTimer += Time.deltaTime;
+        if (_currentTimer >= victoryTimer && _player != null)
+        {
+            //Debug.Log("Victory");
+            // Change Scene
+        }
+        else if (_player == null)
+        {
+            //Debug.Log("Defeated");
+            // Chance Scene
+        }
     }
 
     private void swiftWaves(bool status){
@@ -47,19 +69,14 @@ public class GameManager : MonoBehaviour
             waveGeneratorsGameObject[i].SetActive(status);
         }
     }
+    
+ 
     // Update is called once per frame
     void Update()
     {
         swiftWaves(!disableWave);
         
-        _currentTimer += Time.deltaTime;
-        if (_currentTimer >= victoryTimer && _player != null){
-            //Debug.Log("Victory");
-            // Change Scene
-        } else if (_player == null) {
-            //Debug.Log("Defeated");
-            // Chance Scene
-        }
+        
         
     }
 }

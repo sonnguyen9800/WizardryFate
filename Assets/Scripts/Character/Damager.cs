@@ -13,18 +13,6 @@ public class Damager : MonoBehaviour
 
     [SerializeField] bool causeDamage = true; // If false -> This does cause damage, provide reference to damage instead
 
-
-    private void Awake()
-    {
-
-    }
-
-    private void Start()
-    {
-        
-    }
-
-
     private void CheckAttackHitBox(){
         if (!causeDamage) return;
         Collider2D[] objectCollided = Physics2D.OverlapCircleAll(hitBoxPosition.position, attackRadius, damageableLayer );

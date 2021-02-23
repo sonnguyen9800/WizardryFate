@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 230799881875675935}
   - component: {fileID: 230799881875675934}
   - component: {fileID: 3855735896037900253}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Meteor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,6 +126,8 @@ MonoBehaviour:
   tobeDestroyedLayer:
     serializedVersion: 2
     m_Bits: 256
+  destroyedAfterHit: 1
+  causeDamage: 1
 --- !u!50 &230799881875675934
 Rigidbody2D:
   serializedVersion: 4

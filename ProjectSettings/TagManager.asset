@@ -28,7 +28,7 @@ TagManager:
   - Enemy
   - FloatingText
   - Item
-  - 
+  - EnemyProjectile
   - 
   - 
   - 
@@ -72,4 +72,7 @@ TagManager:
     locked: 0
   - name: TextSFX
     uniqueID: 1721899127
+    locked: 0
+  - name: UI
+    uniqueID: 522443121
     locked: 0
