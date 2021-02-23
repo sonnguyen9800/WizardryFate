@@ -15,9 +15,9 @@ MonoBehaviour:
   ItemName: Behemoth Skill
   hpRecover: 0
   hpLoss: 0
-  amourIncrease: 2
+  amourIncrease: 0
   damageIncrease: 0
   increaseHealth: 0
-  increaseProjectileSpeed: 0
+  increaseProjectileSpeed: 0.1
   prefabVFX: {fileID: 100000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
   sound: {fileID: 8300000, guid: bedd38893baf0ad4d967455653de5cb2, type: 3}

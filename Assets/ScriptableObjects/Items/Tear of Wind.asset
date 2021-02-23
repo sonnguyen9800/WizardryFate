@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Tear of Wind
   m_EditorClassIdentifier: 
   ItemName: Tear of Wind
-  hpRecover: 2
+  hpRecover: 0
   hpLoss: 0
   amourIncrease: 0
   damageIncrease: 0
   increaseHealth: 0
-  increaseProjectileSpeed: 2
+  increaseProjectileSpeed: 0.5
   prefabVFX: {fileID: 100000, guid: ada5d62ffe762ce4fbccc70dcdbc9022, type: 3}
   sound: {fileID: 8300000, guid: bedd38893baf0ad4d967455653de5cb2, type: 3}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterType: 1
   maxHitpoints: 150
-  baseDamage: 20
+  baseDamage: 30
   baseAmour: 1
   baseCooldown: 1
   baseDamageFirerate: 5

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MushyMon
   m_EditorClassIdentifier: 
   characterType: 1
-  maxHitpoints: 250
+  maxHitpoints: 300
   baseDamage: 20
   baseAmour: 1
   baseCooldown: 1

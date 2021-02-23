@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SilverWing
   m_EditorClassIdentifier: 
   characterType: 1
-  maxHitpoints: 300
-  baseDamage: 50
+  maxHitpoints: 400
+  baseDamage: 80
   baseAmour: 1
   baseCooldown: 1
   baseDamageFirerate: 2.5
