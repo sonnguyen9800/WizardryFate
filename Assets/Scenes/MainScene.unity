@@ -273,7 +273,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 84
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -299,7 +299,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108078616}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.5, z: -10}
+  m_LocalPosition: {x: 0, y: -5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -447,7 +447,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8478755658628339700, guid: 8c4f98b43cf33104da611ff20d5cdd6c, type: 3}
       propertyPath: parallaxEffect
-      value: 0.2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478755658992906287, guid: 8c4f98b43cf33104da611ff20d5cdd6c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c4f98b43cf33104da611ff20d5cdd6c, type: 3}
