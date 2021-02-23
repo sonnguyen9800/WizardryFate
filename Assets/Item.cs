@@ -46,7 +46,7 @@ public class Item : MonoBehaviour
             damageable.TakeDamage(damageable.currentHP * (itemFactory.hpLoss / 100));
         }
 
-        characterStats.damage += itemFactory.damageIncrease * 10;
+        characterStats.damage += characterStats.damage*itemFactory.damageIncrease/100;
         characterStats.amour += itemFactory.amourIncrease;
         characterStats.projectilespeed += (itemFactory.increaseProjectileSpeed) / 10;
 
