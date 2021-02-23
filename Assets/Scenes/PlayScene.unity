@@ -718,7 +718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbb05dff18703624699c2f74d1f7ca1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  victoryTimer: 600
+  victoryTimer: 5
   disableWave: 0
   background: {fileID: 8300000, guid: 09d70fe7a562e214eae219b255e6957a, type: 3}
   timeIndicator: {fileID: 1447133433}
@@ -13156,7 +13156,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1486279360, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0cb8811e95228fa4880ddd87f02d1f54, type: 3}
 --- !u!1001 &8094698899795100902
 PrefabInstance:

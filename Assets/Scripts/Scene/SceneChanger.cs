@@ -30,10 +30,15 @@ public class SceneChanger : MonoBehaviour
     public SceneName sceneName;
     // Start is called before the first frame update
 
-    void SwitchScene(SceneName sceneName)
+    public void LoadScene()
     {
-        SceneManager.LoadScene((int)sceneName);
+        SceneManager.LoadSceneAsync((int)sceneName);
+        //SceneManager.LoadScene((int)sceneName);
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
   
 }

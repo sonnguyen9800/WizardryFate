@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -52,13 +53,14 @@ public class GameManager : MonoBehaviour
         //_currentTimer += Time.deltaTime;
         if (_currentTimer >= victoryTimer && _player != null)
         {
-            //Debug.Log("Victory");
-            // Change Scene
+            SceneManager.LoadSceneAsync("VictoryScene");
         }
         else if (_player == null)
         {
             //Debug.Log("Defeated");
             // Chance Scene
+            SceneManager.LoadSceneAsync("DefeatScene");
+
         }
     }
 
@@ -74,7 +76,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        swiftWaves(!disableWave);
+        //swiftWaves(!disableWave);
         
         
         
