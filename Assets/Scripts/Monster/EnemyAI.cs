@@ -95,6 +95,7 @@ public class EnemyAI : MonoBehaviour
 
     public virtual void UpdatePath()
     {
+        if (player == null) return;
         if (_seeker.IsDone())
         {
             _seeker.StartPath
@@ -118,6 +119,7 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (player == null) return;
         switch (state)
         {
             case AIState.WAIT:
@@ -160,6 +162,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Approaching()
     {
+        if (player == null) return;
         if (path == null) return; // If find no path: skip
         if (_currentPoint >= path.vectorPath.Count) return;
         transform.position = Vector3.MoveTowards(transform.position, path.vectorPath[_currentPoint], 

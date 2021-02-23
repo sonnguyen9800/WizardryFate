@@ -28,6 +28,8 @@ public class FollowMainChar : MonoBehaviour
         if (_playerSouStealer.Element != soulElement){
             Destroy(gameObject);
         }
+
+        if (_target == null) return;
         Vector2 targetTransform = _target.transform.position;
         targetTransform.y += 0.9f;
         

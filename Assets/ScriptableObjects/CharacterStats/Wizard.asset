@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wizard
   m_EditorClassIdentifier: 
   characterType: 0
-  maxHitpoints: 1000
+  maxHitpoints: 1
   baseDamage: 50
   baseAmour: 5
   baseCooldown: 1
