@@ -159,9 +159,9 @@ MonoBehaviour:
   isBlinkWhiteOnHit: 1
   matWhite: {fileID: 2100000, guid: 9dbbb87be171f624dad055d3f0d45295, type: 2}
   isKnockable: 1
-  knockbackAmount: 0.5
+  knockbackAmount: 0.223
   deadMat: {fileID: 2100000, guid: 667a6bad6644e4b45924ada72db9c988, type: 2}
-  deadbackTimeAmount: 0
+  deadbackTimeAmount: 0.64
   _bloodVFX: {fileID: 1005737634677538, guid: 651ef2bf8076d2d4cb5eccd257a247d9, type: 3}
   FloatingText: {fileID: 3274585352348847152, guid: 845608eb86d562f489abb23c33263359, type: 3}
   redColor: 0
@@ -231,6 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropFactory: {fileID: 11400000, guid: 416a0dc01d00e52488c9b3d5dfec071d, type: 2}
+  forceOut: 5
 --- !u!82 &8161066274907167223
 AudioSource:
   m_ObjectHideFlags: 0

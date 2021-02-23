@@ -15,6 +15,7 @@ public class ElementFactory : ScriptableObject
 
         public float damageRate;
         public float cooldownTime;
+        public AudioClip audioClip;
 
     }
     [SerializeField] private ElementInfo[] elementInfos;
@@ -29,6 +30,11 @@ public class ElementFactory : ScriptableObject
     public ElementInfo GetElementInfo(SoulElement soulElement)
     {
         return elementMap[soulElement];
+    }
+
+    public AudioClip GetElementAudio(SoulElement soulElement)
+    {
+        return elementMap[soulElement].audioClip;
     }
 
     public float GetElementDamageRate(SoulElement soulElement)

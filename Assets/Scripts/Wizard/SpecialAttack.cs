@@ -39,6 +39,10 @@ public class SpecialAttack : MonoBehaviour
     private Vector3 mousePosition;
     private Vector3 _direction;
     private SoulStealer _soulStealer;
+
+
+    [Header("Sound")]
+    private AudioSource _audioSource;
     private void Awake()
     {
         _cam = Camera.main;
@@ -50,6 +54,7 @@ public class SpecialAttack : MonoBehaviour
             skillTimerMap[elementInfo.SoulElement] = skillTimer;
         }
         _wizard = GetComponent<Wizard>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate() {
@@ -73,12 +78,15 @@ public class SpecialAttack : MonoBehaviour
             {
                 CastSpell(mousePosition, skillPrefab, SoulElement.THUNDER);
                 setCooldownTime(_soulStealer.Element, elementFactory.getCooldownTime(_soulStealer.Element));
+                _audioSource.PlayOneShot(elementFactory.GetElementAudio(_soulStealer.Element));
             }
             else if (_soulStealer.Element == SoulElement.FIRE && getCooldownTime(SoulElement.FIRE) <= 0 )
             {
                 GameObject skill = CastContinousSpell(mousePosition, skillPrefab, _firepoint, SoulElement.FIRE); // Set prefab and the firepoint
-                Destroy(skill, elementFactory.getCooldownTime(_soulStealer.Element)*0.6f); // Destroy skill after preiod of time
+                Destroy(skill, elementFactory.getCooldownTime(_soulStealer.Element)*6f); // Destroy skill after preiod of time
                 setCooldownTime(_soulStealer.Element, elementFactory.getCooldownTime(_soulStealer.Element));
+                _audioSource.PlayOneShot(elementFactory.GetElementAudio(_soulStealer.Element));
+
             }
             else if (_soulStealer.Element == SoulElement.WATER && getCooldownTime(SoulElement.WATER) <= 0)
             {
@@ -86,11 +94,15 @@ public class SpecialAttack : MonoBehaviour
                 //GameObject clone = elementFactory.GetSkillPrefab
                 Summon(elementFactory.GetSkillPrefab(_soulStealer.Element));
                 setCooldownTime(_soulStealer.Element, elementFactory.getCooldownTime(_soulStealer.Element));
+                _audioSource.PlayOneShot(elementFactory.GetElementAudio(_soulStealer.Element));
+
             }
             else if (_soulStealer.Element == SoulElement.EARTH && getCooldownTime(SoulElement.EARTH) <= 0)
             {
                 CastDropSpell(mousePosition, skillPrefab, SoulElement.EARTH);
                 setCooldownTime(_soulStealer.Element, elementFactory.getCooldownTime(_soulStealer.Element));
+                _audioSource.PlayOneShot(elementFactory.GetElementAudio(_soulStealer.Element));
+
             }
         }
         

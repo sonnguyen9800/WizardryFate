@@ -9771,7 +9771,7 @@ GameObject:
   - component: {fileID: 3011281360494417140}
   - component: {fileID: 1223463475057059482}
   m_Layer: 0
-  m_Name: Rock Explosion (Projectile) 1
+  m_Name: Rock Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14650,3 +14650,5 @@ MonoBehaviour:
     m_Bits: 4096
   _stunTime: 1
   _damage: 100
+  causeDamage: 1
+  soundOndestroyed: {fileID: 8300000, guid: 5bc472dfd45bbd547890a732783a1977, type: 3}

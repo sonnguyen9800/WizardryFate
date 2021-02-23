@@ -9770,6 +9770,7 @@ GameObject:
   - component: {fileID: 4911169494415695361}
   - component: {fileID: 2941094505446047410}
   - component: {fileID: 8723148470172918164}
+  - component: {fileID: -4743103366737481966}
   m_Layer: 0
   m_Name: ThunderBall Explosion
   m_TagString: Untagged
@@ -14632,6 +14633,27 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &-4743103366737481966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4680906101633083468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46fc040553fdab7478eb4f08510f035d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitBoxPosition: {fileID: 0}
+  attackRadius: 0
+  layersTobeHit:
+    serializedVersion: 2
+    m_Bits: 0
+  _stunTime: 0
+  _damage: 0
+  causeDamage: 0
+  soundOndestroyed: {fileID: 8300000, guid: 49198c246423ff74c8813825672802c7, type: 3}
 --- !u!1 &7802211232068519329
 GameObject:
   m_ObjectHideFlags: 0

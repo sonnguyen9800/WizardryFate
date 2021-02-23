@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
 
     private GameObject[] waveGeneratorsGameObject;
 
+    [Header("Audio")]
+    public AudioClip background;
+    private AudioSource _audioSource;
     private void OnEnable() {
         waveGeneratorsGameObject = GameObject.FindGameObjectsWithTag("WaveMonster");
         //print("Found " + waveGeneratorsGameObject.Length + " objects");
@@ -26,11 +29,15 @@ public class GameManager : MonoBehaviour
         //     waveGenerators.Add(wave);
         // }
         _player = GameObject.FindGameObjectWithTag("Player");
+        _audioSource = GetComponent<AudioSource>();
     }
 
     void Start()
     {
-        
+        if (_audioSource == null || background == null) return;
+        _audioSource.loop = true;
+        _audioSource.clip = background;
+        _audioSource.Play();
     }
 
     private void swiftWaves(bool status){

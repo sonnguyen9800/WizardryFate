@@ -14,8 +14,8 @@ public class FlameSkill : MonoBehaviour
     {
         if(other.tag == "Enemy")
         {
-            //Debug.Log(other.name);
-            Damageable damageable = other.GetComponentInParent<Damageable>();
+            Debug.Log(other.name);
+            Damageable damageable = other.GetComponent<Damageable>();
             damageable.TakeDamage(_damager.damage);
         }
         

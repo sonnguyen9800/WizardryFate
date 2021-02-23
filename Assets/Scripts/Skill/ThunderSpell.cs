@@ -11,8 +11,9 @@ public class ThunderSpell : MonoBehaviour
     [SerializeField][Range(0.01f, 5f)] private float attackRadius;
     [SerializeField] [Range(0.01f, 5f)] private float blastRadius;
     [SerializeField] LayerMask layersTobeHit;
-
+    [SerializeField] public float DamageCausedOnDestroyed = 1.4f;
     private Damager _damager;
+
 
     private void Awake()
     {
@@ -35,9 +36,12 @@ public class ThunderSpell : MonoBehaviour
             damageables.Add(damageable);
             damageable.TakeDamage(_damage);
         }
+
     }
     private void OnDestroy()
     {
+ 
+        //StunAllEnemies();
         StunAllEnemies();
     }
 
@@ -51,8 +55,9 @@ public class ThunderSpell : MonoBehaviour
             // Monster monsterAffected = collided.transform.GetComponentInParent<Monster>();
             // monsterAffected.stun = _stunTime;
             Damageable damageable = collided.transform.GetComponentInParent<Damageable>();
-            damageable.TakeDamage(_damager.damage);
+            damageable.TakeDamage(_damage*DamageCausedOnDestroyed);
         }
+
     }
 
     private void FixedUpdate() {
