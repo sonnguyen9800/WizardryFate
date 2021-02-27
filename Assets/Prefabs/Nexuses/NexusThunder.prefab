@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4362578555037574704}
   - component: {fileID: 6007226961421266653}
   - component: {fileID: 7762176620114202659}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: NexusThunder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 4875117769361333079}
   - component: {fileID: 3567061164628935656}
   - component: {fileID: 1529450070702367727}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Thunder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5004,7 +5004,7 @@ GameObject:
   - component: {fileID: 292389182932024156}
   - component: {fileID: 6397366847668689314}
   - component: {fileID: 2875742843243930075}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -7,7 +7,8 @@ public enum AIState
 {
     WAIT, // WAIT: Moving repeat in a pattern (predefined by waypoint)
     HUNTING, // Using A* 
-    ATTACK
+    ATTACK,
+    BACKHOME
 }
 
 // To navigate the raycast to scan player

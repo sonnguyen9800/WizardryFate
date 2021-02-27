@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ff8ee3ac4ce9b148b5d62a0a606f6e9, type: 3}
-  m_Name: MushyMon
+  m_Name: MushyPremium
   m_EditorClassIdentifier: 
   characterType: 1
-  maxHitpoints: 100
-  baseDamage: 20
+  maxHitpoints: 200
+  baseDamage: 80
   baseAmour: 1
   baseCooldown: 1
   baseDamageFirerate: 1.8

@@ -150,6 +150,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   hitBoxPosition: {fileID: 2314224479369766754}
+  tobeDestroyedLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  destroyedAfterHit: 1
+  causeDamage: 1
 --- !u!1 &3881845328578206989
 GameObject:
   m_ObjectHideFlags: 0

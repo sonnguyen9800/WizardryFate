@@ -73,11 +73,10 @@ public class Wizard : MonoBehaviour
     }
     void Update()
     {
-
+        // Control dropping and jump movement
         if (controller2D.CollisionInfo.above || controller2D.CollisionInfo.below)
         {
             movementVelocity.y = 0;
-
         }
 
         if (Input.GetKeyDown(jumpKey) && controller2D.CollisionInfo.below)
@@ -89,7 +88,7 @@ public class Wizard : MonoBehaviour
         float targetVelocityX = Input.GetAxisRaw("Horizontal") * moveSpeed;
         movementVelocity.x = Mathf.SmoothDamp(movementVelocity.x, targetVelocityX, ref velocityXSmoothing, (controller2D.CollisionInfo.below) ? accelerationTimeGround : accelerationTimeAirborne);
         movementVelocity.y += gravity * Time.deltaTime;
-
+        
         controller2D.Move(movementVelocity * Time.deltaTime);
 
         UpdateAnimate();

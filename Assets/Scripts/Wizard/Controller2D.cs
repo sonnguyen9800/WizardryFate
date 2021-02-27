@@ -9,7 +9,7 @@ public class Controller2D : MonoBehaviour
     [SerializeField] [Range(4, 16)] private int verticalRayCount = 4;
     [SerializeField] private LayerMask collisionMask;
     private BoxCollider2D boxCollider2D;
-    private const float skinWidth = 0.015f;
+    [SerializeField] public float skinWidth = 0.015f;
     private RaycastOrigin raycastOrigin;
     private CollisionInfo collisionInfo = new CollisionInfo();
     public CollisionInfo CollisionInfo { get => collisionInfo; set => collisionInfo = value; }
@@ -60,6 +60,7 @@ public class Controller2D : MonoBehaviour
                 velocity.y = (hit.distance - skinWidth) * directionY;
                 rayLength = hit.distance;
 
+                //print("Collision to the wall" + velocity.y);
 
                 CollisionInfo.above = directionY == 1;
                 CollisionInfo.below = directionY == -1;
@@ -77,14 +78,17 @@ public class Controller2D : MonoBehaviour
         for (int i = 0; i < horizontalRayCount; i++)
         {
             Vector2 rayOrigin = (directionX == -1) ? raycastOrigin.bottomLeft : raycastOrigin.bottomRight;
-            rayOrigin += Vector2.up * (verticalSpaceRay * i);
+            rayOrigin += Vector2.up * (horitonalSpaceRay * i);
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * directionX, rayLength, collisionMask);
 
             Debug.DrawRay(rayOrigin, Vector2.right * directionX * rayLength, Color.red);
 
             if (hit)
+
             {
+
                 velocity.x = (hit.distance - skinWidth) * directionX;
+
                 rayLength = hit.distance;
 
 
@@ -108,6 +112,9 @@ public class Controller2D : MonoBehaviour
     private void CalculateRaySpacing()
     {
         Bounds bounds = boxCollider2D.bounds;
+
+        bounds.Expand(skinWidth * -2);
+
 
         horizontalRayCount = Mathf.Clamp(horizontalRayCount, 2, int.MaxValue);
         verticalRayCount = Mathf.Clamp(verticalRayCount, 2, int.MaxValue);
