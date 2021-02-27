@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4591824020052337904}
   - component: {fileID: 4591824020052337910}
   - component: {fileID: 4591824020052337911}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4832,7 +4832,7 @@ GameObject:
   - component: {fileID: 4591824020350183950}
   - component: {fileID: 4591824020350183948}
   - component: {fileID: 4591824020350183949}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9648,7 +9648,7 @@ GameObject:
   - component: {fileID: 4591824021134115014}
   - component: {fileID: 4591824021134115012}
   - component: {fileID: 4591824021134114875}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: NexusFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}

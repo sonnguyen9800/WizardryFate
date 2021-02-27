@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1034628007047440980
+--- !u!1 &3913066549985004693
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 285971166942459973}
-  m_Layer: 12
+  - component: {fileID: 5923403023572245363}
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &285971166942459973
+--- !u!4 &5923403023572245363
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1034628007047440980}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: -5.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 3913066549985004693}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: -5.3, z: -0.9023573}
+  m_LocalScale: {x: 25, y: 25, z: 1}
   m_Children: []
   m_Father: {fileID: 6219634069513094991}
   m_RootOrder: 0
@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 2184974273617670859}
   - component: {fileID: -326506672505223564}
   m_Layer: 12
-  m_Name: MushyMon
+  m_Name: MushyPremium
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,10 +64,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6219634069513094960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.65, y: -13.484, z: 0}
+  m_LocalPosition: {x: -6.632198, y: -13.477681, z: 0}
   m_LocalScale: {x: 0.04, y: 0.04, z: 1}
   m_Children:
-  - {fileID: 285971166942459973}
+  - {fileID: 5923403023572245363}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -112,7 +112,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d129c48d1bbeaf248948f69eff766bde, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.8743468, b: 0.23113209, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -175,9 +175,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveRate: 2
-  thurst: 1.8
-  DetectRange: 2.04
-  HuntingRangeRatio: 2.74
+  thurst: 5
+  DetectRange: 5
+  HuntingRangeRatio: 3
 --- !u!61 &1790331092
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -216,12 +216,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 083a050f75dcf7547a5c20a36701c625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRadius: 0.3
-  damage: 50
+  attackRadius: 0.5
+  damage: 80
   damageableLayer:
     serializedVersion: 2
     m_Bits: 1024
-  hitBoxPosition: {fileID: 285971166942459973}
+  hitBoxPosition: {fileID: 5923403023572245363}
   tobeDestroyedLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -239,8 +239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8725f18ff356cfe4d859d2e4b7367ce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 189ebde1caaca8e41a785405f519b827, type: 2}
-  maxHP: 100
+  stats: {fileID: 11400000, guid: 94024967cd2880944b9aa1d08ef0b010, type: 2}
+  maxHP: 150
   currentHP: 0
   life: 1
   isInvicible: 0

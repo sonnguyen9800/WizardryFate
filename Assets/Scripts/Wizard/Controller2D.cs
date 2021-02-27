@@ -37,7 +37,7 @@ public class Controller2D : MonoBehaviour
         {
             VerticalCollision(ref velocity);
         }
-        Debug.Log(velocity);
+        //Debug.Log(velocity);
         transform.Translate(velocity);
     }
 

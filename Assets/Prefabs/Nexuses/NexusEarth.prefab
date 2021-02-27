@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8788864379829934186}
   - component: {fileID: 8788864379829934187}
   - component: {fileID: 8788864379829934188}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: NexusEarth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 8788864380094084836}
   - component: {fileID: 8788864380094084837}
   - component: {fileID: 8788864380094084838}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Earth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5004,7 +5004,7 @@ GameObject:
   - component: {fileID: 8788864380955399052}
   - component: {fileID: 8788864380955399050}
   - component: {fileID: 8788864380955399051}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

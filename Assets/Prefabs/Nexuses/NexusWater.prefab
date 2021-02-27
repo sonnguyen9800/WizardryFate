@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8073814091573439247}
   - component: {fileID: 8073814091573439241}
   - component: {fileID: 8073814091573439246}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4835,7 +4835,7 @@ GameObject:
   - component: {fileID: 8073814092148456182}
   - component: {fileID: 8073814092148456183}
   - component: {fileID: 8073814092148456180}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: NexusWater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5012,7 +5012,7 @@ GameObject:
   - component: {fileID: 8073814092212210183}
   - component: {fileID: 8073814092212210180}
   - component: {fileID: 8073814092212210181}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
