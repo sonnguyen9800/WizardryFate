@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropFactory: {fileID: 11400000, guid: 416a0dc01d00e52488c9b3d5dfec071d, type: 2}
-  forceOut: 7
+  forceOut: 8
 --- !u!82 &-326506672505223564
 AudioSource:
   m_ObjectHideFlags: 0

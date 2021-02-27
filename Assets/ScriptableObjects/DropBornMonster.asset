@@ -22,4 +22,14 @@ MonoBehaviour:
   - itemPrefab: {fileID: 6219634069513094960, guid: ea189555fade08647832cc01dd80d474, type: 3}
     droprate: 0.8
   - itemPrefab: {fileID: 6219634069513094960, guid: a0b88855e1d564b4aab6089fc1e5fbc6, type: 3}
-    droprate: 0.5
+    droprate: 0.8
+  - itemPrefab: {fileID: 6219634069513094960, guid: a0b88855e1d564b4aab6089fc1e5fbc6, type: 3}
+    droprate: 0.8
+  - itemPrefab: {fileID: 6219634069513094960, guid: a0b88855e1d564b4aab6089fc1e5fbc6, type: 3}
+    droprate: 0.8
+  - itemPrefab: {fileID: 6219634069513094960, guid: ea189555fade08647832cc01dd80d474, type: 3}
+    droprate: 0.8
+  - itemPrefab: {fileID: 6219634069513094960, guid: ea189555fade08647832cc01dd80d474, type: 3}
+    droprate: 0.8
+  - itemPrefab: {fileID: 6219634069513094960, guid: ea189555fade08647832cc01dd80d474, type: 3}
+    droprate: 0.8

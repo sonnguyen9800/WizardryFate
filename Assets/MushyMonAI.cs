@@ -14,7 +14,8 @@ public class MushyMonAI : MonoBehaviour
     [SerializeField] private float thurst = 1f;
 
     [Range(0.1f,5f)] [SerializeField] private float DetectRange;
-    [Range(1f, 5f)] [SerializeField] private float HuntingRangeRatio; 
+    [Range(1f, 5f)] [SerializeField] private float HuntingRangeRatio;
+    [SerializeField] public float VerticalSpeed = 1.2f;
 
     CharacterStats _stats;
     Damager _monsterDamager;
@@ -54,7 +55,7 @@ public class MushyMonAI : MonoBehaviour
 
     void MainFSM(AIState state)
     {
-        print("Current State:" + state);
+        //print("Current State:" + state);
 
         switch (state)
         {
@@ -108,7 +109,7 @@ public class MushyMonAI : MonoBehaviour
 
     void MoveTowardPlayer()
     {
-        rigidbody2D.velocity = new Vector2((int)face, 1) * thurst;
+        rigidbody2D.velocity = new Vector2((int)face, VerticalSpeed) * thurst;
         //rigidbody2D.AddForce(new Vector2((int)face, 1)*thurst, ForceMode2D.Impulse);
 
     }
