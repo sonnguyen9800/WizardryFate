@@ -22,7 +22,7 @@ public class DropOnDead : MonoBehaviour
     {
         foreach(var item in dropFactory.dropsList)
         {
-            print("Item OUT:");
+            //print("Item OUT:");
             randomValue = (float)random.NextDouble();
             if (randomValue < item.droprate)
             {
