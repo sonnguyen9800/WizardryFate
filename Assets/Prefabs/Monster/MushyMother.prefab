@@ -178,6 +178,7 @@ MonoBehaviour:
   thurst: 3.5
   DetectRange: 4
   HuntingRangeRatio: 2
+  VerticalSpeed: 1.2
 --- !u!61 &1790331092
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -227,6 +228,7 @@ MonoBehaviour:
     m_Bits: 0
   destroyedAfterHit: 0
   causeDamage: 1
+  soundOnDestroyed: {fileID: 0}
 --- !u!114 &1790331094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +247,7 @@ MonoBehaviour:
   life: 1
   isInvicible: 0
   destroyedSound: {fileID: 8300000, guid: 4f451b4699e7fd64b924efe6acd8173b, type: 3}
+  soundPrefab: {fileID: 5770170694502655294, guid: 91c712be1b9c4824cad37bdd30db19e9, type: 3}
 --- !u!114 &1790331095
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ public class MushyMonAI : MonoBehaviour
     private new Rigidbody2D rigidbody2D;
     GameObject player;
 
-    [SerializeField] public float moveRate = 1f;
+    [SerializeField] public float moveRate = 1f; // Default
     private float _currentTimer = 0;
     private FaceToward face;
     [SerializeField] private float thurst = 1f;
@@ -41,10 +41,11 @@ public class MushyMonAI : MonoBehaviour
         originPosition.y = transform.position.y;
         // Ini State;
         state = AIState.WAIT;
-
         if (_stats == null) return;
         if (_monsterDamager == null) return;
         _monsterDamager.damage = _stats.baseDamage;
+        moveRate = _stats.baseDamageFirerate;
+
     }
     private void FixedUpdate()
     {
@@ -55,6 +56,8 @@ public class MushyMonAI : MonoBehaviour
 
     void MainFSM(AIState state)
     {
+        if (player == null) return;
+
         //print("Current State:" + state);
 
         switch (state)
@@ -101,6 +104,7 @@ public class MushyMonAI : MonoBehaviour
 
     void DoNothing()
     {
+        if (player == null) return;
         if (Vector2.Distance(player.transform.position, transform.position) < DetectRange)
         {
             state = AIState.HUNTING;
@@ -142,11 +146,6 @@ public class MushyMonAI : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 180, 0);
             face = FaceToward.LEFT;
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        print(collision.collider.name);
     }
 
     private void OnDrawGizmos()

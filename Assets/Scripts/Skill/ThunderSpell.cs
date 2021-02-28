@@ -5,25 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(Damager))]
 public class ThunderSpell : MonoBehaviour
 {
-    [SerializeField] private float _damage;
+    [SerializeField] public float _damage;
     public List<Damageable> damageables = new List<Damageable>{};
     [SerializeField] Transform hitBoxPosition;
     [SerializeField][Range(0.01f, 5f)] private float attackRadius;
     [SerializeField] [Range(0.01f, 5f)] private float blastRadius;
     [SerializeField] LayerMask layersTobeHit;
     [SerializeField] public float DamageCausedOnDestroyed = 1.4f;
-    private Damager _damager;
 
 
-    private void Awake()
-    {
-        _damager = GetComponent<Damager>();
-
-    }
-    private void Update()
-    {
-       
-    }
     private void CheckAttackHitBox(){
         Collider2D[] objectCollided = Physics2D.OverlapCircleAll(hitBoxPosition.position, attackRadius, layersTobeHit );
 

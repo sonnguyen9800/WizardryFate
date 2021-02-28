@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropsList:
   - itemPrefab: {fileID: 1606516647351835358, guid: 572d5facc474ec94ca1900c15453408d, type: 3}
-    droprate: 0.1
-  - itemPrefab: {fileID: 1606516647351835358, guid: 6afccf740200cca4ab3e50f222ce0965, type: 3}
-    droprate: 0.1
-  - itemPrefab: {fileID: 1606516647351835358, guid: 9c314a8aae059aa4b8f5e47b8aa98805, type: 3}
-    droprate: 0.05
-  - itemPrefab: {fileID: 1606516647351835358, guid: 5b5f5dd294160f7459d655ba122631e2, type: 3}
     droprate: 0.01
+  - itemPrefab: {fileID: 1606516647351835358, guid: 6afccf740200cca4ab3e50f222ce0965, type: 3}
+    droprate: 0.01
+  - itemPrefab: {fileID: 1606516647351835358, guid: 5b5f5dd294160f7459d655ba122631e2, type: 3}
+    droprate: 0.001
   - itemPrefab: {fileID: 5507322760724133775, guid: 0f4bd83711ffc89479fc83edc05de778, type: 3}
-    droprate: 0.1
+    droprate: 0.01
+  - itemPrefab: {fileID: 1606516647351835358, guid: 9c314a8aae059aa4b8f5e47b8aa98805, type: 3}
+    droprate: 0.001

@@ -32,7 +32,7 @@ public class Damageable : MonoBehaviour
     [Header("Sound")]
     private AudioSource audioSource;
     public AudioClip destroyedSound;
-
+    [SerializeField] public AudioSource soundPrefab;
 
     private void Awake()
     {
@@ -72,8 +72,10 @@ public class Damageable : MonoBehaviour
             OnDamageTaken?.Invoke(amount);
 
             if (audioSource == null || destroyedSound == null) return;
+            //audioSource.PlayOneShot(destroyedSound);
+            AudioSource audioSource2 = Instantiate(soundPrefab, transform.position, Quaternion.identity);
             audioSource.PlayOneShot(destroyedSound);
-
+            Destroy(audioSource2, 1);
         }
 
 
@@ -113,6 +115,7 @@ public class Damageable : MonoBehaviour
         if (!isAlive) return;
         OnDead?.Invoke();
         isAlive = false;
+
         
     }
 

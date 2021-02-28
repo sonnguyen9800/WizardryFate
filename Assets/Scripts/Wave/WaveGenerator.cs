@@ -82,6 +82,7 @@ public class WaveGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_player == null) return;
         if (Vector2.Distance(transform.position, _player.transform.position) > _range) return;
         _currentTimer += Time.deltaTime;
         if (_currentTimer >= InitialSpawnInterval)

@@ -17,5 +17,5 @@ MonoBehaviour:
   baseDamage: 100
   baseAmour: 1
   baseCooldown: 1
-  baseDamageFirerate: 1.8
+  baseDamageFirerate: 5
   projectileSpeed: 3

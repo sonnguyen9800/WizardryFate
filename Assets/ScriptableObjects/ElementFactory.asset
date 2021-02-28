@@ -32,19 +32,19 @@ MonoBehaviour:
     ElementVFX: {fileID: 4491073282904073355, guid: 3066837d4278d2c46849d8bf30f29b0e, type: 3}
     SkillPrefab: {fileID: 5452155520811597277, guid: fe717fb8e2319fc4299f51e77d70a04b, type: 3}
     damageRate: 0
-    cooldownTime: 1
+    cooldownTime: 3
     audioClip: {fileID: 8300000, guid: 230d1ae7cf43bb84c930da596bdb7891, type: 3}
   - SoulElement: 3
     NexusPrefab: {fileID: 1143228082918259958, guid: 00a4405b06e1c374c8189aaecb94f52b, type: 3}
     ElementVFX: {fileID: 6891808529680235121, guid: 33867b93c8e51cf42a430aa8f1bca08b, type: 3}
     SkillPrefab: {fileID: 6378100332894833376, guid: fa159d8471cc9c6469a01d9e857bc62e, type: 3}
-    damageRate: 3
-    cooldownTime: 1
+    damageRate: 0.8
+    cooldownTime: 1.3
     audioClip: {fileID: 8300000, guid: c07479a665bf50f41a33283386a33c4d, type: 3}
   - SoulElement: 4
     NexusPrefab: {fileID: 8788864379829934189, guid: 7613718a089280146b5c17f765e2b0ab, type: 3}
     ElementVFX: {fileID: 5826823370180529763, guid: f3009c657dcb5374ea32be86f11cf612, type: 3}
     SkillPrefab: {fileID: 4102630641624510073, guid: 513977d269e7ca54dba039c68bc37a9e, type: 3}
     damageRate: 2.5
-    cooldownTime: 1
+    cooldownTime: 5
     audioClip: {fileID: 8300000, guid: 3e43f32047836224dbcd63d73de53be2, type: 3}

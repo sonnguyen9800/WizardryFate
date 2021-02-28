@@ -13,23 +13,7 @@ MonoBehaviour:
   m_Name: DropBornMonster
   m_EditorClassIdentifier: 
   dropsList:
-  - itemPrefab: {fileID: 1606516647351835358, guid: 9c314a8aae059aa4b8f5e47b8aa98805, type: 3}
-    droprate: 0.05
-  - itemPrefab: {fileID: 1606516647351835358, guid: 5b5f5dd294160f7459d655ba122631e2, type: 3}
-    droprate: 0.01
-  - itemPrefab: {fileID: 5507322760724133775, guid: 0f4bd83711ffc89479fc83edc05de778, type: 3}
-    droprate: 0.07
   - itemPrefab: {fileID: 6219634069513094960, guid: ea189555fade08647832cc01dd80d474, type: 3}
-    droprate: 0.8
+    droprate: 0.1
   - itemPrefab: {fileID: 6219634069513094960, guid: a0b88855e1d564b4aab6089fc1e5fbc6, type: 3}
-    droprate: 0.8
-  - itemPrefab: {fileID: 6219634069513094960, guid: a0b88855e1d564b4aab6089fc1e5fbc6, type: 3}
-    droprate: 0.8
-  - itemPrefab: {fileID: 6219634069513094960, guid: a0b88855e1d564b4aab6089fc1e5fbc6, type: 3}
-    droprate: 0.8
-  - itemPrefab: {fileID: 6219634069513094960, guid: ea189555fade08647832cc01dd80d474, type: 3}
-    droprate: 0.8
-  - itemPrefab: {fileID: 6219634069513094960, guid: ea189555fade08647832cc01dd80d474, type: 3}
-    droprate: 0.8
-  - itemPrefab: {fileID: 6219634069513094960, guid: ea189555fade08647832cc01dd80d474, type: 3}
-    droprate: 0.8
+    droprate: 0.1

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be5043ccef6f20c41b79d4ff5e59a8ff, type: 3}
+  m_Name: Insight of Darkness
+  m_EditorClassIdentifier: 
+  ItemName: Insight of Darkness
+  hpRecover: 0
+  hpLoss: 5
+  amourIncrease: 0
+  damageIncrease: 5
+  increaseHealth: 0
+  increaseProjectileSpeed: 0
+  prefabVFX: {fileID: 100000, guid: 77ec3c4e07a36814fb3169ecef41b50a, type: 3}
+  sound: {fileID: 8300000, guid: c07479a665bf50f41a33283386a33c4d, type: 3}

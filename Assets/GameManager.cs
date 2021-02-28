@@ -12,17 +12,17 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float victoryTimer = 600f;
 
     private GameObject _player;
-    [SerializeField] bool disableWave = false;
     private Damageable damageable;
     private GameObject[] waveGeneratorsGameObject;
 
-    [Header("Audio")]
-    public AudioClip background;
-    private AudioSource _audioSource;
 
     [Header("Time Indicator")]
     [SerializeField] public TMPro.TextMeshProUGUI timeIndicator;
 
+    [Header("Transition Animation")]
+    [SerializeField]public Animator animator;
+
+    public bool victory = false;
     private void OnEnable() {
         waveGeneratorsGameObject = GameObject.FindGameObjectsWithTag("WaveMonster");
         //print("Found " + waveGeneratorsGameObject.Length + " objects");
@@ -34,36 +34,58 @@ public class GameManager : MonoBehaviour
         //     waveGenerators.Add(wave);
         // }
         _player = GameObject.FindGameObjectWithTag("Player");
-        _audioSource = GetComponent<AudioSource>();
         damageable = _player.GetComponent<Damageable>();
     }
 
     void Start()
     {
         InvokeRepeating("UpdateCounter", 1f, 1f);
-        if (_audioSource == null || background == null) return;
-        _audioSource.loop = true;
-        _audioSource.clip = background;
-        _audioSource.Play();
+
     }
 
     private void UpdateCounter()
     {
         _currentTimer++;
-        timeIndicator.text = "Time Left: " + (victoryTimer - _currentTimer).ToString();
+        timeIndicator.text = (victoryTimer - _currentTimer) >= 0 ? "Time Left: " + (victoryTimer - _currentTimer).ToString() : "Timeout"  ;
 
+        if (victory == true)
+        {
+            StartCoroutine(WaitForVictory());
+            return;
+        }
         if (_currentTimer >= victoryTimer && _player != null)
         {
-            ClearItems("Item");
-            SceneManager.LoadSceneAsync("VictoryScene");
+            //ClearItems("Item");
+            //StartCoroutine(WaitForVictory());
+            StartCoroutine(WaitForDefeat());
         }
         else if (_player == null)
         {
-            ClearItems("Item");
-
-            SceneManager.LoadSceneAsync("DefeatScene");
+            //ClearItems("Item");
+            StartCoroutine(WaitForDefeat());
 
         }
+    }
+
+
+    IEnumerator WaitForDefeat()
+    {
+        animator.SetTrigger("Dying");
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadSceneAsync("DefeatScene");
+
+    }
+
+    IEnumerator WaitForVictory()
+    {
+        animator.SetTrigger("Victory");
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadSceneAsync("VictoryScene");
+
+    }
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(3);
     }
 
     private void ClearItems(string tag)

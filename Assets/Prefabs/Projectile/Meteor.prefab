@@ -128,6 +128,7 @@ MonoBehaviour:
     m_Bits: 256
   destroyedAfterHit: 1
   causeDamage: 1
+  soundOnDestroyed: {fileID: 8300000, guid: 655d8541448424149836eb9aa27fdd7c, type: 3}
 --- !u!50 &230799881875675934
 Rigidbody2D:
   serializedVersion: 4

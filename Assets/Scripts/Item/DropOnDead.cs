@@ -7,23 +7,29 @@ public class DropOnDead : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField]
     DropFactory dropFactory;
-    System.Random random;
-    float randomValue;
 
     [SerializeField] public float forceOut = 7f;
 
     private Rigidbody2D itemBody;
-    private GameObject prefab;
+
+    Damageable _damageble;
     private void Awake()
     {
-        random = new System.Random();
+        _damageble = GetComponent<Damageable>();
     }
-    private void DropItems()
+
+    private void Start()
     {
+        _damageble.OnDamageTaken += DropItems;
+    }
+    private void DropItems(float var)
+    {
+        System.Random random = new System.Random();
         foreach(var item in dropFactory.dropsList)
         {
             //print("Item OUT:");
-            randomValue = (float)random.NextDouble();
+
+            float randomValue = (float)random.NextDouble();
             if (randomValue < item.droprate)
             {
                 GameObject prefab = Instantiate(item.itemPrefab, transform.position, Quaternion.identity);
@@ -41,6 +47,6 @@ public class DropOnDead : MonoBehaviour
     }
     private void OnDestroy()
     {
-        DropItems();
+        
     }
 }

@@ -127,6 +127,7 @@ MonoBehaviour:
   life: 1
   isInvicible: 0
   destroyedSound: {fileID: 8300000, guid: 9e94184561455fe40835e585f0d34f25, type: 3}
+  soundPrefab: {fileID: 5770170694502655294, guid: 91c712be1b9c4824cad37bdd30db19e9, type: 3}
 --- !u!70 &920052704
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -165,6 +166,7 @@ MonoBehaviour:
   _bloodVFX: {fileID: 1005737634677538, guid: 651ef2bf8076d2d4cb5eccd257a247d9, type: 3}
   FloatingText: {fileID: 3274585352348847152, guid: 845608eb86d562f489abb23c33263359, type: 3}
   redColor: 0
+  MainCharacter: 0
 --- !u!114 &1419895691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83683677d0358f94497c74f30fdf9ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 3
   nextPointDis: 0.3
   _enemyAttackProjectile: {fileID: 2615891961974780847, guid: fcf97db095a9f0443b28efe35d6d7557, type: 3}
   _seeker: {fileID: 0}
@@ -187,7 +189,7 @@ MonoBehaviour:
   state: 0
   waypoints: []
   SearchRange: 10
-  _raycastLength: 5
+  _raycastLength: 10
   firerate: 0.4
   thurstProjectile: 8
 --- !u!114 &1419895692

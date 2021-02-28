@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8094698900672973260
+--- !u!1 &712668643342625154
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8094698900672973261}
-  - component: {fileID: 8094698900672973258}
+  - component: {fileID: 712668643342625164}
+  - component: {fileID: 712668643342625155}
   m_Layer: 0
   m_Name: Wave
   m_TagString: Untagged
-  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8094698900672973261
+--- !u!4 &712668643342625164
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8094698900672973260}
+  m_GameObject: {fileID: 712668643342625154}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.72, y: -4.3, z: -0.4147989}
+  m_LocalPosition: {x: -25.24, y: -5.71, z: -1.1747091}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8094698900672973258
+--- !u!114 &712668643342625155
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8094698900672973260}
+  m_GameObject: {fileID: 712668643342625154}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d0b4de931f63a245a9ecc35fe56c8a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monstersPrefab:
-  - {fileID: 4816986638695744444, guid: b5e97dad97c75c24992f8c6c832557f1, type: 3}
-  - {fileID: 6219634069513094960, guid: ea189555fade08647832cc01dd80d474, type: 3}
-  - {fileID: 4816986638695744444, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
+  MonsterPool:
+  - monsterPrefab: {fileID: 6219634069513094960, guid: ea189555fade08647832cc01dd80d474, type: 3}
+    number: 2
+  - monsterPrefab: {fileID: 4816986638695744444, guid: b5e97dad97c75c24992f8c6c832557f1, type: 3}
+    number: 2
+  - monsterPrefab: {fileID: 4816986638695744444, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
+    number: 2
   _range: 10
-  InitialSpawnInterval: 10
-  _thresholdTime: 20
+  InitialSpawnInterval: 5

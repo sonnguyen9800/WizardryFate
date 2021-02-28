@@ -141,10 +141,9 @@ public class SpecialAttack : MonoBehaviour
         
         magicShoot.flySpeed = _wizard.projectilespeed * 0.5f;
         // Set damage
-        Damager damager = skill.GetComponent<Damager>();
-        if (damager == null) 
-        damager.damage = _wizard.damage * elementFactory.GetElementDamageRate(soulElement);
-
+        ThunderSpell damager = skill.GetComponent<ThunderSpell>();
+        //if (damager == null) return;
+        damager._damage = _wizard.damage * elementFactory.GetElementDamageRate(soulElement);
     }
     
     public void Summon(GameObject abilityPrefab)

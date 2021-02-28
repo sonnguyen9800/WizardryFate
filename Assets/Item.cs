@@ -16,7 +16,7 @@ public class Item : MonoBehaviour
     private AudioSource _audioSource;
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
        // print(owner);
     }
@@ -63,9 +63,7 @@ public class Item : MonoBehaviour
             characterStats.RenderDamageIndicator();
         }
         characterStats.amour += itemFactory.amourIncrease;
-        characterStats.projectilespeed += (itemFactory.increaseProjectileSpeed) / 10;
-
-
+        characterStats.projectilespeed += (itemFactory.increaseProjectileSpeed);
 
         // May be more to go
         Destroy(gameObject);

@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 2263546001219095194}
   - component: {fileID: -5390641714439052300}
   - component: {fileID: 7252038466598820820}
+  - component: {fileID: 5050458464818538870}
   m_Layer: 12
   m_Name: MadLove
   m_TagString: Enemy
@@ -129,6 +130,7 @@ MonoBehaviour:
   life: 1
   isInvicible: 0
   destroyedSound: {fileID: 8300000, guid: 4f451b4699e7fd64b924efe6acd8173b, type: 3}
+  soundPrefab: {fileID: 5770170694502655294, guid: 91c712be1b9c4824cad37bdd30db19e9, type: 3}
 --- !u!114 &2268188798013031054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +153,7 @@ MonoBehaviour:
   _bloodVFX: {fileID: 1005737634677538, guid: 651ef2bf8076d2d4cb5eccd257a247d9, type: 3}
   FloatingText: {fileID: 3274585352348847152, guid: 845608eb86d562f489abb23c33263359, type: 3}
   redColor: 0
+  MainCharacter: 0
 --- !u!114 &1299079799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,6 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropFactory: {fileID: 11400000, guid: 416a0dc01d00e52488c9b3d5dfec071d, type: 2}
+  forceOut: 7
 --- !u!82 &7252038466598820820
 AudioSource:
   m_ObjectHideFlags: 0
@@ -377,3 +381,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5050458464818538870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4816986638695744444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083a050f75dcf7547a5c20a36701c625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRadius: 0.5
+  damage: 10
+  damageableLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  hitBoxPosition: {fileID: 4816986638695744387}
+  tobeDestroyedLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  destroyedAfterHit: 0
+  causeDamage: 1
+  soundOnDestroyed: {fileID: 0}

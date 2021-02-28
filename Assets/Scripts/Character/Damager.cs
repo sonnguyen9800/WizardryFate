@@ -13,6 +13,7 @@ public class Damager : MonoBehaviour
 
     [SerializeField] bool causeDamage = true; // If false -> This does cause damage, provide reference to damage instead
 
+    [SerializeField] AudioClip soundOnDestroyed;
     private void CheckAttackHitBox(){
         if (!causeDamage) return;
         Collider2D[] objectCollided = Physics2D.OverlapCircleAll(hitBoxPosition.position, attackRadius, damageableLayer );
@@ -49,5 +50,13 @@ public class Damager : MonoBehaviour
         if (hitBoxPosition == null) return;
         Gizmos.DrawWireSphere(hitBoxPosition.position, attackRadius);
 
+    }
+
+    private void OnDestroy()
+    {
+        if (soundOnDestroyed != null)
+        {
+            AudioSource.PlayClipAtPoint(soundOnDestroyed, transform.position);
+        }
     }
 }

@@ -214,9 +214,10 @@ public class EnemyAI : MonoBehaviour
         {
             Damager damagerProjectile = projectile.GetComponent<Damager>();
             damagerProjectile.damage = _iniStats.baseDamage;
+            currentTimer = _iniStats.baseDamageFirerate;
+
         }
 
-        currentTimer = firerate;
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         rb.AddForce(new Vector2((int)face, 0) * thurstProjectile, ForceMode2D.Impulse);
 
