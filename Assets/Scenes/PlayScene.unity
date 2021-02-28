@@ -60194,6 +60194,58 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8788864379829934231, guid: 7613718a089280146b5c17f765e2b0ab, type: 3}
   m_PrefabInstance: {fileID: 1735073297}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1822933846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1822933848}
+  - component: {fileID: 1822933847}
+  m_Layer: 0
+  m_Name: Wave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1822933847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822933846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d0b4de931f63a245a9ecc35fe56c8a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MonsterPool:
+  - monsterPrefab: {fileID: 6219634069513094960, guid: ea189555fade08647832cc01dd80d474, type: 3}
+    number: 2
+  - monsterPrefab: {fileID: 4816986638695744444, guid: b5e97dad97c75c24992f8c6c832557f1, type: 3}
+    number: 2
+  - monsterPrefab: {fileID: 4816986638695744444, guid: ad9315b7d76725340bc877eaaf71e657, type: 3}
+    number: 2
+  _range: 10
+  InitialSpawnInterval: 5
+--- !u!4 &1822933848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822933846}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -25.24, y: -5.71, z: -1.1747091}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1855281065
 PrefabInstance:
   m_ObjectHideFlags: 0
