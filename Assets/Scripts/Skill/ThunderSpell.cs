@@ -13,6 +13,9 @@ public class ThunderSpell : MonoBehaviour
     [SerializeField] LayerMask layersTobeHit;
     [SerializeField] public float DamageCausedOnDestroyed = 1.4f;
 
+    public Vector3 TargetPosition {get; set;}
+    public float FlySpeed {get;set;}
+
 
     private void CheckAttackHitBox(){
         Collider2D[] objectCollided = Physics2D.OverlapCircleAll(hitBoxPosition.position, attackRadius, layersTobeHit );
@@ -27,6 +30,20 @@ public class ThunderSpell : MonoBehaviour
             damageable.TakeDamage(_damage);
         }
 
+    }
+    /// <summary>
+    /// Update is called every frame, if the MonoBehaviour is enabled.
+    /// </summary>
+    void Update()
+    {
+        if (TargetPosition == null) return;
+
+        transform.position = Vector3.MoveTowards(transform.position, TargetPosition, FlySpeed * Time.deltaTime);
+        if (Vector2.Distance(TargetPosition, transform.position) < 0.01f)
+        {
+
+            Destroy(gameObject);
+        }
     }
     private void OnDestroy()
     {

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: MadLove
   m_EditorClassIdentifier: 
   characterType: 1
-  maxHitpoints: 150
-  baseDamage: 30
+  maxHitpoints: 200
+  baseDamage: 35
   baseAmour: 1
   baseCooldown: 1
   baseDamageFirerate: 1
-  projectileSpeed: 0.8
+  projectileSpeed: 0.5

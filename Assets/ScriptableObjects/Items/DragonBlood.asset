@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Dragon Blood
   hpRecover: 0
-  hpLoss: 30
+  hpLoss: 35
   amourIncrease: 10
-  damageIncrease: 20
+  damageIncrease: 7
   increaseHealth: 0
   increaseProjectileSpeed: 0
   prefabVFX: {fileID: 100006, guid: 60bc526f4be1e044ab9e46340b82ffb3, type: 3}

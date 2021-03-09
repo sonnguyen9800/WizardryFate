@@ -50,6 +50,7 @@ public class Attack : MonoBehaviour
 
     private void Shoot()
     {
+        Vector3 firepointsaved = new Vector3(firePoint.position.x, firePoint.position.y, firePoint.position.z);
         Vector3 mousePosition = _cam.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 10));
         //print(mousePosition);
         Vector3 direction = mousePosition - firePoint.position;
@@ -63,6 +64,7 @@ public class Attack : MonoBehaviour
         Projectile magicShoot = projectileSpawn.GetComponent<Projectile>();
         magicShoot.transform.position = firePoint.transform.position;
         magicShoot.TargetPosition = mousePosition;
+        magicShoot.Firepoint = firepointsaved;
         magicShoot.SetAngle(angle + 90);
 
 

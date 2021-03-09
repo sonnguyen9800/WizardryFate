@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Insight of Darkness
   hpRecover: 0
-  hpLoss: 5
+  hpLoss: 10
   amourIncrease: 0
-  damageIncrease: 5
+  damageIncrease: 2
   increaseHealth: 0
   increaseProjectileSpeed: 0
   prefabVFX: {fileID: 100000, guid: 77ec3c4e07a36814fb3169ecef41b50a, type: 3}

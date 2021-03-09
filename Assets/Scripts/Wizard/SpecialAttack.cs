@@ -133,15 +133,18 @@ public class SpecialAttack : MonoBehaviour
 
     private void CastSpell(Vector3 mousePosition, GameObject abilityPrefab, SoulElement soulElement)
     {
-        GameObject skill = Instantiate(abilityPrefab, mousePosition, transform.rotation);
-        Projectile magicShoot = skill.GetComponent<Projectile>();
-        if (magicShoot == null) return;
-        magicShoot.transform.position = _firepoint.position;
-        magicShoot.TargetPosition = mousePosition;
+        GameObject skill = Instantiate(abilityPrefab, _firepoint.position, transform.rotation);
+        // Projectile magicShoot = skill.GetComponent<Projectile>();
+        // if (magicShoot == null) return;
+        // magicShoot.transform.position = _firepoint.position;
+        // magicShoot.TargetPosition = mousePosition;
         
-        magicShoot.flySpeed = _wizard.projectilespeed * 0.5f;
+        // magicShoot.flySpeed = _wizard.projectilespeed * 0.5f;
         // Set damage
         ThunderSpell damager = skill.GetComponent<ThunderSpell>();
+        damager.TargetPosition = mousePosition;
+        damager.FlySpeed = _wizard.projectilespeed * 0.5f;
+
         //if (damager == null) return;
         damager._damage = _wizard.damage * elementFactory.GetElementDamageRate(soulElement);
     }
