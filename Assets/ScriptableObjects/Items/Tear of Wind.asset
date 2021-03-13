@@ -16,7 +16,7 @@ MonoBehaviour:
   hpRecover: 3
   hpLoss: 0
   amourIncrease: 0
-  damageIncrease: 2
+  damageIncrease: 3
   increaseHealth: 0
   increaseProjectileSpeed: 0.5
   prefabVFX: {fileID: 100000, guid: ada5d62ffe762ce4fbccc70dcdbc9022, type: 3}

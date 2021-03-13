@@ -45,6 +45,6 @@ MonoBehaviour:
     NexusPrefab: {fileID: 8788864379829934189, guid: 7613718a089280146b5c17f765e2b0ab, type: 3}
     ElementVFX: {fileID: 5826823370180529763, guid: f3009c657dcb5374ea32be86f11cf612, type: 3}
     SkillPrefab: {fileID: 4102630641624510073, guid: 513977d269e7ca54dba039c68bc37a9e, type: 3}
-    damageRate: 2.5
-    cooldownTime: 5
+    damageRate: 3.5
+    cooldownTime: 3
     audioClip: {fileID: 8300000, guid: 3e43f32047836224dbcd63d73de53be2, type: 3}

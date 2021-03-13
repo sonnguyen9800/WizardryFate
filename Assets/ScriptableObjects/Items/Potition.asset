@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Potition
   m_EditorClassIdentifier: 
   ItemName: Potion
-  hpRecover: 5
+  hpRecover: 10
   hpLoss: 0
   amourIncrease: 0
   damageIncrease: 0

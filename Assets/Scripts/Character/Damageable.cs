@@ -71,11 +71,15 @@ public class Damageable : MonoBehaviour
             OnHealthChanged?.Invoke();
             OnDamageTaken?.Invoke(amount);
 
-            if (audioSource == null || destroyedSound == null) return;
-            //audioSource.PlayOneShot(destroyedSound);
-            AudioSource audioSource2 = Instantiate(soundPrefab, transform.position, Quaternion.identity);
-            audioSource.PlayOneShot(destroyedSound);
-            Destroy(audioSource2, 1);
+            if (gameObject.tag== "Player")
+            {
+                if (audioSource == null || destroyedSound == null) return;
+                //audioSource.PlayOneShot(destroyedSound);
+                AudioSource audioSource2 = Instantiate(soundPrefab, transform.position, Quaternion.identity);
+                audioSource.PlayOneShot(destroyedSound);
+                Destroy(audioSource2, 1);
+
+            }
         }
 
 
@@ -116,7 +120,13 @@ public class Damageable : MonoBehaviour
         OnDead?.Invoke();
         isAlive = false;
 
-        
+        if (audioSource == null || destroyedSound == null) return;
+        //audioSource.PlayOneShot(destroyedSound);
+        AudioSource audioSource2 = Instantiate(soundPrefab, transform.position, Quaternion.identity);
+        audioSource.PlayOneShot(destroyedSound);
+        Destroy(audioSource2, 1);
+
+
     }
 
 

@@ -15,7 +15,7 @@ MonoBehaviour:
   ItemName: Dragon Blood
   hpRecover: 0
   hpLoss: 35
-  amourIncrease: 10
+  amourIncrease: 15
   damageIncrease: 7
   increaseHealth: 0
   increaseProjectileSpeed: 0
