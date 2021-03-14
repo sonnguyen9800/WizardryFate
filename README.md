@@ -1,7 +1,7 @@
 # Wizardry Fate
 
 ## Description
-A small project I and my small game development team works from 1 month. The game lets you play the role of an unfortunate wizard who get lost in a cursed forest, filled with ancient nexus that hold special power. The player must find ways to get out of this forest before timeout.
+A small project I and my small game development team works from 1.5 months. The game lets you play the role of an unfortunate wizard who get lost in a cursed forest, filled with ancient nexus that hold special power. The player must find ways to get out of this forest before timeout.
 
 Most of the resources were collected from the internet. However, three monsters, which are Mushy Mon (a mushroom-like creature); Silver Wing (a strong, white bird) and Mad Love (a hearth-shaped, flying monster) , are created by our designers, who are: An Bui, Chau Bach and Nhi Tran.
 
