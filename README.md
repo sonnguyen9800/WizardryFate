@@ -40,7 +40,7 @@ The sprite of three monsters are contribution of our designers, ask us if you wa
 
 ## Credits:
 - Tin Vinh (https://github.com/Kasturez)
-- Nhi Tran and Chau Bach for the design of three lovely monster we see.
+- An Tran, Nhi Tran and Chau Bach for the design of three lovely monsters we see.
 - Khai Truong: For give us advise and support.  (https://github.com/khaitruong922)
 - Son Nguyen (me)
 
